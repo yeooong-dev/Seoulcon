@@ -1,5 +1,5 @@
 import Navibar from "../../components/navigation/Navibar";
-import mainImg from "../../assets/images/img-mainBnr.jpg";
+import mainImg from "../../assets/images/main/img-mainBnr.jpg";
 import {
   MainWrap,
   Bottom,
@@ -10,32 +10,28 @@ import {
   LineupWrap,
   ProgramWrap,
   NoticeWrap,
-  FooterWrap,
 } from "./StMain";
-import buttonArrow from "../../assets/images/button-arrow-white.svg";
-import buttonArrowBlack from "../../assets/images/button-arrow-black.svg";
-import leftBtn from "../../assets/images/ico-roundArrow-left.svg";
-import RightBtn from "../../assets/images/ico-roundArrow-right.svg";
+import buttonArrow from "../../assets/images/main/button-arrow-white.svg";
+import buttonArrowBlack from "../../assets/images/main/button-arrow-black.svg";
+import leftBtn from "../../assets/images/main/ico-roundArrow-left.svg";
+import RightBtn from "../../assets/images/main/ico-roundArrow-right.svg";
 import mainVideo from "../../assets/video/main-movie.mp4";
-import lineImg1 from "../../assets/images/img-influencer1.png";
-import lineImg2 from "../../assets/images/img-influencer2.png";
-import lineImg3 from "../../assets/images/img-influencer3.png";
-import lineImg4 from "../../assets/images/img-influencer4.png";
-import lineImg5 from "../../assets/images/img-influencer5.png";
-import lineImg6 from "../../assets/images/img-influencer6.png";
-import lineImg7 from "../../assets/images/img-influencer7.png";
-import lineImg8 from "../../assets/images/img-influencer8.png";
-import lineImg9 from "../../assets/images/img-influencer9.png";
-import lineImg10 from "../../assets/images/img-influencer10.png";
-import lineImg11 from "../../assets/images/img-influencer11.png";
-import imgProgram1 from "../../assets/images/img-program1.jpg";
-import imgProgram2 from "../../assets/images/img-program2.jpg";
-import imgProgram3 from "../../assets/images/img-program3.jpg";
-import imgProgram4 from "../../assets/images/img-program4.jpg";
-import logoFooter from "../../assets/images/logo-footer.svg";
-import icoYoutube from "../../assets/images/ico-youtube.svg";
-import icoInsta from "../../assets/images/ico-insta.svg";
-import icoMail from "../../assets/images/ico-mail.svg";
+import lineImg1 from "../../assets/images/main/img-influencer1.png";
+import lineImg2 from "../../assets/images/main/img-influencer2.png";
+import lineImg3 from "../../assets/images/main/img-influencer3.png";
+import lineImg4 from "../../assets/images/main/img-influencer4.png";
+import lineImg5 from "../../assets/images/main/img-influencer5.png";
+import lineImg6 from "../../assets/images/main/img-influencer6.png";
+import lineImg7 from "../../assets/images/main/img-influencer7.png";
+import lineImg8 from "../../assets/images/main/img-influencer8.png";
+import lineImg9 from "../../assets/images/main/img-influencer9.png";
+import lineImg10 from "../../assets/images/main/img-influencer10.png";
+import lineImg11 from "../../assets/images/main/img-influencer11.png";
+import imgProgram1 from "../../assets/images/main/img-program1.jpg";
+import imgProgram2 from "../../assets/images/main/img-program2.jpg";
+import imgProgram3 from "../../assets/images/main/img-program3.jpg";
+import imgProgram4 from "../../assets/images/main/img-program4.jpg";
+import Footer from "../../components/footer/Footer";
 
 const Main = () => {
   return (
@@ -167,19 +163,7 @@ const Main = () => {
         </button>
       </NoticeWrap>
 
-      <FooterWrap>
-        <div className='left'>
-          <img src={logoFooter} alt='logo' />
-          <p>Copyrights SEOULCON. All rights reserved.</p>
-        </div>
-        <div className='right'>
-          <div>
-            <img src={icoYoutube} alt='youtube' />
-            <img src={icoInsta} alt='instagram' />
-            <img src={icoMail} alt='mail' />
-          </div>
-        </div>
-      </FooterWrap>
+      <Footer />
     </Wrapper>
   );
 };

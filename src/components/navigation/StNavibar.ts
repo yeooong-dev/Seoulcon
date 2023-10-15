@@ -30,6 +30,11 @@ export const NaviWrap = styled.div`
     display: flex;
     align-items: center;
 
+    .menu-container {
+      position: relative;
+      display: inline-block;
+    }
+
     button {
       background: none;
       border: none;
@@ -41,6 +46,7 @@ export const NaviWrap = styled.div`
       align-items: center;
       transition: color 0.3s;
       font-size: 1rem;
+      position: relative;
 
       &:hover {
         color: #ccc;
@@ -57,6 +63,37 @@ export const NaviWrap = styled.div`
       background-color: white;
       border: none;
       width: 1px;
+    }
+
+    .submenu {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      background-color: black;
+      left: -45%;
+      top: 100%;
+      width: 250px;
+
+      a {
+        display: block;
+        width: 100%;
+
+        button {
+          width: 100%;
+          padding: 0px 30px;
+          text-align: left;
+          height: 60px;
+          border: none;
+
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+          }
+        }
+
+        &:not(:last-child) button {
+          border-bottom: 1px solid #565656;
+        }
+      }
     }
   }
 `;
