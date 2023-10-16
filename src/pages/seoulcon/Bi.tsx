@@ -158,7 +158,7 @@ const Divider = styled.hr`
   background: rgba(58, 58, 58, 1);
   opacity: 0.3;
   position: absolute;
-  top: 180px;
+  top: 200px;
   left: 0;
 `;
 
@@ -167,7 +167,7 @@ const Divider2 = styled.hr`
   background: rgba(58, 58, 58, 1);
   opacity: 0.3;
   position: absolute;
-  top: 50px;
+  top: 80px;
   left: 0;
 `;
 
@@ -176,7 +176,7 @@ const Divider3 = styled.hr`
   background: rgba(58, 58, 58, 1);
   opacity: 0.3;
   position: absolute;
-  top: -20px;
+  top: 10px;
   left: 0;
 `;
 
@@ -225,7 +225,7 @@ const BrandSymbol = styled.img`
 `;
 
 const FlexWrap = styled.div`
-  width: 70%;
+  width: 75%;
   display: flex;
   justify-content: space-between;
   align-items: center;

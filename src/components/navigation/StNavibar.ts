@@ -6,11 +6,22 @@ export const NaviWrap = styled.div`
   left: 0;
   width: 100%;
   height: 80px;
-  background: rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px); 
+    z-index: -1; 
+  }
 
   .left {
     padding-left: 30px;
@@ -70,9 +81,9 @@ export const NaviWrap = styled.div`
       flex-direction: column;
       position: absolute;
       background-color: black;
-      left: -45%;
+      left: -60%;
       top: 100%;
-      width: 250px;
+      width: 300px;
 
       a {
         display: block;
@@ -82,7 +93,7 @@ export const NaviWrap = styled.div`
           width: 100%;
           padding: 0px 30px;
           text-align: left;
-          height: 60px;
+          height: 65px;
           border: none;
 
           &:hover {

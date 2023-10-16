@@ -68,7 +68,7 @@ const Navibar = () => {
                 <button>Conference</button>
               </Link>
 
-              <Link to='/content'>
+              <Link to='/contents'>
                 <button>Content/Fashion/Beauty</button>
               </Link>
 

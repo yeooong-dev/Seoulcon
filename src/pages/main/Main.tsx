@@ -32,13 +32,16 @@ import imgProgram2 from "../../assets/images/main/img-program2.jpg";
 import imgProgram3 from "../../assets/images/main/img-program3.jpg";
 import imgProgram4 from "../../assets/images/main/img-program4.jpg";
 import Footer from "../../components/footer/Footer";
+import round from "../../assets/images/seoulcon/img-round.svg";
+import triangle from "../../assets/images/program/img-triangle.svg";
+import { Link } from "react-router-dom";
 
 const Main = () => {
   return (
     <Wrapper>
       <MainWrap>
-        <img src={mainImg} alt='main_img' />
         <Navibar />
+        <img src={mainImg} alt='main_img' />
         <TextCenter>
           <p>2023 SEOULCON INFLUENCER</p>
           <h1>영국남자, T1, 박재범</h1>
@@ -62,6 +65,7 @@ const Main = () => {
       </MainWrap>
 
       <YoutubeWrap>
+        <img src={round} alt='원' />
         <h1>2023 서울콘</h1>
         <p>2023 연말, 인플루언서와 당신을 전세계로 연결합니다</p>
         <div>
@@ -80,9 +84,11 @@ const Main = () => {
             </div>
 
             <div className='right'>
-              <button>
-                한번에 보기 <img src={buttonArrowBlack} alt='detail' />
-              </button>
+              <Link to='/lineup'>
+                <button>
+                  한번에 보기 <img src={buttonArrowBlack} alt='detail' />
+                </button>
+              </Link>
             </div>
           </div>
 
@@ -103,6 +109,7 @@ const Main = () => {
       </LineupWrap>
 
       <ProgramWrap>
+        <img src={triangle} alt='triangle' className='triangle' />
         <div className='padding'>
           <div className='text2'>
             <h1>서울콘 프로그램</h1>
@@ -158,9 +165,11 @@ const Main = () => {
             <span>2023.07.27.</span>
           </div>
         </div>
-        <button>
-          자세히 보기 <img src={buttonArrow} alt='detail' />
-        </button>
+        <Link to='/notice'>
+          <button>
+            자세히 보기 <img src={buttonArrow} alt='detail' />
+          </button>
+        </Link>
       </NoticeWrap>
 
       <Footer />

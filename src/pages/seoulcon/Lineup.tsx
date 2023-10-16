@@ -189,7 +189,8 @@ const Title = styled.h1`
 const Ment = styled.p`
   font-size: 18px;
   align-self: flex-start;
-  margin-top: -30px;
+  margin-top: -25px;
+  margin-bottom: 30px;
 `;
 
 const Divider = styled.hr`
@@ -232,7 +233,7 @@ const ImgBox = styled.div`
     font-weight: bold;
     color: rgba(82, 243, 255, 1);
     font-size: 30px;
-    margin-top: 5px;
+    margin-top: 15px;
   }
 
   @media (max-width: 600px) {

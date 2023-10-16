@@ -130,6 +130,7 @@ const AboutWrap = styled.div`
       font-size: 3.875rem;
       margin-top: 0;
       margin-bottom: -50px;
+      font-weight: bold;
     }
   }
 `;
@@ -151,20 +152,21 @@ const ListWrap = styled.div`
     p:first-child {
       font-weight: bold;
       font-size: 48px;
-      padding-left: 35rem;
+      padding-left: 32rem;
     }
 
     p:last-child {
       font-size: 30px;
       color: rgba(199, 199, 199, 1);
       font-weight: bold;
-      margin-left: 40rem;
+      margin-left: 30rem;
     }
   }
 `;
 
 const SbaWrap = styled.div`
   width: 100%;
+  height: 374px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -180,9 +182,9 @@ const SbaWrap = styled.div`
   }
 
   p {
-    max-width: 900px;
+    max-width: 1000px;
     text-align: center;
-    margin-bottom: 20px;
-    line-height: 1.7rem;
+    margin-bottom: 10px;
+    line-height: 1.8rem;
   }
 `;

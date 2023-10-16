@@ -44,7 +44,8 @@ export const TextCenter = styled.div`
   h1 {
     color: white;
     font-size: 3.875rem;
-    margin-top: -10px;
+    margin-top: 0px;
+    margin-bottom: 80px;
   }
 
   button {
@@ -122,6 +123,14 @@ export const YoutubeWrap = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
+
+  img {
+    width: 372px;
+    position: absolute;
+    top: 130px;
+    left: 350px;
+  }
 
   h1 {
     font-size: 3rem;
@@ -178,7 +187,6 @@ export const LineupWrap = styled.div`
 
     p {
       font-size: 1.125rem;
-      margin-top: -15px;
       margin-bottom: 100px;
     }
   }
@@ -213,6 +221,7 @@ export const LineupWrap = styled.div`
     img {
       width: 260px;
       margin-right: 20px;
+      z-index: 99;
     }
 
     img:last-child {
@@ -232,6 +241,14 @@ export const ProgramWrap = styled.div`
   display: flex;
   justify-content: center;
   margin-top: -300px;
+  position: relative;
+
+  .triangle {
+    width: 446px;
+    position: absolute;
+    top: 350px;
+    right: -100px;
+  }
 
   .padding {
     width: 80%;
@@ -254,7 +271,7 @@ export const ProgramWrap = styled.div`
       }
       p {
         font-size: 1.125rem;
-        margin-top: -15px;
+        margin-top: -8px;
         color: white;
       }
     }
@@ -286,6 +303,7 @@ export const ProgramWrap = styled.div`
         img {
           width: 100%;
           height: auto;
+          z-index: 99;
         }
       }
     }
