@@ -77,7 +77,7 @@ const Main = () => {
 
       <LineupWrap>
         <div className='padding'>
-          <div className='text'>
+          <div className='text_top'>
             <div className='left'>
               <h1>인플루언서 라인업</h1>
               <p>전 세계 30개국, 3,000명, 24억 팔로워와 함께해 보세요</p>
@@ -93,17 +93,115 @@ const Main = () => {
           </div>
 
           <div className='imgBox'>
-            <img src={lineImg1} alt='lineup' />
-            <img src={lineImg2} alt='lineup' />
-            <img src={lineImg3} alt='lineup' />
-            <img src={lineImg4} alt='lineup' />
-            <img src={lineImg5} alt='lineup' />
-            <img src={lineImg6} alt='lineup' />
-            <img src={lineImg7} alt='lineup' />
-            <img src={lineImg8} alt='lineup' />
-            <img src={lineImg9} alt='lineup' />
-            <img src={lineImg10} alt='lineup' />
-            <img src={lineImg11} alt='lineup' />
+            <div className='imgContainer'>
+              <div className='width'>
+                <img src={lineImg1} alt='lineup' />
+              </div>
+              <div className='text'>
+                <span className='hoverText'>펑티모(중국)</span>
+                <b>1,000만</b>
+              </div>
+            </div>
+
+            <div className='imgContainer'>
+              <div className='width'>
+                <img src={lineImg2} alt='lineup' />
+              </div>
+              <div className='text'>
+                <span className='hoverText'>MrBeast (미국)</span>
+                <b>1,46억</b>
+              </div>
+            </div>
+
+            <div className='imgContainer'>
+              <div className='width'>
+                <img src={lineImg3} alt='lineup' />
+              </div>
+              <div className='text'>
+                <span className='hoverText'>ZutiGang (나미비아)</span>
+                <b>1,340만</b>
+              </div>
+            </div>
+
+            <div className='imgContainer'>
+              <div className='width'>
+                <img src={lineImg4} alt='lineup' />
+              </div>
+              <div className='text'>
+                <span className='hoverText'>PewDiePie (미국)</span>
+                <b>1,11억</b>
+              </div>
+            </div>
+
+            <div className='imgContainer'>
+              <div className='width'>
+                <img src={lineImg5} alt='lineup' />
+              </div>
+              <div className='text'>
+                <span className='hoverText'>Romina Gafur (미국)</span>
+                <b>481만</b>
+              </div>
+            </div>
+
+            <div className='imgContainer'>
+              <div className='width'>
+                <img src={lineImg6} alt='lineup' />
+              </div>
+              <div className='text'>
+                <span className='hoverText'>Blazendary (미국)</span>
+                <b>162만</b>
+              </div>
+            </div>
+
+            <div className='imgContainer'>
+              <div className='width'>
+                <img src={lineImg7} alt='lineup' />
+              </div>
+              <div className='text'>
+                <span className='hoverText'>J.Fla (대한민국)</span>
+                <b>1,760만</b>
+              </div>
+            </div>
+
+            <div className='imgContainer'>
+              <div className='width'>
+                <img src={lineImg8} alt='lineup' />
+              </div>
+              <div className='text'>
+                <span className='hoverText'>RZD (인도네시아)</span>
+                <b>408만</b>
+              </div>
+            </div>
+
+            <div className='imgContainer'>
+              <div className='width'>
+                <img src={lineImg9} alt='lineup' />
+              </div>
+              <div className='text'>
+                <span className='hoverText'>영국남자 (영국)</span>
+                <b>557만</b>
+              </div>
+            </div>
+
+            <div className='imgContainer'>
+              <div className='width'>
+                <img src={lineImg10} alt='lineup' />
+              </div>
+              <div className='text'>
+                <span className='hoverText'>Zoe Sugg (영국)</span>
+                <b>1,070만</b>
+              </div>
+            </div>
+
+            <div className='imgContainer'>
+              <div className='width'>
+                <img src={lineImg11} alt='lineup' />
+              </div>
+              <div className='text'>
+                <span className='hoverText'>Junya.じゅんや (일본)</span>
+                <b>2,300만</b>
+              </div>
+            </div>
           </div>
         </div>
       </LineupWrap>
@@ -120,13 +218,21 @@ const Main = () => {
             <div className='left'>
               <p>01</p>
               <h5>페스티벌</h5>
-              <img src={imgProgram1} alt='페스티벌' />
+              <Link to='/festival'>
+                <div className='box'>
+                  <img src={imgProgram1} alt='페스티벌' />
+                </div>
+              </Link>
             </div>
 
             <div className='right'>
               <p>02</p>
               <h5>컨퍼런스</h5>
-              <img src={imgProgram2} alt='컨버런스' />
+              <Link to='/conference'>
+                <div className='box'>
+                  <img src={imgProgram2} alt='컨버런스' />
+                </div>
+              </Link>
             </div>
           </div>
 
@@ -134,13 +240,21 @@ const Main = () => {
             <div className='left'>
               <p>03</p>
               <h5>콘텐츠, 패션, 뷰티</h5>
-              <img src={imgProgram3} alt='콘텐츠, 패션, 뷰티' />
+              <Link to='/contents'>
+                <div className='box'>
+                  <img src={imgProgram3} alt='콘텐츠, 패션, 뷰티' />
+                </div>
+              </Link>
             </div>
 
             <div className='right'>
               <p>04</p>
               <h5>공연&엔터테인멘트</h5>
-              <img src={imgProgram4} alt='공연&엔터테인멘트' />
+              <Link to='/performance'>
+                <div className='box'>
+                  <img src={imgProgram4} alt='공연&엔터테인멘트' />
+                </div>
+              </Link>
             </div>
           </div>
         </div>
@@ -155,14 +269,44 @@ const Main = () => {
               <span>순서</span>
               <span>제목</span>
             </div>
-            <span>등록일</span>
+            <div className='right'>
+              <span>등록일</span>
+            </div>
           </div>
           <hr />
 
-          <div>
-            <span className='num'>1</span>
-            <span>[2023 서울콘] 현장 DDP 입장 순서 안내</span>
-            <span>2023.07.27.</span>
+          <div className='listBox'>
+            <Link to='/noticePage'>
+              <div className='list'>
+                <span className='num'>1</span>
+                <span>[2023 서울콘] 현장 DDP 입장 순서 안내</span>
+                <span>2023.07.27.</span>
+              </div>
+            </Link>
+
+            <div className='list'>
+              <span className='num'>1</span>
+              <span>[2023 서울콘] 현장 DDP 입장 순서 안내</span>
+              <span>2023.07.27.</span>
+            </div>
+
+            <div className='list'>
+              <span className='num'>1</span>
+              <span>[2023 서울콘] 현장 DDP 입장 순서 안내</span>
+              <span>2023.07.27.</span>
+            </div>
+
+            <div className='list'>
+              <span className='num'>1</span>
+              <span>[2023 서울콘] 현장 DDP 입장 순서 안내</span>
+              <span>2023.07.27.</span>
+            </div>
+
+            <div className='list'>
+              <span className='num'>1</span>
+              <span>[2023 서울콘] 현장 DDP 입장 순서 안내</span>
+              <span>2023.07.27.</span>
+            </div>
           </div>
         </div>
         <Link to='/notice'>

@@ -7,12 +7,14 @@ import { FooterWrap } from "./StFooter";
 const Footer = () => {
   return (
     <FooterWrap>
-      <div className='left'>
+      <div className='top'>
         <img src={logoFooter} alt='logo' />
-        <p>Copyrights SEOULCON. All rights reserved.</p>
       </div>
-      <div className='right'>
-        <div>
+      <div className='bottom'>
+        <div className='left'>
+          <p>Copyrights SEOULCON. All rights reserved.</p>
+        </div>
+        <div className='right'>
           <img src={icoYoutube} alt='youtube' />
           <img src={icoInsta} alt='instagram' />
           <img src={icoMail} alt='mail' />

@@ -19,8 +19,8 @@ export const NaviWrap = styled.div`
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(5px); 
-    z-index: -1; 
+    backdrop-filter: blur(5px);
+    z-index: -1;
   }
 
   .left {
@@ -41,6 +41,11 @@ export const NaviWrap = styled.div`
     display: flex;
     align-items: center;
 
+    .mobile-menu-toggle {
+      display: none;
+      cursor: pointer;
+    }
+
     .menu-container {
       position: relative;
       display: inline-block;
@@ -55,7 +60,6 @@ export const NaviWrap = styled.div`
       height: 80px;
       display: flex;
       align-items: center;
-      transition: color 0.3s;
       font-size: 1rem;
       position: relative;
 
@@ -71,17 +75,23 @@ export const NaviWrap = styled.div`
     hr {
       height: 10px;
       margin: 0 -15px;
-      background-color: white;
+      background: white;
       border: none;
       width: 1px;
+      opacity: 40%;
+    }
+
+    .en {
+      color: white;
+      opacity: 40%;
     }
 
     .submenu {
       display: flex;
       flex-direction: column;
       position: absolute;
-      background-color: black;
-      left: -60%;
+      background: black;
+      left: 0%;
       top: 100%;
       width: 300px;
 
@@ -97,13 +107,34 @@ export const NaviWrap = styled.div`
           border: none;
 
           &:hover {
-            background-color: rgba(255, 255, 255, 0.1);
+            background: red;
+            color: black;
           }
         }
 
         &:not(:last-child) button {
           border-bottom: 1px solid #565656;
         }
+      }
+    }
+    @media (max-width: 768px) {
+      .menu-container,
+      .mobile-menu-toggle + button,
+      .attend,
+      .ko,
+      .en,
+      hr {
+        display: none;
+      }
+
+      .mobile-menu-toggle {
+        display: flex;
+        width: 90px;
+        height: 100%;
+      }
+
+      &.open .menu-container {
+        display: block;
       }
     }
   }

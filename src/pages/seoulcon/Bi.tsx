@@ -139,10 +139,10 @@ const ContentSection2 = styled.div`
 
 const ContentSection3 = styled.div`
   width: 70%;
-  height: 1700px;
+  height: 1600px;
   display: flex;
   position: relative;
-  margin-top: -100px;
+  margin-top: -180px;
 `;
 
 const Title = styled.h1`
@@ -176,7 +176,7 @@ const Divider3 = styled.hr`
   background: rgba(58, 58, 58, 1);
   opacity: 0.3;
   position: absolute;
-  top: 10px;
+  top: 0;
   left: 0;
 `;
 

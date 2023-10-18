@@ -2,9 +2,11 @@ import { NaviWrap } from "./StNavibar";
 import logo from "../../assets/images/main/logo-nav.svg";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import menuOpen from "../../assets/images/main/ico-menu.svg";
 
 const Navibar = () => {
   const [openMenu, setOpenMenu] = useState<string | null>(null);
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <NaviWrap>
@@ -14,7 +16,13 @@ const Navibar = () => {
         </Link>
       </div>
 
-      <div className='right'>
+      <div className={`right ${isMobileMenuOpen ? "open" : ""}`}>
+        <button
+          className='mobile-menu-toggle'
+          onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          <img src={menuOpen} alt='menuOpen' />
+        </button>
         <div className='menu-container'>
           <button
             onMouseEnter={() => setOpenMenu("SeoulCon")}
@@ -108,12 +116,12 @@ const Navibar = () => {
         </div>
 
         <Link to='/attend'>
-          <button>Attend</button>
+          <button className='attend'>Attend</button>
         </Link>
 
-        <button>KO</button>
+        <button className='ko'>KO</button>
         <hr />
-        <button>EN</button>
+        <button className='en'>EN</button>
       </div>
     </NaviWrap>
   );

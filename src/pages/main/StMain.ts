@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import buttonArrow from "../../assets/images/main/button-arrow-white.svg";
+import buttonArrowBlack from "../../assets/images/main/button-arrow-black.svg";
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -39,6 +41,7 @@ export const TextCenter = styled.div`
   p {
     color: white;
     font-size: 1.375rem;
+    font-weight: bold;
   }
 
   h1 {
@@ -64,6 +67,16 @@ export const TextCenter = styled.div`
       margin-left: 5px;
     }
   }
+
+  button:hover {
+    background: white;
+    color: black;
+    transition: 0.2s;
+  }
+
+  button:hover img {
+    content: url(${buttonArrowBlack});
+  }
 `;
 
 export const BtnBetween = styled.div`
@@ -76,8 +89,8 @@ export const BtnBetween = styled.div`
 
   button {
     background: none;
-    width: 48px;
-    height: 48px;
+    width: 55px;
+    height: 100%;
     border-radius: 50%;
     cursor: pointer;
     border: none;
@@ -100,7 +113,7 @@ export const Bottom = styled.div`
 
   div {
     width: 201px;
-    height: 1px;
+    height: 2px;
     background: linear-gradient(0deg, #565656, #565656),
       linear-gradient(0deg, #3a3a3a, #3a3a3a);
     cursor: pointer;
@@ -172,7 +185,7 @@ export const LineupWrap = styled.div`
     padding-left: 25rem;
   }
 
-  .text {
+  .text_top {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -207,29 +220,99 @@ export const LineupWrap = styled.div`
         width: 12px;
         height: 12px;
         margin-left: 5px;
+        transition: 0.3s;
+        z-index: 999;
       }
+    }
+
+    button:hover img {
+      content: url(${buttonArrow});
+    }
+
+    button:hover {
+      background: black;
+      color: white;
+      transition: 0.2s;
     }
   }
 
   .imgBox {
+    width: 100%;
     display: flex;
     overflow-x: auto;
-    max-width: 100%;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    white-space: nowrap;
+    margin-top: -50px;
 
-    img {
-      width: 260px;
+    .imgContainer {
+      width: auto;
+      flex: 0 0 auto;
+      position: relative;
       margin-right: 20px;
-      z-index: 99;
-    }
+      display: inline-block;
 
-    img:last-child {
-      margin-right: 400px;
-    }
+      .width {
+        width: 300px;
+        height: 440px;
+        overflow: hidden;
+        border-radius: 150px;
+      }
 
-    &::-webkit-scrollbar {
-      display: none;
+      .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+      }
+
+      img {
+        position: relative;
+        width: 100%;
+        z-index: 9;
+        transition: transform 0.3s ease, filter 0.3s ease;
+        transform-origin: center center;
+
+        &:hover {
+          transform: scale(1.1);
+          filter: brightness(0.3);
+        }
+      }
+
+      .hoverText,
+      b {
+        display: none;
+        z-index: 10;
+      }
+
+      span {
+        color: rgba(82, 243, 255, 1);
+        font-size: 16px;
+        color: white;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      b {
+        color: rgba(82, 243, 255, 1);
+        font-size: 36px;
+        font-weight: bold;
+      }
+
+      &:hover .hoverText,
+      &:hover b {
+        display: block;
+      }
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+    .imgContainer:last-child {
+      margin-right: 220px;
     }
   }
 `;
@@ -263,7 +346,7 @@ export const ProgramWrap = styled.div`
       align-items: flex-start;
       align-self: flex-start;
       margin-top: 250px;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
 
       h1 {
         font-size: 3rem;
@@ -283,27 +366,66 @@ export const ProgramWrap = styled.div`
       align-items: center;
       margin-bottom: 100px;
 
+      .left {
+        margin-right: 20px;
+      }
+
       .left,
       .right {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        margin-right: 20px;
+
+        .box {
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          position: relative;
+
+          &:hover::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            cursor: pointer;
+            pointer-events: none;
+            background: linear-gradient(
+              180deg,
+              rgba(0, 0, 0, 0.5) 0%,
+              rgba(47, 83, 0, 0.5) 100%
+            );
+            z-index: 1;
+          }
+
+          img {
+            width: 100%;
+            height: auto;
+            z-index: 0;
+            position: relative;
+            transition: transform 0.5s;
+            cursor: pointer;
+            will-change: transform;
+
+            &:hover {
+              transform: scale(1.1);
+              transition: 0.5s;
+            }
+          }
+        }
 
         p {
           font-size: 1rem;
           color: #bfff6a;
         }
+
         h5 {
           font-size: 2.25rem;
           color: white;
-          margin-top: -5px;
+          margin-top: 0px;
           margin-bottom: 30px;
-        }
-        img {
-          width: 100%;
-          height: auto;
-          z-index: 99;
         }
       }
     }
@@ -328,30 +450,40 @@ export const NoticeWrap = styled.div`
   p {
     font-size: 1.125rem;
     color: white;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
 
   .content {
     width: 100%;
-    max-width: 55%;
-    padding-top: 20px;
+    max-width: 60%;
 
     .top {
+      width: 100%;
       display: flex;
       justify-content: space-between;
-      padding: 0 20px;
+      align-items: center;
+      padding: 20px;
 
-      .left {
-        display: flex;
-        align-items: center;
-        span:first-child {
-          width: 50px;
-          text-align: center;
+      .right {
+        span {
+          margin-right: 120px;
         }
       }
 
-      span:last-child {
-        flex: 0 0 120px;
+      .left {
+        width: 80%;
+        display: flex;
+        align-items: center;
+
+        span:first-child {
+          width: 100%;
+          flex: 0 0 50px;
+          text-align: center;
+        }
+
+        span:nth-child(2) {
+          margin-left: 80px;
+        }
       }
 
       span {
@@ -361,33 +493,53 @@ export const NoticeWrap = styled.div`
 
     hr {
       border-top: 1px solid white;
-      margin: 20px 0;
+      margin: 0px 0;
     }
 
-    div {
+    .listBox {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
 
-      span:first-child {
-        flex: 0 0 120px;
-        text-align: center;
+      .list {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 65px;
+        border-bottom: 1px solid rgba(58, 58, 58, 1);
+        cursor: pointer;
+
+        &:hover {
+          background: #171717;
+          transition: 0.1s;
+        }
+
+        .num {
+          flex: 0 0 50px;
+          text-align: center;
+          margin-left: 20px;
+        }
       }
 
-      span:last-child {
-        flex: 0 0 140px;
+      span:first-child {
+        flex: 0 0 50px;
+        text-align: center;
       }
 
       span:nth-child(2) {
         flex: 2;
+        text-align: left;
         padding-left: 80px;
+      }
+
+      span:last-child {
+        flex: 0 0 140px;
+        text-align: left;
       }
 
       span {
         color: white;
-      }
-
-      .num {
-        margin-left: 20px;
       }
     }
   }
@@ -400,7 +552,7 @@ export const NoticeWrap = styled.div`
     background: none;
     font-size: 1rem;
     cursor: pointer;
-    margin-top: 100px;
+    margin-top: 50px;
     color: white;
 
     img {
@@ -408,5 +560,14 @@ export const NoticeWrap = styled.div`
       height: 12px;
       margin-left: 5px;
     }
+  }
+  button:hover {
+    background: white;
+    color: black;
+    transition: 0.3s;
+  }
+
+  button:hover img {
+    content: url(${buttonArrowBlack});
   }
 `;

@@ -4,6 +4,10 @@ import intro from "../../components/../assets/images/seoulcon/img-intro-main.svg
 import styled from "styled-components";
 import { Wrapper } from "../main/StMain";
 import imgSba from "../../components/../assets/images/seoulcon/img-sba.png";
+import intro1 from "../../assets/images/seoulcon/img-intro1.svg";
+import intro2 from "../../assets/images/seoulcon/img-intro2.svg";
+import intro3 from "../../assets/images/seoulcon/img-intro3.svg";
+import intro4 from "../../assets/images/seoulcon/img-intro4.svg";
 
 const SeoulconAbout = () => {
   return (
@@ -148,6 +152,8 @@ const ListWrap = styled.div`
     align-items: center;
     justify-content: flex-start;
     border-bottom: 1px solid black;
+    position: relative;
+    overflow: hidden;
 
     p:first-child {
       font-weight: bold;
@@ -161,6 +167,41 @@ const ListWrap = styled.div`
       font-weight: bold;
       margin-left: 30rem;
     }
+  }
+
+  div:hover {
+    background: black;
+    transition: 0.5s;
+    color: white;
+
+    &::before {
+      content: "";
+      display: block;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: -100px;
+      right: -1070px;
+    }
+  }
+
+  div:nth-child(1):hover::before {
+    content: url(${intro1});
+  }
+
+  div:nth-child(2):hover::before {
+    content: url(${intro2});
+  }
+
+  div:nth-child(3):hover::before {
+    content: url(${intro3});
+  }
+
+  div:nth-child(4):hover::before {
+    content: url(${intro4});
   }
 `;
 

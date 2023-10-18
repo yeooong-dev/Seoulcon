@@ -2,41 +2,42 @@ import styled from "styled-components";
 
 export const FooterWrap = styled.div`
   width: 100%;
-  height: 190px;
   background: #ff0e14;
-  padding: 2rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   overflow-y: hidden;
 
-  .left {
-    display: flex;
-    gap: 1rem;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 100px;
+  .top {
+    position: relative;
+    bottom: 50px;
+    width: 100%;
+    height: 170px;
+    border-bottom: 0.1px solid #171717;
+    padding-left: 2rem;
 
     img {
-      width: 130px;
-    }
-
-    p {
-      margin: 0;
+      padding-top: 70px;
+      width: 120px;
     }
   }
 
-  .right {
-    padding: 5rem;
-    margin-top: 160px;
+  .bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background: red;
+    padding-left: 2rem;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    div {
-      grid-row: 5;
-      display: flex;
-      gap: 1rem;
+    .right {
+      padding-right: 4rem;
 
       img {
-        width: 24px;
+        margin-left: 10px;
         cursor: pointer;
       }
     }

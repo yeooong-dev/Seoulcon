@@ -217,6 +217,7 @@ const ImgBox = styled.div`
   img {
     width: 260px;
     margin-bottom: 20px;
+    z-index: 9;
   }
 
   p {
