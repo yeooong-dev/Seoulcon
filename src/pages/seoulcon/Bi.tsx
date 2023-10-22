@@ -66,16 +66,20 @@ const Bi = () => {
                 영향력을 상징합니다.
               </Description2>
               <FlexWrap>
-                <div className='color' />
-                <div style={{ marginRight: "100px" }}>
-                  <p>#000000</p>
-                  <p className='tag'>#세련됨 #시작 #집중 #끝 #기본</p>
+                <div className='brandColor'>
+                  <div className='color' />
+                  <div style={{ marginRight: "100px" }} className='colorText'>
+                    <p>#000000</p>
+                    <p className='tag'>#세련됨 #시작 #집중 #끝 #기본</p>
+                  </div>
                 </div>
 
-                <div className='colorRed' />
-                <div>
-                  <p>#FF0E14</p>
-                  <p className='tag'>#열정 #사랑 #관심 #활력 #재미</p>
+                <div className='brandColor'>
+                  <div className='colorRed' />
+                  <div className='colorText'>
+                    <p>#FF0E14</p>
+                    <p className='tag'>#열정 #사랑 #관심 #활력 #재미</p>
+                  </div>
                 </div>
               </FlexWrap>
             </DescriptionWrapper>
@@ -111,46 +115,77 @@ const BiWrap = styled.div`
   justify-content: center;
   flex-direction: column;
   color: white;
+  padding-top: 200px;
 
   .circle {
     position: absolute;
     top: -200px;
     left: 100px;
   }
+
+  @media (max-width: 768px) {
+    .circle {
+      display: none;
+    }
+  }
 `;
 
 const ContentSection = styled.div`
   width: 70%;
-  height: 1080px;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  top: 0px;
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `;
 
 const ContentSection2 = styled.div`
   width: 70%;
-  height: 850px;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  top: 80px;
+
+  @media (max-width: 768px) {
+    width: 90%;
+    height: auto;
+  }
 `;
 
 const ContentSection3 = styled.div`
   width: 70%;
-  height: 1600px;
+  height: auto;
   display: flex;
   position: relative;
-  margin-top: -180px;
+  top: 150px;
+  margin-bottom: 250px;
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `;
 
 const Title = styled.h1`
   font-size: 48px;
   margin-bottom: 50px;
   position: absolute;
-  top: 60px;
+  top: -100px;
   left: 0;
+
+  @media (max-width: 768px) {
+    top: -100px;
+  }
+
+  @media (max-width: 420px) {
+    font-size: 26px;
+  }
 `;
 
 const Divider = styled.hr`
@@ -158,8 +193,12 @@ const Divider = styled.hr`
   background: rgba(58, 58, 58, 1);
   opacity: 0.3;
   position: absolute;
-  top: 200px;
+  top: 10px;
   left: 0;
+
+  @media (max-width: 420px) {
+    top: -40px;
+  }
 `;
 
 const Divider2 = styled.hr`
@@ -167,8 +206,16 @@ const Divider2 = styled.hr`
   background: rgba(58, 58, 58, 1);
   opacity: 0.3;
   position: absolute;
-  top: 80px;
+  top: 10px;
   left: 0;
+
+  @media (max-width: 768px) {
+    top: 10px;
+  }
+
+  @media (max-width: 420px) {
+    top: -50px;
+  }
 `;
 
 const Divider3 = styled.hr`
@@ -176,34 +223,60 @@ const Divider3 = styled.hr`
   background: rgba(58, 58, 58, 1);
   opacity: 0.3;
   position: absolute;
-  top: 0;
+  top: 10px;
   left: 0;
+
+  @media (max-width: 768px) {
+    top: 10px;
+  }
+
+  @media (max-width: 420px) {
+    top: -43px;
+  }
 `;
 
 const FlexContainer = styled.div`
   width: 100%;
-  height: 700px;
+  height: auto;
   display: flex;
   align-items: flex-start;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const SubTitle = styled.h5`
   width: 40%;
   font-size: 30px;
   align-items: flex-start;
+
+  @media (max-width: 420px) {
+    font-size: 18px;
+    margin-top: 0px;
+  }
 `;
 
 const DescriptionWrapper = styled.div`
   width: 60%;
-  height: 700px;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin-top: 50px;
 
   img {
-    width: 793px;
+    width: 100%;
     margin-bottom: 20px;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-top: 0;
+
+    img {
+      max-width: 100%;
+    }
   }
 `;
 
@@ -211,41 +284,87 @@ const Description = styled.p`
   margin-top: 0;
   font-size: 22px;
   font-weight: bold;
+  line-height: 25px;
+
+  @media (max-width: 420px) {
+    font-size: 16px;
+  }
 `;
 
 const Description2 = styled.p`
   font-size: 18px;
   line-height: 30px;
+
+  @media (max-width: 420px) {
+    font-size: 16px;
+    line-height: 25px;
+  }
 `;
 
 const BrandSymbol = styled.img`
-  width: 790px;
+  width: 100%;
   align-self: flex-start;
   margin-top: 30px;
+  max-width: 100%;
+  object-fit: cover;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
 `;
 
 const FlexWrap = styled.div`
-  width: 75%;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   font-size: 18px;
+  position: relative;
 
-  .color {
-    width: 48px;
-    height: 48px;
-    background: black;
-    border: 2px solid white;
-  }
+  .brandColor {
+    display: flex;
+    align-items: center;
 
-  .colorRed {
-    width: 48px;
-    height: 48px;
-    background: red;
+    .color {
+      width: 48px;
+      height: 48px;
+      background: black;
+      border: 2px solid white;
+      margin-right: 20px;
+    }
+
+    .colorRed {
+      width: 48px;
+      height: 48px;
+      background: red;
+      margin-right: 20px;
+    }
   }
 
   .tag {
     color: rgba(143, 143, 143, 1);
     font-size: 14px;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
+  @media (max-width: 420px) {
+    flex-direction: column;
+
+    .brandColor {
+      width: 100%;
+
+      .colorText {
+        p:first-child {
+          font-size: 16px;
+        }
+
+        p:last-child {
+          font-size: 11.3px;
+        }
+      }
+    }
   }
 `;

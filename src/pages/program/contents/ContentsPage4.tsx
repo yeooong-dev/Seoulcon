@@ -5,6 +5,7 @@ import Footer from "../../../components/footer/Footer";
 import Triangle from "../../../assets/images/program/img-triangle.svg";
 import buttonArrow from "../../../assets/images/main/button-arrow-white.svg";
 import buttonArrowGreen from "../../../assets/images/main/button-arrow-green.svg";
+import buttonArrowBlack from "../../../assets/images/main/button-arrow-black.svg";
 import festival1 from "../../../assets/images/program/img-contents4.jpg";
 import { Link } from "react-router-dom";
 
@@ -19,6 +20,12 @@ const ContentsPage4 = () => {
           <Title>쇼플루언서 라이브세일즈 쇼</Title>
           <Divider />
           <Contents>
+            <div className='right'>
+              <div>
+                <img src={festival1} alt='팬 페스티벌' />
+              </div>
+            </div>
+
             <div className='left'>
               <p className='date'>일정</p>
               <p>• 23. 12. 30.(토) ~ 12. 31.(일)</p>
@@ -29,20 +36,16 @@ const ContentsPage4 = () => {
                 • 쇼플루언서 = 쇼호스트 + 인플루언서
                 <br />• 서울중소기업 상품 마케팅 전문가 인플루언서와 실시간 판매
               </p>
-              <div>
+
+              <div className='btnBox'>
                 <button className='green'>
                   신청하기 <img src={buttonArrowGreen} alt='detail' />
                 </button>
                 <Link to='/contents'>
-                  <button>
+                  <button className='back'>
                     돌아가기 <img src={buttonArrow} alt='detail' />
                   </button>
                 </Link>
-              </div>
-            </div>
-            <div className='right'>
-              <div>
-                <img src={festival1} alt='팬 페스티벌' />
               </div>
             </div>
           </Contents>
@@ -81,16 +84,32 @@ const FestivalWrap = styled.div`
     position: absolute;
     overflow: hidden;
   }
+
+  @media (max-width: 768px) {
+    .Triangle {
+      display: none;
+    }
+  }
 `;
 
 const PaddingWrap = styled.div`
   width: 80%;
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `;
 
 const Title = styled.h1`
   font-size: 48px;
   margin-top: 120px;
   color: rgba(191, 255, 106, 1);
+  position: relative;
+
+  @media (max-width: 420px) {
+    font-size: 26px;
+    line-height:40px;
+  }
 `;
 
 const Divider = styled.hr`
@@ -105,7 +124,7 @@ const Contents = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 300px;
+  margin-bottom: 100px;
 
   .left {
     width: 50%;
@@ -113,8 +132,13 @@ const Contents = styled.div`
     flex-direction: column;
     z-index: 9;
 
+    .btnBox {
+      width: 500px;
+      display: flex;
+    }
+
     p {
-      line-height: 30px;
+      line-height: 35px;
     }
 
     .date {
@@ -141,7 +165,7 @@ const Contents = styled.div`
         border: 1px solid white;
         border-radius: 50px;
         font-size: 16px;
-        margin-top: 80px;
+        margin-top: 100px;
         margin-bottom: 100px;
         cursor: pointer;
       }
@@ -155,6 +179,25 @@ const Contents = styled.div`
         border: 1px solid rgba(191, 255, 106, 1);
         color: rgba(191, 255, 106, 1);
       }
+      .green:hover {
+        background: rgba(191, 255, 106, 1);
+        transition: 0.2s;
+        color: black;
+      }
+
+      .green:hover img {
+        content: url(${buttonArrowBlack});
+      }
+
+      .back:hover {
+        background: white;
+        transition: 0.2s;
+        color: black;
+      }
+
+      .back:hover img {
+        content: url(${buttonArrowBlack});
+      }
     }
   }
 
@@ -166,6 +209,46 @@ const Contents = styled.div`
 
     img {
       width: 80%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    justify-content: center;
+    flex-direction: column;
+
+    .left {
+      width: 100%;
+      margin-top: 50px;
+    }
+
+    .right {
+      width: 100%;
+      position: static;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 420px) {
+    .left {
+      font-size: 16px;
+
+      .btnBox {
+        width: 100%;
+        flex-direction: column;
+
+        button {
+          width: 100%;
+          margin-top: 30px;
+          margin-bottom: 30px;
+        }
+
+        button:first-child {
+          margin-bottom: -10px;
+        }
+      }
     }
   }
 `;

@@ -4,8 +4,8 @@ import Navibar from "../../../components/navigation/Navibar";
 import Footer from "../../../components/footer/Footer";
 import Triangle from "../../../assets/images/program/img-triangle.svg";
 import buttonArrow from "../../../assets/images/main/button-arrow-white.svg";
-import buttonArrowGreen from "../../../assets/images/main/button-arrow-green.svg";
 import festival1 from "../../../assets/images/program/img-festival5.jpg";
+import buttonArrowBlack from "../../../assets/images/main/button-arrow-black.svg";
 import { Link } from "react-router-dom";
 
 const FestivalPage5 = () => {
@@ -16,9 +16,15 @@ const FestivalPage5 = () => {
         <img src={festival1} alt='셀럽 프라이빗 EDM 파티' className='bg' />
         <PaddingWrap>
           <img src={Triangle} alt='도형' className='Triangle' />
-          <Title>셀럽 프라이빗 EDM 파티</Title>
+          <Title>서울콘 프라이빗 파티 [EDM 등]</Title>
           <Divider />
           <Contents>
+            <div className='right'>
+              <div>
+                <img src={festival1} alt='팬 페스티벌' />
+              </div>
+            </div>
+
             <div className='left'>
               <p className='date'>일정</p>
               <p>• 23. 12. 30.(토) ~ 12. 31.(일)</p>
@@ -26,27 +32,17 @@ const FestivalPage5 = () => {
               <p>• DDP 디자인랩 3층 디자인홀, 4층 잔디사랑방</p>
               <p className='date'>내용</p>
               <p>
-                • 서울콘 참여 셀럽, 인플루언서의 프라이빗 네트워킹
-                <br />• 협/단체 프라이빗 네트워킹
-                <br />• 크리에이티브포스 글로벌 교류
-                <br />• EDM 파티 등
+                • 서울콘 참여 셀럽 인플루언서의 프라이빗 네트워킹
+                <br />• 협/단체, 크리에이티브포스 간 교류 등
               </p>
               <p className='date'>협력</p>
-              <p>• 인플루언서산업협회 등</p>
+              <p>• 다수 협/단체</p>
               <div>
-                <button className='green'>
-                  신청하기 <img src={buttonArrowGreen} alt='detail' />
-                </button>
                 <Link to='/festival'>
                   <button>
                     돌아가기 <img src={buttonArrow} alt='detail' />
                   </button>
                 </Link>
-              </div>
-            </div>
-            <div className='right'>
-              <div>
-                <img src={festival1} alt='팬 페스티벌' />
               </div>
             </div>
           </Contents>
@@ -85,17 +81,33 @@ const FestivalWrap = styled.div`
     position: absolute;
     overflow: hidden;
   }
+
+  @media (max-width: 768px) {
+    .Triangle {
+      display: none;
+    }
+  }
 `;
 
 const PaddingWrap = styled.div`
   width: 80%;
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `;
 
 const Title = styled.h1`
   font-size: 48px;
   margin-top: 120px;
   color: rgba(191, 255, 106, 1);
-  z-index: 99;
+  position: relative;
+  line-height: 4rem;
+
+  @media (max-width: 420px) {
+    font-size: 26px;
+    line-height: 2.3rem;
+  }
 `;
 
 const Divider = styled.hr`
@@ -155,10 +167,14 @@ const Contents = styled.div`
         margin-left: 5px;
       }
 
-      .green {
-        margin-right: 20px;
-        border: 1px solid rgba(191, 255, 106, 1);
-        color: rgba(191, 255, 106, 1);
+      button:hover {
+        background: white;
+        transition: 0.2s;
+        color: black;
+      }
+
+      button:hover img {
+        content: url(${buttonArrowBlack});
       }
     }
   }
@@ -171,6 +187,39 @@ const Contents = styled.div`
 
     img {
       width: 80%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    justify-content: center;
+    flex-direction: column;
+
+    .left {
+      width: 100%;
+      margin-top: 50px;
+    }
+
+    .right {
+      width: 100%;
+      position: static;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 420px) {
+    .left {
+      font-size: 16px;
+
+      div {
+        button {
+          width: 100%;
+          margin-top: 30px;
+          margin-bottom: 30px;
+        }
+      }
     }
   }
 `;

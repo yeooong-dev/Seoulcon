@@ -4,6 +4,7 @@ import Navibar from "../../components/navigation/Navibar";
 import Footer from "../../components/footer/Footer";
 import FestivalImg4 from "../../assets/images/program/img-festival4.jpg";
 import buttonArrow from "../../assets/images/main/button-arrow-white.svg";
+import buttonArrowBlack from "../../assets/images/main/button-arrow-black.svg";
 
 const Attend = () => {
   return (
@@ -93,12 +94,20 @@ const FestivalWrap = styled.div`
 
 const PaddingWrap = styled.div`
   width: 80%;
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `;
 
 const Title = styled.h1`
   font-size: 48px;
   margin-top: 120px;
   z-index: 9;
+
+  @media (max-width: 375px) {
+    font-size: 26px;
+  }
 `;
 
 const Divider = styled.hr`
@@ -124,14 +133,46 @@ const Contents = styled.div`
     flex-direction: column;
     text-align: center;
     overflow: hidden;
-    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      pointer-events: none;
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(47, 83, 0, 0.5) 100%
+      );
+      transition: 0.3s;
+      opacity: 0;
+      z-index: 1;
+    }
+
+    &:hover::after {
+      opacity: 1;
+    }
+
+    .conImg {
+      width: 100%;
+      height: auto;
+      transition: transform 0.5s, filter 0.3s;
+      will-change: transform, filter;
+      filter: brightness(0.3);
+    }
 
     img {
       width: 100%;
     }
 
-    .conImg {
-      filter: brightness(0.3);
+    &:hover .conImg {
+      filter: none;
+      transform: scale(1.1);
+      transition: 0.5s;
     }
 
     .center {
@@ -140,12 +181,12 @@ const Contents = styled.div`
       align-items: center;
       justify-content: center;
       flex-direction: column;
+      z-index: 2;
 
       b {
         display: inline-block;
         color: rgba(191, 255, 106, 1);
         font-size: 30px;
-        margin-bottom: 30px;
       }
     }
 
@@ -165,6 +206,25 @@ const Contents = styled.div`
         height: 12px;
         margin-left: 5px;
       }
+    }
+
+    button:hover {
+      background: white;
+      color: black;
+      transition: 0.2s;
+    }
+
+    button:hover img {
+      content: url(${buttonArrowBlack});
+    }
+  }
+
+  @media (max-width: 768px) {
+    justify-content: center;
+    flex-direction: column;
+
+    .box {
+      width: 100%;
     }
   }
 `;

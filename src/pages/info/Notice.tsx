@@ -20,82 +20,143 @@ const Notice = () => {
                 <span>순서</span>
                 <span>제목</span>
               </div>
-              <span>등록일</span>
+              <div className='right'>
+                <span>등록일</span>
+                <span>조회수</span>
+              </div>
             </div>
             <Divider2 />
 
-            <div className='list'>
-              <span className='num'>1</span>
+            <div className='listBox'>
               <Link to='/noticePage'>
-                <span className='title'>
-                  [2023 서울콘] 현장 DDP 입장 순서 안내
-                </span>
+                <div className='list'>
+                  <span className='num'>1</span>
+                  <span className='title'>
+                    [2023 서울콘] 현장 DDP 입장 순서 안내
+                  </span>
+                  <div className='rightBox'>
+                    <span className='date'>2023.07.27.</span>
+                    <span className='views'>3,345</span>
+                  </div>
+                </div>
               </Link>
-              <span className='date'>2023.07.27.</span>
-            </div>
 
-            <div className='list'>
-              <span className='num'>1</span>
-              <span className='title'>
-                [2023 서울콘] 현장 DDP 입장 순서 안내
-              </span>
-              <span className='date'>2023.07.27.</span>
-            </div>
-            <div className='list'>
-              <span className='num'>1</span>
-              <span className='title'>
-                [2023 서울콘] 현장 DDP 입장 순서 안내
-              </span>
-              <span className='date'>2023.07.27.</span>
-            </div>
-            <div className='list'>
-              <span className='num'>1</span>
-              <span className='title'>
-                [2023 서울콘] 현장 DDP 입장 순서 안내
-              </span>
-              <span className='date'>2023.07.27.</span>
-            </div>
-            <div className='list'>
-              <span className='num'>1</span>
-              <span className='title'>
-                [2023 서울콘] 현장 DDP 입장 순서 안내
-              </span>
-              <span className='date'>2023.07.27.</span>
-            </div>
-            <div className='list'>
-              <span className='num'>1</span>
-              <span className='title'>
-                [2023 서울콘] 현장 DDP 입장 순서 안내
-              </span>
-              <span className='date'>2023.07.27.</span>
-            </div>
-            <div className='list'>
-              <span className='num'>1</span>
-              <span className='title'>
-                [2023 서울콘] 현장 DDP 입장 순서 안내
-              </span>
-              <span className='date'>2023.07.27.</span>
-            </div>
-            <div className='list'>
-              <span className='num'>1</span>
-              <span className='title'>
-                [2023 서울콘] 현장 DDP 입장 순서 안내
-              </span>
-              <span className='date'>2023.07.27.</span>
-            </div>
-            <div className='list'>
-              <span className='num'>1</span>
-              <span className='title'>
-                [2023 서울콘] 현장 DDP 입장 순서 안내
-              </span>
-              <span className='date'>2023.07.27.</span>
-            </div>
-            <div className='list'>
-              <span className='num'>1</span>
-              <span className='title'>
-                [2023 서울콘] 현장 DDP 입장 순서 안내
-              </span>
-              <span className='date'>2023.07.27.</span>
+              <Link to='/noticePage'>
+                <div className='list'>
+                  <span className='num'>1</span>
+                  <span className='title'>
+                    [2023 서울콘] 현장 DDP 입장 순서 안내
+                  </span>
+                  <div className='rightBox'>
+                    <span className='date'>2023.07.27.</span>
+                    <span className='views'>3,345</span>
+                  </div>
+                </div>
+              </Link>
+
+              <Link to='/noticePage'>
+                <div className='list'>
+                  <span className='num'>1</span>
+                  <span className='title'>
+                    [2023 서울콘] 현장 DDP 입장 순서 안내
+                  </span>
+                  <div className='rightBox'>
+                    <span className='date'>2023.07.27.</span>
+                    <span className='views'>3,345</span>
+                  </div>
+                </div>
+              </Link>
+
+              <Link to='/noticePage'>
+                <div className='list'>
+                  <span className='num'>1</span>
+                  <span className='title'>
+                    [2023 서울콘] 현장 DDP 입장 순서 안내
+                  </span>
+                  <div className='rightBox'>
+                    <span className='date'>2023.07.27.</span>
+                    <span className='views'>3,345</span>
+                  </div>
+                </div>
+              </Link>
+
+              <Link to='/noticePage'>
+                <div className='list'>
+                  <span className='num'>1</span>
+                  <span className='title'>
+                    [2023 서울콘] 현장 DDP 입장 순서 안내
+                  </span>
+                  <div className='rightBox'>
+                    <span className='date'>2023.07.27.</span>
+                    <span className='views'>3,345</span>
+                  </div>
+                </div>
+              </Link>
+
+              <Link to='/noticePage'>
+                <div className='list'>
+                  <span className='num'>1</span>
+                  <span className='title'>
+                    [2023 서울콘] 현장 DDP 입장 순서 안내
+                  </span>
+                  <div className='rightBox'>
+                    <span className='date'>2023.07.27.</span>
+                    <span className='views'>3,345</span>
+                  </div>
+                </div>
+              </Link>
+
+              <Link to='/noticePage'>
+                <div className='list'>
+                  <span className='num'>1</span>
+                  <span className='title'>
+                    [2023 서울콘] 현장 DDP 입장 순서 안내
+                  </span>
+                  <div className='rightBox'>
+                    <span className='date'>2023.07.27.</span>
+                    <span className='views'>3,345</span>
+                  </div>
+                </div>
+              </Link>
+
+              <Link to='/noticePage'>
+                <div className='list'>
+                  <span className='num'>1</span>
+                  <span className='title'>
+                    [2023 서울콘] 현장 DDP 입장 순서 안내
+                  </span>
+                  <div className='rightBox'>
+                    <span className='date'>2023.07.27.</span>
+                    <span className='views'>3,345</span>
+                  </div>
+                </div>
+              </Link>
+
+              <Link to='/noticePage'>
+                <div className='list'>
+                  <span className='num'>1</span>
+                  <span className='title'>
+                    [2023 서울콘] 현장 DDP 입장 순서 안내
+                  </span>
+                  <div className='rightBox'>
+                    <span className='date'>2023.07.27.</span>
+                    <span className='views'>3,345</span>
+                  </div>
+                </div>
+              </Link>
+
+              <Link to='/noticePage'>
+                <div className='list'>
+                  <span className='num'>1</span>
+                  <span className='title'>
+                    [2023 서울콘] 현장 DDP 입장 순서 안내
+                  </span>
+                  <div className='rightBox'>
+                    <span className='date'>2023.07.27.</span>
+                    <span className='views'>3,345</span>
+                  </div>
+                </div>
+              </Link>
             </div>
           </Contents>
         </PaddingWrap>
@@ -123,118 +184,191 @@ const FestivalWrap = styled.div`
     top: 0px;
     left: -50px;
   }
+
+  @media (max-width: 768px) {
+    .square {
+      display: none;
+    }
+  }
 `;
 
 const PaddingWrap = styled.div`
   width: 60%;
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `;
 
 const Title = styled.h1`
   font-size: 48px;
   margin-top: 120px;
   z-index: 9;
+
+  @media (max-width: 375px) {
+    font-size: 26px;
+  }
 `;
 
 const Divider = styled.hr`
   width: 100%;
   background: rgba(58, 58, 58, 1);
   opacity: 0.3;
-  margin-bottom: 20px;
+
+  @media (max-width: 420px) {
+    display: none;
+  }
 `;
 
 const Divider2 = styled.hr`
   width: 100%;
   background: rgba(58, 58, 58, 1);
+  margin: 0;
+  margin-top: 10px;
 `;
 
 const Contents = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  width: 100%;
   margin-bottom: 200px;
 
-  .list {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgba(58, 58, 58, 1);
-
-    a {
-      text-decoration: none;
-      color: inherit;
-      display: flex; 
-      align-items: center;
-      justify-content: flex-start;
-      width: 64%; 
-      overflow: hidden;
-      
-      &.title {
-        white-space: nowrap;
-        text-overflow: ellipsis;
-      }
-    }
-  }
-
   .top {
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    padding-bottom: 10px;
+    align-items: center;
+    padding: 20px;
 
     .left {
-      display: flex;
       width: 80%;
-      justify-content: space-between;
+      display: flex;
+      align-items: center;
+      justify-content: start;
 
-      span {
-        display: flex;
-        align-items: center;
+      span:first-child {
+        flex: 0 0 45px;
+        margin-left: 10px;
+      }
 
-        &:first-child {
-          justify-content: center;
-          width: 10%;
-        }
-        &:last-child {
-          justify-content: flex-start;
-          width: 85%;
-        }
+      span:nth-child(2) {
+        flex: 2;
+        margin-left: 15px;
       }
     }
 
-    span:last-child {
+    .right {
+      width: 20%;
+      flex: 1;
       display: flex;
       align-items: center;
-      justify-content: flex-start;
-      width: 20%;
+      justify-content: flex-end;
+
+      span:first-child {
+        flex: 0 0 100px;
+        text-align: left;
+      }
+
+      span:nth-child(2) {
+        flex: 0 0 130px;
+        text-align: center;
+      }
+    }
+    span {
+      color: white;
     }
   }
 
-  div:not(.top) {
+  hr {
+    border-top: 1px solid white;
+    margin: 0px 0;
+  }
+
+  .listBox {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
+    justify-content: center;
+    flex-direction: column;
 
-    .num {
+    .list {
       display: flex;
       align-items: center;
-      justify-content: center;
-      width: 8%;
+      width: 100%;
+      height: 65px;
+      border-bottom: 1px solid rgba(58, 58, 58, 1);
+      cursor: pointer;
+
+      .rightBox {
+        width: 260px;
+      }
+
+      &:hover {
+        background: #171717;
+        transition: 0.1s;
+      }
+
+      .num {
+        flex: 0 1 50px;
+        text-align: center;
+        margin-left: 20px;
+      }
+
+      .title {
+        flex: 1;
+        text-align: left;
+        padding-left: 20px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      
+      }
+
+      .date {
+        margin-right: 0px;
+        padding-left:50px;
+      }
+
+      .views {
+        margin-left: 43px;
+      }
     }
 
-    .title {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      width: 64%;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
+    span {
+      color: white;
+    }
+  }
+
+  @media (max-width: 420px) {
+    font-size: 14px;
+    margin-bottom: 100px;
+
+    .top {
+      display: none;
     }
 
-    .date {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      width: 20%;
+    .listBox {
+      .list {
+        width: 100%;
+        align-items: flex-start;
+        flex-direction: column;
+        position: relative;
+  
+        .num {
+          display: none;
+        }
+  
+        .title {
+          position: absolute;
+          top: 10px;
+          left: -20px;
+        }
+  
+        .rightBox {
+          position: absolute;
+          bottom: 10px;
+          left: -50px;
+  
+          span {
+            color: rgba(171, 171, 171, 1);
+          }
+        }
     }
   }
 `;

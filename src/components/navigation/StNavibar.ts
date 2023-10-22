@@ -1,15 +1,20 @@
 import styled from "styled-components";
 
 export const NaviWrap = styled.div`
-  position: absolute;
+  width: 100%;
+  position: relative;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 80px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1;
+
+  .padding {
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+  }
 
   &::before {
     content: "";
@@ -117,9 +122,11 @@ export const NaviWrap = styled.div`
         }
       }
     }
+
     @media (max-width: 768px) {
+      position: relative;
+
       .menu-container,
-      .mobile-menu-toggle + button,
       .attend,
       .ko,
       .en,
@@ -128,13 +135,69 @@ export const NaviWrap = styled.div`
       }
 
       .mobile-menu-toggle {
+        position: absolute;
+        right: 0;
         display: flex;
         width: 90px;
-        height: 100%;
+        height: auto;
+        z-index: 999;
+      }
+
+      &.open .menu-container,
+      &.open .menu-container + button,
+      &.open .attend,
+      &.open .ko,
+      &.open .en,
+      &.open .submenu {
+        display: block;
       }
 
       &.open .menu-container {
-        display: block;
+        transform: translateX(0%);
+      }
+
+      .menu-container {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 300px;
+        height: 100vh;
+        background: black;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        display: flex;
+        flex-direction: column;
+
+        .menuBtn3 {
+          position: absolute;
+          top: 200px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    background: red;
+
+    .padding {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 375px) {
+    .padding {
+      width: 100%;
+
+      .left {
+        padding-left: 10px;
+      }
+
+      .right {
+        button {
+          width: 100%;
+          margin-right: 10px;
+        }
       }
     }
   }

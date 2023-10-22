@@ -44,9 +44,9 @@ const Main = () => {
         <img src={mainImg} alt='main_img' />
         <TextCenter>
           <p>2023 SEOULCON INFLUENCER</p>
-          <h1>영국남자, T1, 박재범</h1>
+          <h1>영국남자, T1, 장엘리나</h1>
           <button>
-            자세히보기 <img src={buttonArrow} alt='detail' />
+            더 보기 <img src={buttonArrow} alt='detail' />
           </button>
         </TextCenter>
         <BtnBetween>
@@ -80,7 +80,7 @@ const Main = () => {
           <div className='text_top'>
             <div className='left'>
               <h1>인플루언서 라인업</h1>
-              <p>전 세계 30개국, 3,000명, 24억 팔로워와 함께해 보세요</p>
+              <p>전 세계 50개 국, 3,000팀, 30억 팔로워와 함께하세요</p>
             </div>
 
             <div className='right'>
@@ -210,7 +210,7 @@ const Main = () => {
         <img src={triangle} alt='triangle' className='triangle' />
         <div className='padding'>
           <div className='text2'>
-            <h1>서울콘 프로그램</h1>
+            <h1>프로그램</h1>
             <p>서울콘이 준비한 다양한 프로그램을 만나보세요</p>
           </div>
 
@@ -271,6 +271,7 @@ const Main = () => {
             </div>
             <div className='right'>
               <span>등록일</span>
+              <span>조회수</span>
             </div>
           </div>
           <hr />
@@ -279,33 +280,58 @@ const Main = () => {
             <Link to='/noticePage'>
               <div className='list'>
                 <span className='num'>1</span>
-                <span>[2023 서울콘] 현장 DDP 입장 순서 안내</span>
-                <span>2023.07.27.</span>
+                <span className='title'>
+                  [2023 서울콘] 현장 DDP 입장 순서 안내
+                </span>
+                <div className='rightBox'>
+                  <span className='date'>2023.07.27.</span>
+                  <span className='views'>3,345</span>
+                </div>
               </div>
             </Link>
 
             <div className='list'>
               <span className='num'>1</span>
-              <span>[2023 서울콘] 현장 DDP 입장 순서 안내</span>
-              <span>2023.07.27.</span>
+              <span className='title'>
+                [2023 서울콘] 현장 DDP 입장 순서 안내
+              </span>
+              <div className='rightBox'>
+                <span className='date'>2023.07.27.</span>
+                <span className='views'>3,345</span>
+              </div>
             </div>
 
             <div className='list'>
               <span className='num'>1</span>
-              <span>[2023 서울콘] 현장 DDP 입장 순서 안내</span>
-              <span>2023.07.27.</span>
+              <span className='title'>
+                [2023 서울콘] 현장 DDP 입장 순서 안내
+              </span>
+              <div className='rightBox'>
+                <span className='date'>2023.07.27.</span>
+                <span className='views'>3,345</span>
+              </div>
             </div>
 
             <div className='list'>
               <span className='num'>1</span>
-              <span>[2023 서울콘] 현장 DDP 입장 순서 안내</span>
-              <span>2023.07.27.</span>
+              <span className='title'>
+                [2023 서울콘] 현장 DDP 입장 순서 안내
+              </span>
+              <div className='rightBox'>
+                <span className='date'>2023.07.27.</span>
+                <span className='views'>3,345</span>
+              </div>
             </div>
 
             <div className='list'>
               <span className='num'>1</span>
-              <span>[2023 서울콘] 현장 DDP 입장 순서 안내</span>
-              <span>2023.07.27.</span>
+              <span className='title'>
+                [2023 서울콘] 현장 DDP 입장 순서 안내
+              </span>
+              <div className='rightBox'>
+                <span className='date'>2023.07.27.</span>
+                <span className='views'>3,345</span>
+              </div>
             </div>
           </div>
         </div>

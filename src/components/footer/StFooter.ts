@@ -32,6 +32,7 @@ export const FooterWrap = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 999;
 
     .right {
       padding-right: 4rem;
@@ -39,6 +40,26 @@ export const FooterWrap = styled.div`
       img {
         margin-left: 10px;
         cursor: pointer;
+      }
+    }
+  }
+
+  @media (max-width: 420px) {
+    .top {
+      left: -15px;
+      border: none;
+    }
+
+    .bottom {
+      left: -15px;
+      font-size: 12px;
+
+      .right {
+        padding-right: 1.6rem;
+
+        img:last-child {
+          display: none;
+        }
       }
     }
   }

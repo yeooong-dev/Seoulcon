@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
 
 export const MainWrap = styled.div`
   width: 100%;
-  height: 1080px;
+  height: 100vh;
   position: relative;
 
   &::before {
@@ -77,6 +77,20 @@ export const TextCenter = styled.div`
   button:hover img {
     content: url(${buttonArrowBlack});
   }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
+  @media (max-width: 375px) {
+    h1 {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
 `;
 
 export const BtnBetween = styled.div`
@@ -103,11 +117,15 @@ export const BtnBetween = styled.div`
   button:last-child {
     margin-right: 50px;
   }
+
+  @media (max-width: 375px) {
+    display: none;
+  }
 `;
 
 export const Bottom = styled.div`
   position: absolute;
-  bottom: 50px;
+  bottom: 100px;
   left: 50%;
   transform: translateX(-50%);
 
@@ -130,7 +148,7 @@ export const Bottom = styled.div`
 
 export const YoutubeWrap = styled.div`
   width: 100%;
-  height: 1080px;
+  height: 100vh;
   background: black;
   display: flex;
   justify-content: center;
@@ -142,7 +160,7 @@ export const YoutubeWrap = styled.div`
     width: 372px;
     position: absolute;
     top: 130px;
-    left: 350px;
+    left: 15%;
   }
 
   h1 {
@@ -150,6 +168,7 @@ export const YoutubeWrap = styled.div`
     color: white;
     margin-bottom: 10px;
     font-weight: bold;
+    position: relative;
   }
 
   p {
@@ -167,6 +186,31 @@ export const YoutubeWrap = styled.div`
       width: 90%;
       object-fit: cover;
       z-index: 10;
+    }
+  }
+
+  @media (max-width: 768px) {
+    img {
+      position: absolute;
+      top: 250px;
+      left: -10%;
+    }
+  }
+
+  @media (max-width: 375px) {
+    img {
+      display: none;
+    }
+
+    h1 {
+      font-size: 26px;
+    }
+
+    p {
+      font-size: 16px;
+      width: 90%;
+      text-align: center;
+      line-height: 1.5rem;
     }
   }
 `;
@@ -245,12 +289,17 @@ export const LineupWrap = styled.div`
     white-space: nowrap;
     margin-top: -50px;
 
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
     .imgContainer {
       width: auto;
       flex: 0 0 auto;
       position: relative;
       margin-right: 20px;
       display: inline-block;
+      overflow-y: hidden;
 
       .width {
         width: 300px;
@@ -315,11 +364,121 @@ export const LineupWrap = styled.div`
       margin-right: 220px;
     }
   }
+
+  @media (max-width: 768px) {
+    .padding {
+      padding-left: 5rem;
+    }
+
+    .text_top {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-direction: column;
+      margin-top: -30px;
+
+      .left {
+        width: 100%;
+      }
+
+      .right {
+        width: 100%;
+        padding: 0;
+        margin-top: -50px;
+        margin-bottom: 60px;
+
+        button {
+          pointer-events: none;
+        }
+      }
+    }
+    .imgBox {
+      .imgContainer {
+        .width {
+          width: 260px;
+
+          img {
+            pointer-events: none;
+          }
+        }
+        .text {
+          display: none;
+        }
+      }
+      .imgContainer:last-child {
+        margin-right: 100px;
+      }
+    }
+  }
+
+  @media (max-width: 375px) {
+    .padding {
+      padding-left: 3rem;
+
+      .text_top {
+        width: 80%;
+
+        .left {
+          h1 {
+            font-size: 26px;
+          }
+          p {
+            font-size: 16px;
+            line-height: 1.5rem;
+          }
+        }
+      }
+      .imgBox {
+        .imgContainer {
+          .width {
+            width: 136px;
+          }
+          .text {
+            position: static;
+            transform: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: -220px;
+
+            span {
+              font-size: 14px;
+            }
+
+            b {
+              font-size: 20px;
+            }
+          }
+
+          .hoverText,
+          b {
+            display: block;
+          }
+
+          img {
+            &:hover {
+              transform: none;
+              filter: none;
+            }
+          }
+
+          &:hover .hoverText,
+          &:hover b {
+            display: block;
+          }
+        }
+        .imgContainer:last-child {
+          margin-right: 80px;
+        }
+      }
+    }
+  }
 `;
 
 export const ProgramWrap = styled.div`
   width: 100%;
-  height: 1800px;
+  height: auto;
   background: black;
   display: flex;
   justify-content: center;
@@ -338,6 +497,7 @@ export const ProgramWrap = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 
     .text2 {
       width: 100%;
@@ -397,7 +557,6 @@ export const ProgramWrap = styled.div`
               rgba(0, 0, 0, 0.5) 0%,
               rgba(47, 83, 0, 0.5) 100%
             );
-            z-index: 1;
           }
 
           img {
@@ -430,16 +589,83 @@ export const ProgramWrap = styled.div`
       }
     }
   }
+
+  @media (max-width: 768px) {
+    .triangle {
+      display: none;
+    }
+
+    .padding {
+      .imgWrap {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        .left {
+          margin-bottom: 50px;
+        }
+        .right {
+          margin-bottom: -40px;
+        }
+
+        .box {
+          pointer-events: none;
+
+          img {
+            pointer-events: none;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 375px) {
+    margin-top: -530px;
+
+    .padding {
+      width: 90%;
+
+      .text2 {
+        h1 {
+          font-size: 26px;
+          margin-bottom: 30px;
+        }
+        p {
+          font-size: 16px;
+          line-height: 25px;
+        }
+      }
+      .imgWrap {
+        .left {
+          margin-right: 0;
+        }
+
+        .left,
+        .right {
+          .box {
+            max-width: 100%;
+
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
 `;
 
 export const NoticeWrap = styled.div`
   width: 100%;
-  height: 800px;
+  height: auto;
   background-color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 50px;
+  position: relative;
+  padding-bottom: 200px;
 
   h1 {
     font-size: 3rem;
@@ -464,28 +690,40 @@ export const NoticeWrap = styled.div`
       align-items: center;
       padding: 20px;
 
-      .right {
-        span {
-          margin-right: 120px;
-        }
-      }
-
       .left {
         width: 80%;
         display: flex;
         align-items: center;
+        justify-content: start;
 
         span:first-child {
-          width: 100%;
-          flex: 0 0 50px;
-          text-align: center;
+          flex: 0 0 45px;
+          margin-left: 10px;
         }
 
         span:nth-child(2) {
-          margin-left: 80px;
+          flex: 2;
+          margin-left: 15px;
         }
       }
 
+      .right {
+        width: 20%;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        span:first-child {
+          flex: 0 0 110px;
+          text-align: left;
+        }
+
+        span:nth-child(2) {
+          flex: 0 0 130px;
+          text-align: center;
+        }
+      }
       span {
         color: white;
       }
@@ -499,7 +737,6 @@ export const NoticeWrap = styled.div`
     .listBox {
       display: flex;
       justify-content: center;
-      display: flex;
       flex-direction: column;
 
       .list {
@@ -510,32 +747,38 @@ export const NoticeWrap = styled.div`
         border-bottom: 1px solid rgba(58, 58, 58, 1);
         cursor: pointer;
 
+        .rightBox {
+          width: 220px;
+        }
+
         &:hover {
           background: #171717;
           transition: 0.1s;
         }
 
         .num {
-          flex: 0 0 50px;
+          flex: 0 1 50px;
           text-align: center;
           margin-left: 20px;
         }
-      }
 
-      span:first-child {
-        flex: 0 0 50px;
-        text-align: center;
-      }
+        .title {
+          flex: 1;
+          text-align: left;
+          padding-left: 20px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
 
-      span:nth-child(2) {
-        flex: 2;
-        text-align: left;
-        padding-left: 80px;
-      }
+        .date {
+          flex: 0 1 50px;
+          margin-right: 55px;
+        }
 
-      span:last-child {
-        flex: 0 0 140px;
-        text-align: left;
+        .views {
+          flex: 0 1 50px;
+        }
       }
 
       span {
@@ -569,5 +812,113 @@ export const NoticeWrap = styled.div`
 
   button:hover img {
     content: url(${buttonArrowBlack});
+  }
+
+  @media (max-width: 768px) {
+    .content {
+      max-width: 90%;
+
+      .top {
+        .left {
+          span:first-child {
+            margin-left: 0px;
+          }
+
+          span:nth-child(2) {
+            margin-left: 18px;
+          }
+        }
+
+        .right {
+          span:first-child {
+          }
+        }
+      }
+
+      .listBox {
+        .list {
+          .num {
+            margin-left: 5px;
+          }
+
+          .title {
+            padding-left: 30px;
+          }
+
+          .date {
+            flex-basis: 0px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 375px) {
+    h1 {
+      font-size: 26px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    .content {
+      max-width: 90%;
+
+      .top {
+        display: none;
+      }
+    }
+
+    .listBox {
+      width: 100%;
+
+      .list {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+        position: relative;
+
+        .num {
+          display: none;
+        }
+
+        .title {
+          flex: none;
+          width: 100%;
+          text-align: left;
+          position: absolute;
+          top: 10px;
+          left: -20px;
+        }
+
+        .rightBox {
+          width: 100%;
+          position: absolute;
+          bottom: 10px;
+          left: 10px;
+        }
+
+        .date,
+        .views {
+          flex: none;
+          display: inline;
+          font-size: 14px;
+          color: rgba(171, 171, 171, 1);
+        }
+
+        .date {
+          flex: none;
+          display: inline;
+        }
+
+        .views {
+          flex: none;
+          display: inline;
+        }
+      }
+    }
   }
 `;

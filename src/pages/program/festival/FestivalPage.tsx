@@ -6,6 +6,7 @@ import Triangle from "../../../assets/images/program/img-triangle.svg";
 import buttonArrow from "../../../assets/images/main/button-arrow-white.svg";
 import buttonArrowGreen from "../../../assets/images/main/button-arrow-green.svg";
 import festival1 from "../../../assets/images/program/img-festival1.jpg";
+import buttonArrowBlack from "../../../assets/images/main/button-arrow-black.svg";
 import { Link } from "react-router-dom";
 
 const FestivalPage = () => {
@@ -16,12 +17,15 @@ const FestivalPage = () => {
         <img src={festival1} alt='팬 페스티벌' className='bg' />
         <PaddingWrap>
           <img src={Triangle} alt='도형' className='Triangle' />
-          <Title>
-            [T1 CON]
-            <br />팬 페스티벌
-          </Title>
+          <Title>T1 CON</Title>
           <Divider />
           <Contents>
+            <div className='right'>
+              <div>
+                <img src={festival1} alt='팬 페스티벌' />
+              </div>
+            </div>
+
             <div className='left'>
               <p className='date'>일정</p>
               <p>• 23. 12. 30.(토) 10:00 ~ 18:00</p>
@@ -31,27 +35,21 @@ const FestivalPage = () => {
               <p>
                 • E스포츠 구단 T1의 한 해를 마무리하는 팬 페스티벌
                 <br />
-                • 팬들과 함께 진행하는 팬 페스티벌
-                <br />
-                • 선수와 관객들이 함께하는 각종 프로그램 및 이벤트 매치
-                <br />• 팬미팅, 팬 토크쇼 등 다양한 이벤트, T1구단 굿즈 판매
+                • 선수와 팬들이 함께하는 각종 프로그램 및 이벤트 매치
+                <br />• T1구단 굿즈 판매
               </p>
               <p className='date'>협력</p>
               <p>• SK텔레콤 T1구단</p>
-              <div>
+
+              <div className='btnBox'>
                 <button className='green'>
                   신청하기 <img src={buttonArrowGreen} alt='detail' />
                 </button>
                 <Link to='/festival'>
-                  <button>
+                  <button className='back'>
                     돌아가기 <img src={buttonArrow} alt='detail' />
                   </button>
                 </Link>
-              </div>
-            </div>
-            <div className='right'>
-              <div>
-                <img src={festival1} alt='팬 페스티벌' />
               </div>
             </div>
           </Contents>
@@ -90,17 +88,32 @@ const FestivalWrap = styled.div`
     position: absolute;
     overflow: hidden;
   }
+
+  @media (max-width: 768px) {
+    .Triangle {
+      display: none;
+    }
+  }
 `;
 
 const PaddingWrap = styled.div`
   width: 80%;
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `;
 
 const Title = styled.h1`
   font-size: 48px;
   margin-top: 120px;
+  line-height: 36px;
   color: rgba(191, 255, 106, 1);
-  line-height: 65px;
+  position: relative;
+
+  @media (max-width: 420px) {
+    font-size: 26px;
+  }
 `;
 
 const Divider = styled.hr`
@@ -122,6 +135,11 @@ const Contents = styled.div`
     display: flex;
     flex-direction: column;
     z-index: 9;
+
+    .btnBox {
+      width: 500px;
+      display: flex;
+    }
 
     p {
       line-height: 35px;
@@ -165,6 +183,25 @@ const Contents = styled.div`
         border: 1px solid rgba(191, 255, 106, 1);
         color: rgba(191, 255, 106, 1);
       }
+      .green:hover {
+        background: rgba(191, 255, 106, 1);
+        transition: 0.2s;
+        color: black;
+      }
+
+      .green:hover img {
+        content: url(${buttonArrowBlack});
+      }
+
+      .back:hover {
+        background: white;
+        transition: 0.2s;
+        color: black;
+      }
+
+      .back:hover img {
+        content: url(${buttonArrowBlack});
+      }
     }
   }
 
@@ -176,6 +213,46 @@ const Contents = styled.div`
 
     img {
       width: 80%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    justify-content: center;
+    flex-direction: column;
+
+    .left {
+      width: 100%;
+      margin-top: 50px;
+    }
+
+    .right {
+      width: 100%;
+      position: static;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 420px) {
+    .left {
+      font-size: 16px;
+
+      .btnBox {
+        width: 100%;
+        flex-direction: column;
+
+        button {
+          width: 100%;
+          margin-top: 30px;
+          margin-bottom: 30px;
+        }
+
+        button:first-child {
+          margin-bottom: -10px;
+        }
+      }
     }
   }
 `;

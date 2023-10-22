@@ -7,6 +7,7 @@ import Conference1 from "../../../assets/images/program/img-conference1.jpg";
 import Conference2 from "../../../assets/images/program/img-conference2.jpg";
 import Conference3 from "../../../assets/images/program/img-conference3.jpg";
 import buttonArrow from "../../../assets/images/main/button-arrow-white.svg";
+import buttonArrowBlack from "../../../assets/images/main/button-arrow-black.svg";
 import { Link } from "react-router-dom";
 
 const Conference = () => {
@@ -114,15 +115,30 @@ const FestivalWrap = styled.div`
     top: -100px;
     left: 60px;
   }
+
+  @media (max-width: 768px) {
+    .Triangle {
+      display: none;
+    }
+  }
 `;
 
 const PaddingWrap = styled.div`
   width: 80%;
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `;
 
 const Title = styled.h1`
   font-size: 48px;
   margin-top: 120px;
+  position: relative;
+
+  @media (max-width: 420px) {
+    font-size: 26px;
+  }
 `;
 
 const Divider = styled.hr`
@@ -140,6 +156,8 @@ const Contents = styled.div`
 
   .box {
     width: 49.5%;
+    height: auto;
+    min-height: 400px;
     margin-bottom: 20px;
     position: relative;
     display: flex;
@@ -148,18 +166,53 @@ const Contents = styled.div`
     flex-direction: column;
     text-align: center;
     overflow: hidden;
-    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      pointer-events: none;
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(47, 83, 0, 0.5) 100%
+      );
+      transition: 0.3s;
+      opacity: 0;
+      z-index: 1;
+    }
+
+    &:hover::after {
+      opacity: 1;
+    }
+
+    .conImg {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.5s, filter 0.3s;
+      will-change: transform, filter;
+      filter: brightness(0.3);
+      object-fit: cover;
+    }
 
     img {
       width: 100%;
     }
 
-    .conImg {
-      filter: brightness(0.3);
+    &:hover .conImg {
+      filter: none;
+      transform: scale(1.1);
+      transition: 0.5s;
     }
 
     .center {
       position: absolute;
+      width: 90%;
+      z-index: 2;
 
       b {
         display: inline-block;
@@ -202,6 +255,63 @@ const Contents = styled.div`
         width: 12px;
         height: 12px;
         margin-left: 5px;
+      }
+    }
+
+    button:hover {
+      background: white;
+      color: black;
+      transition: 0.2s;
+    }
+
+    button:hover img {
+      content: url(${buttonArrowBlack});
+    }
+  }
+
+  @media (max-width: 768px) {
+    justify-content: center;
+    flex-direction: column;
+
+    .box {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .box {
+      height: 300px;
+      min-height: 0px;
+      position: relative;
+
+      .conImg {
+        height: 100%;
+        width: auto;
+        object-fit: cover;
+        display: block;
+      }
+
+      .center {
+        div {
+          width: 90%;
+          margin: 10px auto;
+        }
+
+        b {
+          font-size: 18px;
+          margin-bottom: 10px;
+          line-height: 28px;
+        }
+
+        button {
+          margin-top: 10px;
+        }
+
+        div {
+          span {
+            font-size: 16px;
+          }
+        }
       }
     }
   }

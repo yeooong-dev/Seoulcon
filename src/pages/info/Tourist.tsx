@@ -3,6 +3,7 @@ import Footer from "../../components/footer/Footer";
 import Navibar from "../../components/navigation/Navibar";
 import { Wrapper } from "../main/StMain";
 import buttonArrow from "../../assets/images/main/button-arrow-white.svg";
+import buttonArrowBlack from "../../assets/images/main/button-arrow-black.svg";
 
 const Tourist = () => {
   return (
@@ -52,19 +53,26 @@ const PaddingWrap = styled.div`
     margin-top: -10px;
     margin-bottom: 30px;
   }
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `;
 
 const Title = styled.h1`
   font-size: 48px;
   margin-top: 120px;
   z-index: 9;
+
+  @media (max-width: 420px) {
+    font-size: 26px;
+  }
 `;
 
 const Divider = styled.hr`
   width: 100%;
   background: rgba(58, 58, 58, 1);
   opacity: 0.3;
-  margin-bottom: 20px;
 `;
 
 const Contents = styled.div`
@@ -72,8 +80,9 @@ const Contents = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 200px;
-  height: 600px;
+  padding-top: 300px;
+  padding-bottom: 350px;
+  height: auto;
 
   p {
     font-size: 22px;
@@ -95,5 +104,20 @@ const Contents = styled.div`
       height: 12px;
       margin-left: 5px;
     }
+  }
+
+  button:hover {
+    background: white;
+    color: black;
+    transition: 0.3s;
+  }
+
+  button:hover img {
+    content: url(${buttonArrowBlack});
+  }
+
+  @media (max-width: 420px) {
+    margin-top: -100px;
+    margin-bottom: -120px;
   }
 `;

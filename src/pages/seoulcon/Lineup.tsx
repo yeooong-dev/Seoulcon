@@ -30,9 +30,7 @@ const Lineup = () => {
         <StarImg src={star} alt='별' />
         <PaddingWrap>
           <Title>서울콘 인플루언서 라인업</Title>
-          <Ment>
-            전 세계 30개국, 3,000명, 24억 팔로워가 서울콘에서 함께합니다
-          </Ment>
+          <Ment>전 세계 50개 국, 3,000팀, 30억 팔로워와 함께하세요</Ment>
           <Divider />
           <ImgBox>
             <div>
@@ -154,7 +152,7 @@ export default Lineup;
 
 const LinupWrap = styled.div`
   width: 100%;
-  height: 2000px;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -167,15 +165,23 @@ const StarImg = styled.img`
   position: absolute;
   top: -240px;
   left: -50px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const PaddingWrap = styled.div`
   width: 70%;
-  height: 1500px;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `;
 
 const Title = styled.h1`
@@ -183,7 +189,12 @@ const Title = styled.h1`
   margin-bottom: 50px;
   display: flex;
   align-self: flex-start;
-  margin-top: 250px;
+  margin-top: 150px;
+  z-index: 9;
+
+  @media (max-width: 420px) {
+    font-size: 26px;
+  }
 `;
 
 const Ment = styled.p`
@@ -191,6 +202,13 @@ const Ment = styled.p`
   align-self: flex-start;
   margin-top: -25px;
   margin-bottom: 30px;
+  z-index: 9;
+  font-weight: bold;
+
+  @media (max-width: 420px) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 `;
 
 const Divider = styled.hr`
@@ -243,5 +261,35 @@ const ImgBox = styled.div`
 
   @media (max-width: 400px) {
     grid-template-columns: 1fr;
+  }
+
+  @media (max-width: 768px) {
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+
+    img {
+      width: 220px;
+    }
+  }
+
+  @media (max-width: 420px) {
+    margin-bottom: 100px;
+    grid-template-columns: repeat(2, 1fr);
+
+    img {
+      width: 156px;
+    }
+
+    div {
+      b {
+        font-size: 20px;
+        margin-top: 5px;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 22.4px;
+      }
+    }
   }
 `;

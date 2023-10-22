@@ -4,8 +4,8 @@ import Navibar from "../../../components/navigation/Navibar";
 import Footer from "../../../components/footer/Footer";
 import Triangle from "../../../assets/images/program/img-triangle.svg";
 import buttonArrow from "../../../assets/images/main/button-arrow-white.svg";
-import buttonArrowGreen from "../../../assets/images/main/button-arrow-green.svg";
 import festival1 from "../../../assets/images/program/img-festival2.jpg";
+import buttonArrowBlack from "../../../assets/images/main/button-arrow-black.svg";
 import { Link } from "react-router-dom";
 
 const FestivalPage2 = () => {
@@ -16,18 +16,20 @@ const FestivalPage2 = () => {
         <img src={festival1} alt='크리에이티브포스어워즈' className='bg' />
         <PaddingWrap>
           <img src={Triangle} alt='도형' className='Triangle' />
-          <Title>
-            [서울콘(SEOULCon) 어워즈]
-            <br />
-            크리에이티브포스어워즈
-          </Title>
+          <Title>크리에이티브포스 어워즈</Title>
           <Divider />
           <Contents>
+            <div className='right'>
+              <div>
+                <img src={festival1} alt='팬 페스티벌' />
+              </div>
+            </div>
+
             <div className='left'>
               <p className='date'>일정</p>
-              <p>• 23. 12. 30.(토) 14:00 ~ 15:50</p>
+              <p>• 23. 12. 31.(일) 14:00 ~ 17:00</p>
               <p className='date'>장소</p>
-              <p>• DDP 아트홀 2관</p>
+              <p>• DDP 컨퍼런스홀</p>
               <p className='date'>내용</p>
               <p>
                 • 서울시와 서울경제진흥원이 육성 ‧ 지원하는 크리에이티브포스
@@ -42,19 +44,11 @@ const FestivalPage2 = () => {
               <p className='date'>협력</p>
               <p>• 틱톡 코리아</p>
               <div>
-                <button className='green'>
-                  신청하기 <img src={buttonArrowGreen} alt='detail' />
-                </button>
                 <Link to='/festival'>
                   <button>
                     돌아가기 <img src={buttonArrow} alt='detail' />
                   </button>
                 </Link>
-              </div>
-            </div>
-            <div className='right'>
-              <div>
-                <img src={festival1} alt='팬 페스티벌' />
               </div>
             </div>
           </Contents>
@@ -93,18 +87,31 @@ const FestivalWrap = styled.div`
     position: absolute;
     overflow: hidden;
   }
+
+  @media (max-width: 768px) {
+    .Triangle {
+      display: none;
+    }
+  }
 `;
 
 const PaddingWrap = styled.div`
   width: 80%;
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `;
 
 const Title = styled.h1`
   font-size: 48px;
   margin-top: 120px;
   color: rgba(191, 255, 106, 1);
-  z-index: 9;
-  line-height: 65px;
+  position: relative;
+
+  @media (max-width: 420px) {
+    font-size: 26px;
+  }
 `;
 
 const Divider = styled.hr`
@@ -128,7 +135,7 @@ const Contents = styled.div`
     z-index: 9;
 
     p {
-      line-height: 30px;
+      line-height: 35px;
     }
 
     .date {
@@ -143,7 +150,7 @@ const Contents = styled.div`
       line-height: 26px;
       font-size: 16px;
       text-align: center;
-      margin-bottom: -5px;
+      margin-bottom: -10px;
     }
 
     div {
@@ -164,10 +171,14 @@ const Contents = styled.div`
         margin-left: 5px;
       }
 
-      .green {
-        margin-right: 20px;
-        border: 1px solid rgba(191, 255, 106, 1);
-        color: rgba(191, 255, 106, 1);
+      button:hover {
+        background: white;
+        transition: 0.2s;
+        color: black;
+      }
+
+      button:hover img {
+        content: url(${buttonArrowBlack});
       }
     }
   }
@@ -180,6 +191,46 @@ const Contents = styled.div`
 
     img {
       width: 80%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    justify-content: center;
+    flex-direction: column;
+
+    .left {
+      width: 100%;
+      margin-top: 50px;
+
+      div {
+        button {
+          margin-top: 30px;
+          margin-bottom: 0px;
+        }
+      }
+    }
+
+    .right {
+      width: 100%;
+      position: static;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 420px) {
+    .left {
+      font-size: 16px;
+
+      div {
+        button {
+          width: 100%;
+          margin-top: 20px;
+          margin-bottom: 0px;
+        }
+      }
     }
   }
 `;

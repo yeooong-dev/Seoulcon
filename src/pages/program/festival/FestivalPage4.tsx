@@ -5,6 +5,7 @@ import Footer from "../../../components/footer/Footer";
 import Triangle from "../../../assets/images/program/img-triangle.svg";
 import buttonArrow from "../../../assets/images/main/button-arrow-white.svg";
 import buttonArrowGreen from "../../../assets/images/main/button-arrow-green.svg";
+import buttonArrowBlack from "../../../assets/images/main/button-arrow-black.svg";
 import festival1 from "../../../assets/images/program/img-festival4.jpg";
 import { Link } from "react-router-dom";
 
@@ -16,13 +17,15 @@ const FestivalPage5 = () => {
         <img src={festival1} alt='피지컬 100 VS 인플루언서' className='bg' />
         <PaddingWrap>
           <img src={Triangle} alt='도형' className='Triangle' />
-          <Title>
-            [오징어 게임]
-            <br />
-            피지컬 100 VS 인플루언서
-          </Title>
+          <Title>피지컬 100 vs 글로벌 인플루언서 [오징어 게임]</Title>
           <Divider />
           <Contents>
+            <div className='right'>
+              <div>
+                <img src={festival1} alt='팬 페스티벌' />
+              </div>
+            </div>
+
             <div className='left'>
               <p className='date'>일정</p>
               <p>• 23. 12. 31.(일) 10:00 ~ 18:00</p>
@@ -30,13 +33,11 @@ const FestivalPage5 = () => {
               <p>• DDP 아트홀 2관</p>
               <p className='date'>내용</p>
               <p>
-                • 피지컬100 출연진과 글로벌 인플루언서의 대결
-                <br />• {"<오징어게임>"} 콘텐츠로 대결 진행/ 일반 참여자
-                체험행사
+                • 피지컬100 출연진과 글로벌 인플루언서의 {"<오징어게임>"} 대결
               </p>
               <p className='date'>협력</p>
-              <p>• 페이스러너, 넷플릭스</p>
-              <div>
+              <p>• (주)페이스러너</p>
+              <div className='btnBox'>
                 <button className='green'>
                   신청하기 <img src={buttonArrowGreen} alt='detail' />
                 </button>
@@ -45,11 +46,6 @@ const FestivalPage5 = () => {
                     돌아가기 <img src={buttonArrow} alt='detail' />
                   </button>
                 </Link>
-              </div>
-            </div>
-            <div className='right'>
-              <div>
-                <img src={festival1} alt='팬 페스티벌' />
               </div>
             </div>
           </Contents>
@@ -88,18 +84,33 @@ const FestivalWrap = styled.div`
     position: absolute;
     overflow: hidden;
   }
+
+  @media (max-width: 768px) {
+    .Triangle {
+      display: none;
+    }
+  }
 `;
 
 const PaddingWrap = styled.div`
   width: 80%;
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `;
 
 const Title = styled.h1`
   font-size: 48px;
   margin-top: 120px;
   color: rgba(191, 255, 106, 1);
-  z-index: 9;
-  line-height: 65px;
+  position: relative;
+  line-height: 4rem;
+
+  @media (max-width: 420px) {
+    font-size: 26px;
+    line-height: 2.3rem;
+  }
 `;
 
 const Divider = styled.hr`
@@ -121,6 +132,11 @@ const Contents = styled.div`
     display: flex;
     flex-direction: column;
     z-index: 9;
+
+    .btnBox {
+      width: 500px;
+      display: flex;
+    }
 
     p {
       line-height: 35px;
@@ -155,6 +171,16 @@ const Contents = styled.div`
         cursor: pointer;
       }
 
+      button:hover {
+        background: white;
+        transition: 0.2s;
+        color: black;
+      }
+
+      button:hover img {
+        content: url(${buttonArrowBlack});
+      }
+
       img {
         margin-left: 5px;
       }
@@ -163,6 +189,15 @@ const Contents = styled.div`
         margin-right: 20px;
         border: 1px solid rgba(191, 255, 106, 1);
         color: rgba(191, 255, 106, 1);
+      }
+
+      .green:hover {
+        background: rgba(191, 255, 106, 1);
+        color: black;
+      }
+
+      .green:hover img {
+        content: url(${buttonArrowBlack});
       }
     }
   }
@@ -175,6 +210,46 @@ const Contents = styled.div`
 
     img {
       width: 80%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    justify-content: center;
+    flex-direction: column;
+
+    .left {
+      width: 100%;
+      margin-top: 50px;
+    }
+
+    .right {
+      width: 100%;
+      position: static;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 420px) {
+    .left {
+      font-size: 16px;
+
+      .btnBox {
+        width: 100%;
+        flex-direction: column;
+
+        button {
+          width: 100%;
+          margin-top: 30px;
+          margin-bottom: 30px;
+        }
+
+        button:first-child {
+          margin-bottom: -10px;
+        }
+      }
     }
   }
 `;

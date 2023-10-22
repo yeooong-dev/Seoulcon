@@ -25,7 +25,7 @@ export default Goods;
 
 const GoodsWrap = styled.div`
   width: 100%;
-  height: auto;
+  height: 100vh;
   background: black;
   position: relative;
   display: flex;
@@ -39,23 +39,38 @@ const GoodsWrap = styled.div`
     top: -200px;
     left: 100px;
   }
+
+  @media (max-width: 768px) {
+    .circle {
+      display: none;
+    }
+  }
 `;
 
 const ContentSection = styled.div`
   width: 70%;
-  height: 1080px;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `;
 
 const Title = styled.h1`
   font-size: 48px;
   margin-bottom: 50px;
   position: absolute;
-  top: 60px;
+  top: -90px;
   left: 0;
+
+  @media (max-width: 420px) {
+    font-size: 26px;
+    top: 30px;
+  }
 `;
 
 const Divider = styled.hr`
@@ -63,8 +78,12 @@ const Divider = styled.hr`
   background: rgba(58, 58, 58, 1);
   opacity: 0.3;
   position: absolute;
-  top: 200px;
+  top: 20px;
   left: 0;
+
+  @media (max-width: 420px) {
+    top: 90px;
+  }
 `;
 
 const FlexContainer = styled.div`
