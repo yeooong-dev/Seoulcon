@@ -6,7 +6,11 @@ interface NaviWrapProps {
   isInfoOpen?: boolean;
 }
 
-export const NaviWrap = styled.div<NaviWrapProps>`
+export const NaviWrap = styled.div.attrs<NaviWrapProps>((props) => ({
+  isSeoulConOpen: undefined,
+  isProgramOpen: undefined,
+  isInfoOpen: undefined,
+}))<NaviWrapProps>`
   width: 100%;
   position: fixed;
   top: 0;
@@ -224,7 +228,7 @@ export const NaviWrap = styled.div<NaviWrapProps>`
       }
 
       .ko,
-      .hr,
+      hr,
       .en {
         position: absolute;
         bottom: 50px;
@@ -247,6 +251,41 @@ export const NaviWrap = styled.div<NaviWrapProps>`
 
       .menu-container:first-child {
         margin-top: 50px;
+      }
+    }
+  }
+
+  @media (max-width: 420px) {
+    .right {
+      width: 100%;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      .menu-container {
+        width: 85%;
+      }
+
+      .menu-container:first-child {
+        margin-top: 80px;
+      }
+
+      .ko,
+      .en {
+        bottom: 0px;
+        left: 30px;
+      }
+
+      hr {
+        position: absolute;
+        bottom: 35px;
+        left: 85px;
+      }
+
+      .ko {
+        position: absolute;
+        left: 95px;
       }
     }
   }

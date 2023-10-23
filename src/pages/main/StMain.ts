@@ -80,9 +80,13 @@ export const TextCenter = styled.div`
 
   @media (max-width: 768px) {
     width: 100%;
+
+    button {
+      pointer-events: none;
+    }
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 420px) {
     h1 {
       font-size: 32px;
       margin-bottom: 30px;
@@ -118,7 +122,7 @@ export const BtnBetween = styled.div`
     margin-right: 50px;
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 768px) {
     display: none;
   }
 `;
@@ -197,7 +201,7 @@ export const YoutubeWrap = styled.div`
     }
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 420px) {
     img {
       display: none;
     }
@@ -226,11 +230,11 @@ export const LineupWrap = styled.div`
 
   .padding {
     width: 100%;
-    padding-left: 25rem;
   }
 
   .text_top {
     width: 100%;
+    height: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -238,18 +242,22 @@ export const LineupWrap = styled.div`
   }
 
   .left {
+    padding-left: 12.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     h1 {
       font-size: 3rem;
     }
 
     p {
       font-size: 1.125rem;
-      margin-bottom: 100px;
     }
   }
 
   .right {
-    padding-right: 25rem;
+    padding-right: 12.3rem;
 
     button {
       width: 239px;
@@ -259,6 +267,7 @@ export const LineupWrap = styled.div`
       background: none;
       font-size: 1rem;
       cursor: pointer;
+      color:black;
 
       img {
         width: 12px;
@@ -287,7 +296,8 @@ export const LineupWrap = styled.div`
     scrollbar-width: none;
     -ms-overflow-style: none;
     white-space: nowrap;
-    margin-top: -50px;
+    margin-top: 0px;
+    padding-left: 12.5rem;
 
     &::-webkit-scrollbar {
       display: none;
@@ -303,7 +313,6 @@ export const LineupWrap = styled.div`
 
       .width {
         width: 300px;
-        height: 440px;
         overflow: hidden;
         border-radius: 150px;
       }
@@ -324,11 +333,11 @@ export const LineupWrap = styled.div`
         z-index: 9;
         transition: transform 0.3s ease, filter 0.3s ease;
         transform-origin: center center;
+      }
 
-        &:hover {
-          transform: scale(1.1);
-          filter: brightness(0.3);
-        }
+      &:hover img {
+        transform: scale(1.1);
+        filter: brightness(0.3);
       }
 
       .hoverText,
@@ -361,25 +370,26 @@ export const LineupWrap = styled.div`
       }
     }
     .imgContainer:last-child {
-      margin-right: 220px;
+      margin-right: 250px;
     }
   }
 
   @media (max-width: 768px) {
-    .padding {
-      padding-left: 5rem;
-    }
-
     .text_top {
       width: 100%;
       display: flex;
-      align-items: center;
       justify-content: flex-start;
       flex-direction: column;
-      margin-top: -30px;
+      padding-left: 3rem;
 
       .left {
         width: 100%;
+        padding: 0;
+        align-items: flex-start;
+
+        p {
+          margin-top: -5px;
+        }
       }
 
       .right {
@@ -390,34 +400,35 @@ export const LineupWrap = styled.div`
 
         button {
           pointer-events: none;
+          margin-top: 80px;
         }
       }
     }
+
     .imgBox {
+      padding-left: 3rem;
       .imgContainer {
         .width {
           width: 260px;
-
-          img {
-            pointer-events: none;
-          }
-        }
-        .text {
-          display: none;
+          background: gray;
         }
       }
       .imgContainer:last-child {
-        margin-right: 100px;
+        margin-right: 120px;
       }
     }
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 420px) {
+    width: 100%;
+    margin-top: 50px;
+
     .padding {
-      padding-left: 3rem;
+      padding-left: 0rem;
 
       .text_top {
         width: 80%;
+        padding-left: 1.5rem;
 
         .left {
           h1 {
@@ -429,7 +440,11 @@ export const LineupWrap = styled.div`
           }
         }
       }
+
       .imgBox {
+        margin-top: -50px;
+        padding-left: 1.5rem;
+
         .imgContainer {
           .width {
             width: 136px;
@@ -440,7 +455,7 @@ export const LineupWrap = styled.div`
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: -220px;
+            margin-top: 10px;
 
             span {
               font-size: 14px;
@@ -493,7 +508,7 @@ export const ProgramWrap = styled.div`
   }
 
   .padding {
-    width: 80%;
+    width: 87%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -620,7 +635,7 @@ export const ProgramWrap = styled.div`
     }
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 420px) {
     margin-top: -530px;
 
     .padding {
@@ -815,6 +830,10 @@ export const NoticeWrap = styled.div`
   }
 
   @media (max-width: 768px) {
+    button {
+      pointer-events: none;
+    }
+
     .content {
       max-width: 90%;
 
@@ -837,6 +856,7 @@ export const NoticeWrap = styled.div`
 
       .listBox {
         .list {
+          pointer-events: none;
           .num {
             margin-left: 5px;
           }
@@ -853,7 +873,7 @@ export const NoticeWrap = styled.div`
     }
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 420px) {
     h1 {
       font-size: 26px;
     }
