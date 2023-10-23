@@ -69,7 +69,7 @@ const Main = () => {
         <h1>2023 서울콘</h1>
         <p>2023 연말, 인플루언서와 당신을 전세계로 연결합니다</p>
         <div>
-          <video muted autoPlay loop>
+          <video playsInline muted autoPlay loop>
             <source src={mainVideo} type='video/mp4' />
           </video>
         </div>
