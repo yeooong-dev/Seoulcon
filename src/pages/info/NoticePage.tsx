@@ -150,7 +150,7 @@ const Contents = styled.div`
 
   p {
     font-size: 18px;
-    line-height: 35px;
+    line-height: 32px;
   }
 
   button {

@@ -79,7 +79,7 @@ const Main = () => {
         <div className='padding'>
           <div className='text_top'>
             <div className='left'>
-              <h1>인플루언서 라인업</h1>
+              <h1>Influencer Line up</h1>
               <p>전 세계 50개 국, 3,000팀, 30억 팔로워와 함께하세요</p>
             </div>
 

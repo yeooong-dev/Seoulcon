@@ -1,17 +1,45 @@
 import { NaviWrap } from "./StNavibar";
 import logo from "../../assets/images/main/logo-nav.svg";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import menuOpen from "../../assets/images/main/ico-menu.svg";
 import menuClose from "../../assets/images/main/ico-nav-close.svg";
-// import menuClose from "../../assets/images/main/ico-menu-close.svg";
+import menuToggleOpen from "../../assets/images/main/ico-menu-close.svg";
+import menuToggleClose from "../../assets/images/main/ico-menu-open.svg";
 
 const Navibar = () => {
   const [openMenu, setOpenMenu] = useState<string | null>(null);
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isSeoulConOpen, setIsSeoulConOpen] = useState(false);
+  const [isProgramOpen, setIsProgramOpen] = useState(false);
+  const [isInfoOpen, setIsInfoOpen] = useState(false);
+
+  const navRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+        setMobileMenuOpen(false);
+        setIsSeoulConOpen(false);
+        setIsProgramOpen(false);
+        setIsInfoOpen(false);
+      }
+    };
+
+    // 외부 클릭 이벤트 추가
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
-    <NaviWrap>
+    <NaviWrap
+      ref={navRef}
+      isSeoulConOpen={isSeoulConOpen}
+      isProgramOpen={isProgramOpen}
+      isInfoOpen={isInfoOpen}
+    >
       <div className='padding'>
         <div className='left'>
           <Link to='/'>
@@ -19,25 +47,35 @@ const Navibar = () => {
           </Link>
         </div>
 
+        <button
+          className='mobile-menu-toggle'
+          onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          <img src={isMobileMenuOpen ? menuClose : menuOpen} alt='menuToggle' />
+        </button>
+
         <div className={`right ${isMobileMenuOpen ? "open" : ""}`}>
-          <button
-            className='mobile-menu-toggle'
-            onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            <img
-              src={isMobileMenuOpen ? menuClose : menuOpen}
-              alt='menuToggle'
-            />
-          </button>
           <div className='menu-container'>
             <button
               onMouseEnter={() => setOpenMenu("SeoulCon")}
               onMouseLeave={() => setOpenMenu(null)}
               className='menuBtn'
+              onClick={() => {
+                setIsSeoulConOpen(!isSeoulConOpen);
+                setIsProgramOpen(false);
+                setIsInfoOpen(false);
+              }}
             >
-              SeoulCon
+              SEOULCon
+              <div>
+                <img
+                  src={isSeoulConOpen ? menuToggleClose : menuToggleOpen}
+                  alt='메뉴 열기'
+                  className='toggle'
+                />
+              </div>
             </button>
-            {openMenu === "SeoulCon" && (
+            {isSeoulConOpen && (
               <div
                 className='submenu'
                 onMouseEnter={() => setOpenMenu("SeoulCon")}
@@ -67,12 +105,25 @@ const Navibar = () => {
               onMouseEnter={() => setOpenMenu("Program")}
               onMouseLeave={() => setOpenMenu(null)}
               className='menuBtn2'
+              onClick={() => {
+                setIsProgramOpen(!isProgramOpen);
+                setIsSeoulConOpen(false);
+                setIsInfoOpen(false);
+              }}
             >
               Program
+              <div>
+                <img
+                  src={isProgramOpen ? menuToggleClose : menuToggleOpen}
+                  alt='메뉴 열기'
+                  className='toggle'
+                />
+              </div>
             </button>
-            {openMenu === "Program" && (
+
+            {isProgramOpen && (
               <div
-                className='submenu'
+                className='submenu col'
                 onMouseEnter={() => setOpenMenu("Program")}
                 onMouseLeave={() => setOpenMenu(null)}
               >
@@ -100,10 +151,23 @@ const Navibar = () => {
               onMouseEnter={() => setOpenMenu("Info")}
               onMouseLeave={() => setOpenMenu(null)}
               className='menuBtn3'
+              onClick={() => {
+                setIsInfoOpen(!isInfoOpen);
+                setIsSeoulConOpen(false);
+                setIsProgramOpen(false);
+              }}
             >
               Information
+              <div>
+                <img
+                  src={isInfoOpen ? menuToggleClose : menuToggleOpen}
+                  alt='메뉴 열기'
+                  className='toggle'
+                />
+              </div>
             </button>
-            {openMenu === "Info" && (
+
+            {isInfoOpen && (
               <div
                 className='submenu'
                 onMouseEnter={() => setOpenMenu("Info")}
@@ -124,9 +188,11 @@ const Navibar = () => {
             )}
           </div>
 
-          <Link to='/attend'>
-            <button className='attend menuBtn4'>Attend</button>
-          </Link>
+          <div className='menu-container'>
+            <Link to='/attend'>
+              <button className='menuBtn4'>Attend</button>
+            </Link>
+          </div>
 
           <button className='ko'>KO</button>
           <hr />

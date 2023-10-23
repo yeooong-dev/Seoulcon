@@ -233,7 +233,8 @@ const ImgBox = styled.div`
   }
 
   img {
-    width: 260px;
+    width: 100%;
+    max-width: 260px;
     margin-bottom: 20px;
     z-index: 9;
   }
@@ -255,15 +256,7 @@ const ImgBox = styled.div`
     margin-top: 15px;
   }
 
-  @media (max-width: 600px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (max-width: 400px) {
-    grid-template-columns: 1fr;
-  }
-
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
     justify-content: center;
     grid-template-columns: repeat(3, 1fr);
 
@@ -272,12 +265,20 @@ const ImgBox = styled.div`
     }
   }
 
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+
+    img {
+      max-width: 160px;
+    }
+  }
+
   @media (max-width: 420px) {
     margin-bottom: 100px;
     grid-template-columns: repeat(2, 1fr);
 
     img {
-      width: 156px;
+      max-width: 156px;
     }
 
     div {

@@ -703,7 +703,7 @@ export const NoticeWrap = styled.div`
 
         span:nth-child(2) {
           flex: 2;
-          margin-left: 15px;
+          margin-left: 40px;
         }
       }
 
@@ -765,7 +765,7 @@ export const NoticeWrap = styled.div`
         .title {
           flex: 1;
           text-align: left;
-          padding-left: 20px;
+          padding-left: 45px;
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;

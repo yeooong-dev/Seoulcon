@@ -28,9 +28,7 @@ const SeoulconAbout = () => {
           <p className='text'>
             서울콘은 전 세계 1억 명이 실시간으로 시청하고,
             <br />
-            5만 명의 현장 관람객이 함께 즐기는 FUN 하고
-            <br />
-            WOW한 새로운 행사입니다.
+            5만 명의 현장 관람객이 함께 즐기는 FUN 하고 WOW한 새로운 행사입니다.
           </p>
           <p className='text'>
             최초로, 서울에서 열릴만 하며
@@ -57,6 +55,7 @@ const SeoulconAbout = () => {
 
           <div className='right'>
             <p>지금 전 세계가 주목하는,</p>
+            <img src={intro1} alt='설득력' />
             <img src={intro1} alt='설득력' />
           </div>
         </div>
@@ -275,9 +274,11 @@ const ListWrap = styled.div`
     &::before {
       content: "";
       display: block;
+      background-image: inherit;
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
+      transition: transform 0.3s ease;
       width: 100%;
       height: 100%;
       position: absolute;
@@ -329,6 +330,15 @@ const ListWrap = styled.div`
         }
 
         img {
+          position: absolute;
+          top: 50%;
+          right: 40px;
+          transform: translateY(-50%);
+          display: block;
+          width: 140px;
+        }
+
+        img:last-child {
           position: absolute;
           top: 50%;
           right: 40px;
