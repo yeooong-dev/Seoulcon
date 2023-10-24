@@ -156,6 +156,8 @@ const AboutWrap = styled.div`
   align-items: center;
   justify-content: space-between;
   position: relative;
+  padding-top: 100px;
+  padding-bottom: 100px;
   background: conic-gradient(
     from 0.8turn,
     rgba(255, 14, 20, 1) 0%,
@@ -165,7 +167,7 @@ const AboutWrap = styled.div`
 
   .left {
     position: absolute;
-    top: -80px;
+    top: 0px;
     left: 0;
     width: 50%;
 
@@ -399,7 +401,7 @@ const ListWrap = styled.div`
         }
 
         img {
-          right: 15px;
+          right: px;
           width: 70px;
         }
 

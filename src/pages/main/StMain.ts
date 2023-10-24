@@ -152,13 +152,15 @@ export const Bottom = styled.div`
 
 export const YoutubeWrap = styled.div`
   width: 100%;
-  height: 100vh;
+  height: auto;
   background: black;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   position: relative;
+  padding-top: 100px;
+  padding-bottom: 100px;
 
   img {
     width: 372px;
@@ -267,7 +269,7 @@ export const LineupWrap = styled.div`
       background: none;
       font-size: 1rem;
       cursor: pointer;
-      color:black;
+      color: black;
 
       img {
         width: 12px;
