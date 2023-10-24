@@ -4,7 +4,6 @@ import Navibar from "../../../components/navigation/Navibar";
 import Footer from "../../../components/footer/Footer";
 import Triangle from "../../../assets/images/program/img-triangle.svg";
 import buttonArrow from "../../../assets/images/main/button-arrow-white.svg";
-import buttonArrowGreen from "../../../assets/images/main/button-arrow-green.svg";
 import buttonArrowBlack from "../../../assets/images/main/button-arrow-black.svg";
 import festival1 from "../../../assets/images/program/img-conference1.jpg";
 import { Link } from "react-router-dom";
@@ -14,37 +13,29 @@ const ConferencePage = () => {
     <Wrapper>
       <Navibar />
       <FestivalWrap>
-        <img src={festival1} alt='팬 페스티벌' className='bg' />
+        <img src={festival1} alt='인플루언서 팬미팅' className='bg' />
         <PaddingWrap>
           <img src={Triangle} alt='도형' className='Triangle' />
-          <Title>크리에이터 팬미팅</Title>
+          <Title>인플루언서 팬미팅</Title>
           <Divider />
           <Contents>
             <div className='right'>
               <div>
-                <img src={festival1} alt='팬 페스티벌' />
+                <img src={festival1} alt='인플루언서 팬미팅' />
               </div>
             </div>
 
             <div className='left'>
               <p className='date'>일정</p>
-              <p>• 23. 12. 30.(토) ~ 12. 31.(일)</p>
+              <p>• 23. 12. 30.(토) 10:00 ~ 18:00</p>
               <p className='date'>장소</p>
-              <p>• DDP 디자인랩 2층 매거진 라이브러리</p>
+              <p>• DDP 디자인랩 2층 북세미나실</p>
               <p className='date'>내용</p>
-              <p>
-                • 국내 유명 크리에이터 팬 미팅 및 팬 사인회
-                <br />
-                • 우정잉, 고말숙, 쵸단 등 국내 인플루언서 (※섭외 중)
-                <br />• 리나대장, 온오빠 등 셀럽 인플루언서 (※섭외 중)
-              </p>
+              <p>• 국내 유명 인플루언서 팬 미팅 및 사인회</p>
               <p className='date'>협력</p>
-              <p>• 트레저헌터, 순엔터, 인플루언서 협/단쳬 등</p>
+              <p>• ㈜트레저헌터</p>
 
               <div className='btnBox'>
-                <button className='green'>
-                  신청하기 <img src={buttonArrowGreen} alt='detail' />
-                </button>
                 <Link to='/conference'>
                   <button className='back'>
                     돌아가기 <img src={buttonArrow} alt='detail' />

@@ -4,7 +4,6 @@ import Navibar from "../../../components/navigation/Navibar";
 import Footer from "../../../components/footer/Footer";
 import Triangle from "../../../assets/images/program/img-triangle.svg";
 import buttonArrow from "../../../assets/images/main/button-arrow-white.svg";
-import buttonArrowGreen from "../../../assets/images/main/button-arrow-green.svg";
 import buttonArrowBlack from "../../../assets/images/main/button-arrow-black.svg";
 import festival1 from "../../../assets/images/program/img-conference3.jpg";
 import { Link } from "react-router-dom";
@@ -14,35 +13,29 @@ const ConferencePage3 = () => {
     <Wrapper>
       <Navibar />
       <FestivalWrap>
-        <img src={festival1} alt='팬 페스티벌' className='bg' />
+        <img src={festival1} alt='숏폼 콘텐츠 공모전' className='bg' />
         <PaddingWrap>
           <img src={Triangle} alt='도형' className='Triangle' />
-          <Title>미디어 기자단 포럼</Title>
+          <Title>숏폼 콘텐츠 공모전</Title>
           <Divider />
           <Contents>
             <div className='right'>
               <div>
-                <img src={festival1} alt='팬 페스티벌' />
+                <img src={festival1} alt='숏폼 콘텐츠 공모전' />
               </div>
             </div>
 
             <div className='left'>
               <p className='date'>일정</p>
-              <p>• 23. 12. 31.(일)</p>
+              <p>• 23. 12. 30.(토) 10:00 ~ 18:00</p>
               <p className='date'>장소</p>
-              <p>• DDP 아트홀 컨퍼런스홀</p>
+              <p>• DDP 디자인랩 2층 서울온</p>
               <p className='date'>내용</p>
-              <p>
-                • 전 세계 주요 언론이 바라보는 K-콘텐츠 관련 인사이트 공유
-                <br />• K-콘텐츠의 글로벌 파급효과 및 한류의 지속 확산
-              </p>
+              <p>• 숏폼 콘텐츠 공모전 시상 및 전시</p>
               <p className='date'>협력</p>
-              <p>• TV조선</p>
+              <p>• 전자신문 등</p>
 
               <div className='btnBox'>
-                <button className='green'>
-                  신청하기 <img src={buttonArrowGreen} alt='detail' />
-                </button>
                 <Link to='/conference'>
                   <button className='back'>
                     돌아가기 <img src={buttonArrow} alt='detail' />

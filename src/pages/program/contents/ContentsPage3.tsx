@@ -4,9 +4,8 @@ import Navibar from "../../../components/navigation/Navibar";
 import Footer from "../../../components/footer/Footer";
 import Triangle from "../../../assets/images/program/img-triangle.svg";
 import buttonArrow from "../../../assets/images/main/button-arrow-white.svg";
-import buttonArrowGreen from "../../../assets/images/main/button-arrow-green.svg";
 import buttonArrowBlack from "../../../assets/images/main/button-arrow-black.svg";
-import festival1 from "../../../assets/images/program/img-contents3.jpg";
+import festival1 from "../../../assets/images/program/img-contents6.jpg";
 import { Link } from "react-router-dom";
 
 const ContentsPage3 = () => {
@@ -14,15 +13,15 @@ const ContentsPage3 = () => {
     <Wrapper>
       <Navibar />
       <FestivalWrap>
-        <img src={festival1} alt='팬 페스티벌' className='bg' />
+        <img src={festival1} alt='쇼플루언서 라이브 세일즈쇼' className='bg' />
         <PaddingWrap>
           <img src={Triangle} alt='도형' className='Triangle' />
-          <Title>워너브라더스 100주년 전시</Title>
+          <Title>쇼플루언서 라이브 세일즈쇼</Title>
           <Divider />
           <Contents>
             <div className='right'>
               <div>
-                <img src={festival1} alt='팬 페스티벌' />
+                <img src={festival1} alt='쇼플루언서 라이브 세일즈쇼' />
               </div>
             </div>
 
@@ -30,30 +29,14 @@ const ContentsPage3 = () => {
               <p className='date'>일정</p>
               <p>• 23. 12. 30.(토) ~ 12. 31.(일)</p>
               <p className='date'>장소</p>
-              <p>• DDP 뮤지엄 전시 1관</p>
+              <p>• DDP 디자인랩 2층 회의실</p>
               <p className='date'>내용</p>
-              <p
-                style={{
-                  color: "rgba(191, 255, 106, 1)",
-                  marginBottom: "-48px",
-                }}
-              >
-                • 워너브라더스 100주년을 기념해 진행하는 특별전 (1923-2023)
-              </p>
-
               <p>
-                <br />• 애니메이션 {"<톰과 제리>"}, {"<루니툰>"} 등
-                <br />• DC코믹스 {"<배트맨>"}, {"<저스티스리그>"} 등
-                <br />• 초기 제작 필름부터 현재의 워너브라더스의 다양한 콘텐츠를
-                활용한 체험 전시
+                • 쇼플루언서 = 쇼호스트 + 인플루언서
+                <br />• 서울 중소기업 상품의 실시간 판매
               </p>
-              <p className='date'>협력</p>
-              <p>• 서울디자인재단, GNC 미디어</p>
 
               <div className='btnBox'>
-                <button className='green'>
-                  신청하기 <img src={buttonArrowGreen} alt='detail' />
-                </button>
                 <Link to='/contents'>
                   <button className='back'>
                     돌아가기 <img src={buttonArrow} alt='detail' />
@@ -117,11 +100,12 @@ const Title = styled.h1`
   font-size: 48px;
   margin-top: 120px;
   color: rgba(191, 255, 106, 1);
+  line-height: 65px;
   position: relative;
 
   @media (max-width: 420px) {
     font-size: 26px;
-    line-height:40px;
+    line-height: 40px;
   }
 `;
 

@@ -49,21 +49,45 @@ const Contents = () => {
 
             <div className='box'>
               <img
-                src={contents2}
-                alt='24년 콘텐츠 제작 발표회'
+                src={contents1}
+                alt='아티스트 콜라보 전시'
                 className='conImg'
               />
               <div className='center'>
-                <b>24년 콘텐츠 제작 발표회</b>
+                <b>아티스트 콜라보 전시</b>
                 <div>
                   <span className='date'>일정</span>
                   <span>23. 12. 30.(토) ~ 12. 31.(일)</span>
                 </div>
                 <div>
                   <span className='date'>장소</span>
-                  <span>DDP 디자인랩 3층 디자인 홀</span>
+                  <span>DDP 어울림광장</span>
                 </div>
                 <Link to='/contentsPage2'>
+                  <button>
+                    바로가기 <img src={buttonArrow} alt='detail' />
+                  </button>
+                </Link>
+              </div>
+            </div>
+
+            <div className='box'>
+              <img
+                src={contents2}
+                alt='쇼플루언서 라이브 세일즈쇼'
+                className='conImg'
+              />
+              <div className='center'>
+                <b>쇼플루언서 라이브 세일즈쇼</b>
+                <div>
+                  <span className='date'>일정</span>
+                  <span>23. 12. 30.(토) ~ 12. 31.(일) 10:00 ~ 18:00</span>
+                </div>
+                <div>
+                  <span className='date'>장소</span>
+                  <span>DDP 디자인랩 2층 회의실</span>
+                </div>
+                <Link to='/contentsPage3'>
                   <button>
                     바로가기
                     <img src={buttonArrow} alt='detail' />
@@ -75,21 +99,21 @@ const Contents = () => {
             <div className='box'>
               <img
                 src={contents3}
-                alt='워너브라더스 100주년 전시'
+                alt='뷰티 ‧ 패션 체험 공간'
                 className='conImg'
               />
               <div className='center'>
-                <b>워너브라더스 100주년 전시</b>
+                <b>뷰티 ‧ 패션 체험 공간</b>
                 <div>
                   <span className='date'>일정</span>
-                  <span>23. 12. 30.(토) ~ 12. 31.(일)</span>
+                  <span>23. 12. 30.(토) 10:00 ~ 18:00</span>
                 </div>
 
                 <div>
                   <span className='date'>장소</span>
-                  <span>DDP 뮤지엄 전시 1관</span>
+                  <span>DDP 디자인랩 2층 멤버십라이브러리</span>
                 </div>
-                <Link to='/contentsPage3'>
+                <Link to='/contentsPage4'>
                   <button>
                     바로가기 <img src={buttonArrow} alt='detail' />
                   </button>
@@ -98,23 +122,19 @@ const Contents = () => {
             </div>
 
             <div className='box'>
-              <img
-                src={contents4}
-                alt='쇼플루언서 라이브세일즈 쇼'
-                className='conImg'
-              />
+              <img src={contents4} alt='생활맥주 쇼륨' className='conImg' />
               <div className='center'>
-                <b>쇼플루언서 라이브세일즈 쇼</b>
+                <b>생활맥주 쇼륨</b>
                 <div>
                   <span className='date'>일정</span>
-                  <span>23. 12. 30.(토) ~ 12. 31.(일)</span>
+                  <span>23. 12. 30.(토) ~ 12. 31.(일) 10:00 ~ 18:00</span>
                 </div>
 
                 <div>
                   <span className='date'>장소</span>
-                  <span>DDP 디자인랩 2층</span>
+                  <span>DDP 아트홀 고객지원실</span>
                 </div>
-                <Link to='/contentsPage4'>
+                <Link to='/contentsPage5'>
                   <button>
                     바로가기
                     <img src={buttonArrow} alt='detail' />
@@ -124,46 +144,21 @@ const Contents = () => {
             </div>
 
             <div className='box'>
-              <img src={contents5} alt='서울의 뷰티, 패션' className='conImg' />
+              <img
+                src={contents5}
+                alt='포토부스(인생네컷)'
+                className='conImg'
+              />
               <div className='center'>
-                <b>
-                  [B the B]
-                  <br />
-                  서울의 뷰티 ‧ 패션
-                </b>
+                <b>포토부스(인생네컷)</b>
                 <div>
                   <span className='date'>일정</span>
-                  <span>23. 12. 30.(토) ~ 12. 31.(일)</span>
+                  <span>23. 12. 30.(토) ~ 12. 31.(일) 10:00 ~ 18:00</span>
                 </div>
 
                 <div>
                   <span className='date'>장소</span>
-                  <span>DDP 디자인랩 B the B</span>
-                </div>
-                <Link to='/contentsPage5'>
-                  <button>
-                    바로가기 <img src={buttonArrow} alt='detail' />
-                  </button>
-                </Link>
-              </div>
-            </div>
-
-            <div className='box'>
-              <img src={contents6} alt='혁신기술시연' className='conImg' />
-              <div className='center'>
-                <b>
-                  [서울테크밋업]
-                  <br />
-                  혁신기술시연
-                </b>
-                <div>
-                  <span className='date'>일정</span>
-                  <span>23. 12. 30.(토) ~ 12. 31.(일)</span>
-                </div>
-
-                <div>
-                  <span className='date'>장소</span>
-                  <span>DDP 디자인랩 3층 디자인 홀</span>
+                  <span>DDP 디자인랩 데크라운지</span>
                 </div>
                 <Link to='/contentsPage6'>
                   <button>
@@ -192,6 +187,7 @@ const FestivalWrap = styled.div`
   flex-direction: column;
   color: white;
   position: relative;
+  padding-bottom:100px;
 
   .Triangle {
     position: absolute;
@@ -200,6 +196,8 @@ const FestivalWrap = styled.div`
   }
 
   @media (max-width: 768px) {
+    padding-bottom: 50px;
+
     .Triangle {
       display: none;
     }
@@ -357,6 +355,11 @@ const ContentsBox = styled.div`
 
     .box {
       width: 100%;
+      pointer-events: none;
+
+      button {
+        pointer-events: auto;
+      }
     }
   }
 

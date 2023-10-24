@@ -5,6 +5,7 @@ import Footer from "../../../components/footer/Footer";
 import Triangle from "../../../assets/images/program/img-triangle.svg";
 import performance1 from "../../../assets/images/program/img-performance1.jpg";
 import performance2 from "../../../assets/images/program/img-performance2.jpg";
+import performance3 from "../../../assets/images/program/img-conference1.jpg";
 import buttonArrow from "../../../assets/images/main/button-arrow-white.svg";
 import buttonArrowBlack from "../../../assets/images/main/button-arrow-black.svg";
 import { Link } from "react-router-dom";
@@ -29,7 +30,7 @@ const Performance = () => {
                 <b>K-POP 공연 & 카운트다운</b>
                 <div>
                   <span className='date'>일정</span>
-                  <span>23. 12. 31.(일) 19:00 ~ 23. 1. 1.(월) 01:00</span>
+                  <span>23. 12. 31.(일) 19:00 ~ 23. 1. 1.(월) 03:00 </span>
                 </div>
                 <div>
                   <span className='date'>장소</span>
@@ -53,16 +54,88 @@ const Performance = () => {
                 <b> K-POP 랜덤플레이댄스</b>
                 <div>
                   <span className='date'>일정</span>
-                  <span>23. 12. 30.(토) ~ 12. 31.(일)</span>
+                  <span>23. 12. 30.(토) 10:00 ~ 18:00</span>
                 </div>
                 <div>
                   <span className='date'>장소</span>
-                  <span>DDP 어울림광장</span>
+                  <span>DDP 미래로 상부</span>
                 </div>
                 <Link to='/performancePage2'>
                   <button>
                     바로가기
                     <img src={buttonArrow} alt='detail' />
+                  </button>
+                </Link>
+              </div>
+            </div>
+
+            <div className='box'>
+              <img
+                src={performance3}
+                alt='크리에이터 팬미팅'
+                className='conImg'
+              />
+              <div className='center'>
+                <b>크리에이터 팬미팅</b>
+                <div>
+                  <span className='date'>일정</span>
+                  <span>23. 12. 30.(토) 10:00 ~ 18:00</span>
+                </div>
+                <div>
+                  <span className='date'>장소</span>
+                  <span>DDP 디자인랩 2층 북세미나실</span>
+                </div>
+                <Link to='/performancePage3'>
+                  <button>
+                    바로가기 <img src={buttonArrow} alt='detail' />
+                  </button>
+                </Link>
+              </div>
+            </div>
+
+            <div className='box'>
+              <img
+                src={performance3}
+                alt='크리에이터 팬미팅'
+                className='conImg'
+              />
+              <div className='center'>
+                <b>K-POP 댄스 어플 체험</b>
+                <div>
+                  <span className='date'>일정</span>
+                  <span>23. 12. 31.(일) 10:00 ~ 18:00</span>
+                </div>
+                <div>
+                  <span className='date'>장소</span>
+                  <span>DDP 디자인랩 2층 서울온</span>
+                </div>
+                <Link to='/performancePage4'>
+                  <button>
+                    바로가기 <img src={buttonArrow} alt='detail' />
+                  </button>
+                </Link>
+              </div>
+            </div>
+
+            <div className='box'>
+              <img
+                src={performance3}
+                alt='크리에이터 팬미팅'
+                className='conImg'
+              />
+              <div className='center'>
+                <b>K-POP XR 콘텐츠 체험</b>
+                <div>
+                  <span className='date'>일정</span>
+                  <span>23. 12. 30.(토) ~ 12. 31.(일) 10:00 ~ 18:00</span>
+                </div>
+                <div>
+                  <span className='date'>장소</span>
+                  <span>DDP 디자인랩 1층 미디어아트갤러리</span>
+                </div>
+                <Link to='/performancePage5'>
+                  <button>
+                    바로가기 <img src={buttonArrow} alt='detail' />
                   </button>
                 </Link>
               </div>
@@ -95,6 +168,8 @@ const FestivalWrap = styled.div`
   }
 
   @media (max-width: 768px) {
+    padding-bottom: 50px;
+
     .Triangle {
       display: none;
     }
@@ -251,9 +326,14 @@ const Contents = styled.div`
 
     .box {
       width: 100%;
+      pointer-events: none;
+
+      button {
+        pointer-events: auto;
+      }
     }
   }
-
+  
   @media (max-width: 420px) {
     .box {
       height: 300px;

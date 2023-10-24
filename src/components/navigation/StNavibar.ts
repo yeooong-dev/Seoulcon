@@ -256,6 +256,14 @@ export const NaviWrap = styled.div.attrs<NaviWrapProps>((props) => ({
   }
 
   @media (max-width: 420px) {
+    .mobile-menu-toggle {
+      padding-right: 20px;
+    }
+
+    .left {
+      padding-left: 10px;
+    }
+
     .right {
       width: 100%;
       padding: 0;

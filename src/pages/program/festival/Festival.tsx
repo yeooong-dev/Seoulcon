@@ -173,6 +173,7 @@ const FestivalWrap = styled.div`
   flex-direction: column;
   color: white;
   position: relative;
+  padding-bottom:100px;
 
   .Triangle {
     position: absolute;
@@ -182,6 +183,8 @@ const FestivalWrap = styled.div`
   }
 
   @media (max-width: 768px) {
+    padding-bottom: 50px;
+    
     .Triangle {
       display: none;
     }
@@ -345,6 +348,11 @@ const Contents = styled.div`
 
     .box {
       width: 100%;
+      pointer-events: none;
+
+      button {
+        pointer-events: auto;
+      }
     }
   }
 

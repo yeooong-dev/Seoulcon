@@ -4,7 +4,6 @@ import Navibar from "../../../components/navigation/Navibar";
 import Footer from "../../../components/footer/Footer";
 import Triangle from "../../../assets/images/program/img-triangle.svg";
 import buttonArrow from "../../../assets/images/main/button-arrow-white.svg";
-import buttonArrowGreen from "../../../assets/images/main/button-arrow-green.svg";
 import buttonArrowBlack from "../../../assets/images/main/button-arrow-black.svg";
 import festival1 from "../../../assets/images/program/img-contents2.jpg";
 import { Link } from "react-router-dom";
@@ -14,15 +13,15 @@ const ContentsPage2 = () => {
     <Wrapper>
       <Navibar />
       <FestivalWrap>
-        <img src={festival1} alt='팬 페스티벌' className='bg' />
+        <img src={festival1} alt='아티스트 콜라보 전시' className='bg' />
         <PaddingWrap>
           <img src={Triangle} alt='도형' className='Triangle' />
-          <Title>24년 콘텐츠 제작 발표회</Title>
+          <Title>아티스트 콜라보 전시</Title>
           <Divider />
           <Contents>
             <div className='right'>
               <div>
-                <img src={festival1} alt='팬 페스티벌' />
+                <img src={festival1} alt='아티스트 콜라보 전시' />
               </div>
             </div>
 
@@ -30,20 +29,13 @@ const ContentsPage2 = () => {
               <p className='date'>일정</p>
               <p>• 23. 12. 30.(토) ~ 12. 31.(일)</p>
               <p className='date'>장소</p>
-              <p>• DDP 디자인랩 3층 디자인 홀</p>
+              <p>• DDP 어울림광장</p>
               <p className='date'>내용</p>
-              <p>
-                • 2024년 방영예정인 콘텐츠 라인업 제작 발표
-                <br />• 감독, 배우 참여 토크쇼 진행 <br />• 콘텐츠 라인업 티져,
-                트레일러 상영 등
-              </p>
+              <p>• 아티스트와 콜라보 한 서울콘 키비주얼 ‧ 조형물 연출</p>
               <p className='date'>협력</p>
-              <p>• 하이그라운드</p>
+              <p>• 그라플렉스, ㈜커넥아트</p>
 
               <div className='btnBox'>
-                <button className='green'>
-                  신청하기 <img src={buttonArrowGreen} alt='detail' />
-                </button>
                 <Link to='/contents'>
                   <button className='back'>
                     돌아가기 <img src={buttonArrow} alt='detail' />
@@ -111,7 +103,7 @@ const Title = styled.h1`
 
   @media (max-width: 420px) {
     font-size: 26px;
-    line-height:40px;
+    line-height: 40px;
   }
 `;
 

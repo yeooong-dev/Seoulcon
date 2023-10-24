@@ -23,18 +23,18 @@ const Conference = () => {
             <div className='box'>
               <img
                 src={Conference1}
-                alt='크리에이터 팬미팅'
+                alt='인플루언서 팬미팅'
                 className='conImg'
               />
               <div className='center'>
-                <b>크리에이터 팬미팅</b>
+                <b>인플루언서 팬미팅</b>
                 <div>
                   <span className='date'>일정</span>
-                  <span>23. 12. 30.(토) ~ 12. 31.(일)</span>
+                  <span>23. 12. 30.(토) 10:00 ~ 18:00</span>
                 </div>
                 <div>
                   <span className='date'>장소</span>
-                  <span>DDP 디자인랩 2층 매거진 라이브러리</span>
+                  <span>DDP 디자인랩 2층 북세미나실</span>
                 </div>
                 <Link to='/conferencePage'>
                   <button>
@@ -45,18 +45,42 @@ const Conference = () => {
             </div>
 
             <div className='box'>
-              <img src={Conference2} alt='한류 세미나' className='conImg' />
+              <img src={Conference1} alt='한류 포럼' className='conImg' />
               <div className='center'>
-                <b>한류 세미나</b>
+                <b>한류 포럼</b>
                 <div>
                   <span className='date'>일정</span>
-                  <span>23. 12. 30.(토)</span>
+                  <span>23. 12. 30.(토) 13:00 ~ 17:00</span>
                 </div>
                 <div>
                   <span className='date'>장소</span>
-                  <span>DDP 아트홀 컨퍼런스홀</span>
+                  <span>DDP 컨퍼런스홀</span>
                 </div>
                 <Link to='/conferencePage2'>
+                  <button>
+                    바로가기 <img src={buttonArrow} alt='detail' />
+                  </button>
+                </Link>
+              </div>
+            </div>
+
+            <div className='box'>
+              <img
+                src={Conference2}
+                alt='숏폼 콘텐츠 공모전'
+                className='conImg'
+              />
+              <div className='center'>
+                <b>숏폼 콘텐츠 공모전</b>
+                <div>
+                  <span className='date'>일정</span>
+                  <span>23. 12. 30.(토) 10:00 ~ 18:00</span>
+                </div>
+                <div>
+                  <span className='date'>장소</span>
+                  <span>DDP 디자인랩 2층 서울온</span>
+                </div>
+                <Link to='/conferencePage3'>
                   <button>
                     바로가기
                     <img src={buttonArrow} alt='detail' />
@@ -68,21 +92,43 @@ const Conference = () => {
             <div className='box'>
               <img
                 src={Conference3}
-                alt='미디어 기자단 포럼'
+                alt='크리에이터
+                글로벌 진출 솔루션 세미나'
                 className='conImg'
               />
               <div className='center'>
-                <b>미디어 기자단 포럼</b>
+                <b>크리에이터 글로벌 진출 솔루션 세미나</b>
                 <div>
                   <span className='date'>일정</span>
-                  <span>23. 12. 31.(일)</span>
+                  <span>23. 12. 31.(일) 14:00 ~ 18:00</span>
                 </div>
 
                 <div>
                   <span className='date'>장소</span>
-                  <span>DDP 아트홀 컨퍼런스홀</span>
+                  <span>DDP 디자인랩 3층 디자인홀</span>
                 </div>
-                <Link to='/conferencePage3'>
+                <Link to='/conferencePage4'>
+                  <button>
+                    바로가기 <img src={buttonArrow} alt='detail' />
+                  </button>
+                </Link>
+              </div>
+            </div>
+
+            <div className='box'>
+              <img src={Conference3} alt='서울테크밋업' className='conImg' />
+              <div className='center'>
+                <b>서울테크밋업</b>
+                <div>
+                  <span className='date'>일정</span>
+                  <span>23. 12. 30.(토) 11:00 ~ 14:00</span>
+                </div>
+
+                <div>
+                  <span className='date'>장소</span>
+                  <span>DDP 디자인랩 3층 디자인홀</span>
+                </div>
+                <Link to='/conferencePage5'>
                   <button>
                     바로가기 <img src={buttonArrow} alt='detail' />
                   </button>
@@ -109,6 +155,7 @@ const FestivalWrap = styled.div`
   flex-direction: column;
   color: white;
   position: relative;
+  padding-bottom: 100px;
 
   .Triangle {
     position: absolute;
@@ -117,6 +164,8 @@ const FestivalWrap = styled.div`
   }
 
   @media (max-width: 768px) {
+    padding-bottom: 50px;
+
     .Triangle {
       display: none;
     }
@@ -275,6 +324,11 @@ const Contents = styled.div`
 
     .box {
       width: 100%;
+      pointer-events: none;
+
+      button {
+        pointer-events: auto;
+      }
     }
   }
 

@@ -4,7 +4,6 @@ import Navibar from "../../../components/navigation/Navibar";
 import Footer from "../../../components/footer/Footer";
 import Triangle from "../../../assets/images/program/img-triangle.svg";
 import buttonArrow from "../../../assets/images/main/button-arrow-white.svg";
-import buttonArrowGreen from "../../../assets/images/main/button-arrow-green.svg";
 import buttonArrowBlack from "../../../assets/images/main/button-arrow-black.svg";
 import festival1 from "../../../assets/images/program/img-contents4.jpg";
 import { Link } from "react-router-dom";
@@ -14,33 +13,34 @@ const ContentsPage4 = () => {
     <Wrapper>
       <Navibar />
       <FestivalWrap>
-        <img src={festival1} alt='팬 페스티벌' className='bg' />
+        <img src={festival1} alt='뷰티 ‧ 패션 체험 공간' className='bg' />
         <PaddingWrap>
           <img src={Triangle} alt='도형' className='Triangle' />
-          <Title>쇼플루언서 라이브세일즈 쇼</Title>
+          <Title>뷰티 ‧ 패션 체험 공간</Title>
           <Divider />
           <Contents>
             <div className='right'>
               <div>
-                <img src={festival1} alt='팬 페스티벌' />
+                <img src={festival1} alt='뷰티 ‧ 패션 체험 공간' />
               </div>
             </div>
 
             <div className='left'>
               <p className='date'>일정</p>
-              <p>• 23. 12. 30.(토) ~ 12. 31.(일)</p>
+              <p>• 23. 12. 30.(토) 10:00 ~ 18:00</p>
               <p className='date'>장소</p>
-              <p>• DDP 디자인랩 2층</p>
+              <p>• DDP 디자인랩 2층 멤버십라이브러리</p>
               <p className='date'>내용</p>
               <p>
-                • 쇼플루언서 = 쇼호스트 + 인플루언서
-                <br />• 서울중소기업 상품 마케팅 전문가 인플루언서와 실시간 판매
+                • 페이스 페인팅을 비롯한 메이크업 체험
+                <br />
+                참여자의 퍼스널 컬러 진단
               </p>
 
+              <p className='date'>협력</p>
+              <p>• 서울크루</p>
+
               <div className='btnBox'>
-                <button className='green'>
-                  신청하기 <img src={buttonArrowGreen} alt='detail' />
-                </button>
                 <Link to='/contents'>
                   <button className='back'>
                     돌아가기 <img src={buttonArrow} alt='detail' />
@@ -108,7 +108,7 @@ const Title = styled.h1`
 
   @media (max-width: 420px) {
     font-size: 26px;
-    line-height:40px;
+    line-height: 40px;
   }
 `;
 

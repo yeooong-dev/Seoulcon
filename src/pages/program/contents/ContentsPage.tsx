@@ -33,11 +33,8 @@ const ContentsPage = () => {
               <p>• DDP 디자인랩 1층 D숲</p>
               <p className='date'>내용</p>
               <p>
-                • 국내 유일한 스트릿 패션& 스니커즈 전시 (한정판 드롭, 콜라보
-                등)
+                • 국내 유일 스트릿 패션 & 스니커즈 전시
                 <br />• GenZ세대들에게 인기 있는 서울의 대표 스트릿 브랜드
-                (무신사, 아디다스, 분<br />
-                &nbsp; &nbsp;더샵, 카시나, 피치스 등)
               </p>
               <p className='date'>협력</p>
               <p>• ㈜오리지널랩, ㈜무신사</p>
@@ -113,7 +110,7 @@ const Title = styled.h1`
 
   @media (max-width: 420px) {
     font-size: 26px;
-    line-height:40px;
+    line-height: 40px;
   }
 `;
 

@@ -5,23 +5,23 @@ import Footer from "../../../components/footer/Footer";
 import Triangle from "../../../assets/images/program/img-triangle.svg";
 import buttonArrow from "../../../assets/images/main/button-arrow-white.svg";
 import buttonArrowBlack from "../../../assets/images/main/button-arrow-black.svg";
-import festival1 from "../../../assets/images/program/img-contents6.jpg";
+import festival1 from "../../../assets/images/program/img-performance2.jpg";
 import { Link } from "react-router-dom";
 
-const ContentsPage5 = () => {
+const PerformancePage5 = () => {
   return (
     <Wrapper>
       <Navibar />
       <FestivalWrap>
-        <img src={festival1} alt='생활맥주 쇼륨' className='bg' />
+        <img src={festival1} alt='K-POP XR 콘텐츠 체험' className='bg' />
         <PaddingWrap>
           <img src={Triangle} alt='도형' className='Triangle' />
-          <Title>생활맥주 쇼륨</Title>
+          <Title>K-POP XR 콘텐츠 체험</Title>
           <Divider />
           <Contents>
             <div className='right'>
               <div>
-                <img src={festival1} alt='생활맥주 쇼륨' />
+                <img src={festival1} alt='K-POP XR 콘텐츠 체험' />
               </div>
             </div>
 
@@ -29,14 +29,17 @@ const ContentsPage5 = () => {
               <p className='date'>일정</p>
               <p>• 23. 12. 30.(토) ~ 12. 31.(일) 10:00 ~ 18:00</p>
               <p className='date'>장소</p>
-              <p>• DDP 아트홀 고객지원실</p>
+              <p>• DDP 디자인랩 1층 미디어아트갤러리</p>
               <p className='date'>내용</p>
-              <p>• 대한민국 수제 맥주의 대표 브랜드 ‘생활맥주’ 쇼룸 체험</p>
+              <p>
+                • VR로 관람하는 K-POP 콘서트
+                <br />• 한류스타와 함께하는 특별한 경험
+              </p>
               <p className='date'>협력</p>
-              <p>• 생활맥주</p>
+              <p>• VENTA VR</p>
 
               <div className='btnBox'>
-                <Link to='/contents'>
+                <Link to='/performance'>
                   <button className='back'>
                     돌아가기 <img src={buttonArrow} alt='detail' />
                   </button>
@@ -51,7 +54,7 @@ const ContentsPage5 = () => {
   );
 };
 
-export default ContentsPage5;
+export default PerformancePage5;
 
 const FestivalWrap = styled.div`
   width: 100%;
@@ -99,7 +102,6 @@ const Title = styled.h1`
   font-size: 48px;
   margin-top: 120px;
   color: rgba(191, 255, 106, 1);
-  line-height: 65px;
   position: relative;
 
   @media (max-width: 420px) {

@@ -4,7 +4,6 @@ import Navibar from "../../../components/navigation/Navibar";
 import Footer from "../../../components/footer/Footer";
 import Triangle from "../../../assets/images/program/img-triangle.svg";
 import buttonArrow from "../../../assets/images/main/button-arrow-white.svg";
-import buttonArrowGreen from "../../../assets/images/main/button-arrow-green.svg";
 import buttonArrowBlack from "../../../assets/images/main/button-arrow-black.svg";
 import festival1 from "../../../assets/images/program/img-conference2.jpg";
 import { Link } from "react-router-dom";
@@ -17,7 +16,7 @@ const ConferencePage2 = () => {
         <img src={festival1} alt='팬 페스티벌' className='bg' />
         <PaddingWrap>
           <img src={Triangle} alt='도형' className='Triangle' />
-          <Title>한류 세미나</Title>
+          <Title>한류 포럼</Title>
           <Divider />
           <Contents>
             <div className='right'>
@@ -28,24 +27,15 @@ const ConferencePage2 = () => {
 
             <div className='left'>
               <p className='date'>일정</p>
-              <p>• 23. 12. 30.(토)</p>
+              <p>• 23. 12. 30.(토) 13:00 ~ 17:00</p>
               <p className='date'>장소</p>
-              <p>• DDP 아트홀 컨퍼런스홀</p>
+              <p>• DDP 컨퍼런스홀</p>
               <p className='date'>내용</p>
-              <p>
-                • 한류와 문화의 역사적 배경, 한류의 글로벌 영향과 향후 전망
-                <br />
-                • 한류와 팬 커뮤니티 등 한류에 대한 글로벌 석학들의 대담
-                <br />• 연사 : 헨리 젠킨스, 산기타 슈레스토바, 샤론 킨셀라, 폴
-                로페스, 오인규 교수 등
-              </p>
+              <p>• 한류와 팬 커뮤니티 등 한류에 대한 글로벌 석학들의 대담</p>
               <p className='date'>협력</p>
               <p>• 세계한류학회</p>
 
               <div className='btnBox'>
-                <button className='green'>
-                  신청하기 <img src={buttonArrowGreen} alt='detail' />
-                </button>
                 <Link to='/conference'>
                   <button className='back'>
                     돌아가기 <img src={buttonArrow} alt='detail' />

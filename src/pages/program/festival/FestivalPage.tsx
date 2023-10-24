@@ -223,6 +223,14 @@ const Contents = styled.div`
     .left {
       width: 100%;
       margin-top: 50px;
+
+      .btnBox {
+        pointer-events: none;
+
+        a {
+          pointer-events: auto;
+        }
+      }
     }
 
     .right {

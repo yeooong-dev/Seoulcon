@@ -4,7 +4,6 @@ import Navibar from "../../../components/navigation/Navibar";
 import Footer from "../../../components/footer/Footer";
 import Triangle from "../../../assets/images/program/img-triangle.svg";
 import buttonArrow from "../../../assets/images/main/button-arrow-white.svg";
-import buttonArrowGreen from "../../../assets/images/main/button-arrow-green.svg";
 import buttonArrowBlack from "../../../assets/images/main/button-arrow-black.svg";
 import festival1 from "../../../assets/images/program/img-performance2.jpg";
 import { Link } from "react-router-dom";
@@ -30,21 +29,16 @@ const PerformancePage2 = () => {
               <p className='date'>일정</p>
               <p>• 23. 12. 30.(토) 10:00 ~ 18:00</p>
               <p className='date'>장소</p>
-              <p>• DDP 아트홀 1관</p>
+              <p>• DDP 미래로 상부</p>
               <p className='date'>내용</p>
               <p>
-                • E스포츠 구단 T1의 한 해를 마무리하는 팬 페스티벌
-                <br />• 팬들과 함께 진행하는 팬 페스티벌
-                <br />• 선수와 관객들이 함께하는 각종 프로그램 및 이벤트 매치
-                <br />• 팬미팅, 팬 토크쇼 등 다양한 이벤트, T1구단 굿즈 판매
+                • K-POP 팬들과 함께하는 플래시몹
+                <br />• 랜덤플레이댄스 체험
               </p>
               <p className='date'>협력</p>
-              <p>• SK텔레콤 T1구단</p>
+              <p>• KBS, 딩가딩가스튜디오</p>
 
               <div className='btnBox'>
-                <button className='green'>
-                  신청하기 <img src={buttonArrowGreen} alt='detail' />
-                </button>
                 <Link to='/performance'>
                   <button className='back'>
                     돌아가기 <img src={buttonArrow} alt='detail' />

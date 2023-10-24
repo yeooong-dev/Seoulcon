@@ -28,18 +28,15 @@ const PerformancePage = () => {
 
             <div className='left'>
               <p className='date'>일정</p>
-              <p>• 23. 12. 30.(토) 10:00 ~ 18:00</p>
+              <p>• 23. 12. 31.(일) 19:00 ~ 23. 1. 1.(월) 03:00</p>
               <p className='date'>장소</p>
               <p>• DDP 아트홀 1관</p>
               <p className='date'>내용</p>
               <p>
-                • E스포츠 구단 T1의 한 해를 마무리하는 팬 페스티벌
-                <br />• 팬들과 함께 진행하는 팬 페스티벌
-                <br />• 선수와 관객들이 함께하는 각종 프로그램 및 이벤트 매치
-                <br />• 팬미팅, 팬 토크쇼 등 다양한 이벤트, T1구단 굿즈 판매
+                • K-POP & EDM 공연 <br />• 2024년을 맞이하는 새해 카운트다운
               </p>
               <p className='date'>협력</p>
-              <p>• SK텔레콤 T1구단</p>
+              <p>• ㈜비이피씨탄젠트</p>
 
               <div className='btnBox'>
                 <button className='green'>

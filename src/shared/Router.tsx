@@ -20,6 +20,8 @@ import FestivalPage5 from "../pages/program/festival/FestivalPage5";
 import ConferencePage from "../pages/program/conference/ConferencePage";
 import ConferencePage2 from "../pages/program/conference/ConferencePage2";
 import ConferencePage3 from "../pages/program/conference/ConferencePage3";
+import ConferencePage4 from "../pages/program/conference/ConferencePage4";
+import ConferencePage5 from "../pages/program/conference/ConferencePage5";
 import ContentsPage from "../pages/program/contents/ContentsPage";
 import ContentsPage2 from "../pages/program/contents/ContentsPage2";
 import ContentsPage3 from "../pages/program/contents/ContentsPage3";
@@ -27,8 +29,11 @@ import ContentsPage4 from "../pages/program/contents/ContentsPage4";
 import ContentsPage5 from "../pages/program/contents/ContentsPage5";
 import ContentsPage6 from "../pages/program/contents/ContentsPage6";
 import PerformancePage from "../pages/program/performance/PerformancePage";
-import PerformancePage2 from '../pages/program/performance/PerformancePage2';
-import NoticePage from '../pages/info/NoticePage';
+import PerformancePage2 from "../pages/program/performance/PerformancePage2";
+import PerformancePage3 from "../pages/program/performance/PerformancePage3";
+import PerformancePage4 from "../pages/program/performance/PerformancePage4";
+import PerformancePage5 from "../pages/program/performance/PerformancePage5";
+import NoticePage from "../pages/info/NoticePage";
 
 function Router() {
   return (
@@ -57,6 +62,8 @@ function Router() {
         <Route path='/conferencePage' element={<ConferencePage />} />
         <Route path='/conferencePage2' element={<ConferencePage2 />} />
         <Route path='/conferencePage3' element={<ConferencePage3 />} />
+        <Route path='/conferencePage4' element={<ConferencePage4 />} />
+        <Route path='/conferencePage5' element={<ConferencePage5 />} />
 
         <Route path='/contentsPage' element={<ContentsPage />} />
         <Route path='/contentsPage2' element={<ContentsPage2 />} />
@@ -67,9 +74,11 @@ function Router() {
 
         <Route path='/performancePage' element={<PerformancePage />} />
         <Route path='/performancePage2' element={<PerformancePage2 />} />
+        <Route path='/performancePage3' element={<PerformancePage3 />} />
+        <Route path='/performancePage4' element={<PerformancePage4 />} />
+        <Route path='/performancePage5' element={<PerformancePage5 />} />
 
         <Route path='/noticePage' element={<NoticePage />} />
-        
       </Routes>
     </BrowserRouter>
   );

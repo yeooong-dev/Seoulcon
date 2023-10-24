@@ -484,7 +484,7 @@ export const LineupWrap = styled.div`
           }
         }
         .imgContainer:last-child {
-          margin-right: 80px;
+          margin-right: 100px;
         }
       }
     }
