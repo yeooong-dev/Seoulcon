@@ -34,10 +34,12 @@ import PerformancePage3 from "../pages/program/performance/PerformancePage3";
 import PerformancePage4 from "../pages/program/performance/PerformancePage4";
 import PerformancePage5 from "../pages/program/performance/PerformancePage5";
 import NoticePage from "../pages/info/NoticePage";
+import ScrollToTop from "../components/ScrollTop";
 
 function Router() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path='/' element={<Main />} />
         <Route path='/about' element={<SeoulconAbout />} />

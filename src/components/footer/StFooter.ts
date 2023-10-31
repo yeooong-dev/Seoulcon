@@ -39,26 +39,32 @@ export const FooterWrap = styled.div`
 
       img {
         margin-left: 10px;
+        margin-bottom: -4px;
         cursor: pointer;
       }
     }
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 470px) {
     .top {
       left: -15px;
       border: none;
     }
 
     .bottom {
+      height: 70px;
+      bottom: 0px;
       left: -15px;
       font-size: 12px;
+      flex-direction: column;
+      align-items: flex-start;
 
       .right {
-        padding-right: 1.6rem;
+        position: absolute;
+        bottom: 10px;
 
-        img:last-child {
-          display: none;
+        img:first-child {
+          margin-left: 0;
         }
       }
     }

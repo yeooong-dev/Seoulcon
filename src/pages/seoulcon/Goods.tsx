@@ -51,6 +51,7 @@ const GoodsWrap = styled.div`
 
 const PaddingWrap = styled.div`
   width: 80%;
+  max-width: 1544px;
 
   @media (max-width: 768px) {
     width: 90%;

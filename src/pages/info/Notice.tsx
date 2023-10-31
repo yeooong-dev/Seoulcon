@@ -194,6 +194,7 @@ const FestivalWrap = styled.div`
 
 const PaddingWrap = styled.div`
   width: 60%;
+  max-width: 1544px;
 
   @media (max-width: 768px) {
     width: 90%;
@@ -215,7 +216,7 @@ const Divider = styled.hr`
   background: rgba(58, 58, 58, 1);
   opacity: 0.3;
 
-  @media (max-width: 420px) {
+  @media (max-width: 600px) {
     display: none;
   }
 `;
@@ -335,7 +336,7 @@ const Contents = styled.div`
     }
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 600px) {
     font-size: 14px;
     margin-bottom: 100px;
 
@@ -346,6 +347,8 @@ const Contents = styled.div`
     .listBox {
       .list {
         width: 100%;
+        height: 70px;
+        margin:0;
         align-items: flex-start;
         flex-direction: column;
         position: relative;
@@ -356,13 +359,13 @@ const Contents = styled.div`
   
         .title {
           position: absolute;
-          top: 10px;
+          top: 13px;
           left: -20px;
         }
   
         .rightBox {
           position: absolute;
-          bottom: 10px;
+          bottom: 13px;
           left: -50px;
   
           span {

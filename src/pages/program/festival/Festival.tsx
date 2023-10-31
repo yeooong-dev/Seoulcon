@@ -192,6 +192,7 @@ const FestivalWrap = styled.div`
 
 const PaddingWrap = styled.div`
   width: 80%;
+  max-width: 1544px;
 
   @media (max-width: 768px) {
     width: 90%;
@@ -288,6 +289,8 @@ const Contents = styled.div`
 
       div {
         font-size: 18px;
+        width: 100%;
+        margin: 3px auto;
 
         .date {
           margin-right: 10px;
@@ -342,7 +345,7 @@ const Contents = styled.div`
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     justify-content: center;
     flex-direction: column;
 
@@ -356,15 +359,29 @@ const Contents = styled.div`
     }
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 700px) {
+    .box {
+      margin-top: -10px;
+      margin-bottom: -10px;
+    }
+  }
+
+  @media (max-width: 670px) {
+    .box {
+      margin-top: -20px;
+    }
+  }
+
+  @media (max-width: 610px) {
     .box {
       height: 300px;
       min-height: 0px;
       position: relative;
+      margin-top: 0px;
+      margin-bottom: 20px;
 
       .conImg {
         height: 300px;
-        width: auto;
         object-fit: cover;
         display: block;
       }
@@ -391,6 +408,12 @@ const Contents = styled.div`
           }
         }
       }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .box {
+      margin-top: 0px;
     }
   }
 `;

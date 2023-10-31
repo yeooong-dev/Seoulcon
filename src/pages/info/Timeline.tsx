@@ -43,6 +43,7 @@ const FestivalWrap = styled.div`
 
 const PaddingWrap = styled.div`
   width: 80%;
+  max-width: 1544px;
 `;
 
 const Title = styled.h1`

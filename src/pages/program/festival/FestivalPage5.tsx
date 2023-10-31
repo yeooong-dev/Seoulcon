@@ -91,6 +91,7 @@ const FestivalWrap = styled.div`
 
 const PaddingWrap = styled.div`
   width: 80%;
+  max-width: 1544px;
 
   @media (max-width: 768px) {
     width: 90%;
@@ -100,13 +101,13 @@ const PaddingWrap = styled.div`
 const Title = styled.h1`
   font-size: 48px;
   margin-top: 120px;
+  line-height: 60px;
   color: rgba(191, 255, 106, 1);
   position: relative;
-  line-height: 4rem;
 
   @media (max-width: 420px) {
     font-size: 26px;
-    line-height: 2.3rem;
+    line-height: 35px;
   }
 `;
 
@@ -123,12 +124,19 @@ const Contents = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 100px;
+  flex-direction: row-reverse;
 
   .left {
     width: 50%;
     display: flex;
     flex-direction: column;
     z-index: 9;
+
+    .btnBox {
+      width: 500px;
+      display: flex;
+      margin-top: -50px;
+    }
 
     p {
       line-height: 35px;
@@ -145,6 +153,7 @@ const Contents = styled.div`
       margin-bottom: 8px;
       line-height: 26px;
       font-size: 16px;
+      font-weight: bold;
       text-align: center;
       margin-bottom: -10px;
     }
@@ -158,7 +167,7 @@ const Contents = styled.div`
         border: 1px solid white;
         border-radius: 50px;
         font-size: 16px;
-        margin-top: 100px;
+        margin-top: 60px;
         margin-bottom: 100px;
         cursor: pointer;
       }
@@ -167,13 +176,17 @@ const Contents = styled.div`
         margin-left: 5px;
       }
 
-      button:hover {
+      .green:hover img {
+        content: url(${buttonArrowBlack});
+      }
+
+      .back:hover {
         background: white;
         transition: 0.2s;
         color: black;
       }
 
-      button:hover img {
+      .back:hover img {
         content: url(${buttonArrowBlack});
       }
     }
@@ -182,11 +195,10 @@ const Contents = styled.div`
   .right {
     width: 50%;
     display: flex;
-    position: absolute;
-    right: 0;
+    overflow: hidden;
 
     img {
-      width: 80%;
+      width: 100%;
     }
   }
 
@@ -197,6 +209,14 @@ const Contents = styled.div`
     .left {
       width: 100%;
       margin-top: 50px;
+
+      .btnBox {
+        pointer-events: none;
+
+        a {
+          pointer-events: auto;
+        }
+      }
     }
 
     .right {
@@ -209,14 +229,16 @@ const Contents = styled.div`
     }
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 500px) {
     .left {
-      font-size: 16px;
-
       div {
+        width: 100%;
+        flex-direction: column;
+        margin-top: 10px;
+
         button {
           width: 100%;
-          margin-top: 30px;
+          margin-top: 15px;
           margin-bottom: 30px;
         }
       }

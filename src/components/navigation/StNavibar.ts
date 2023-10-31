@@ -6,6 +6,22 @@ interface NaviWrapProps {
   isInfoOpen?: boolean;
 }
 
+export const Dim = styled.div`
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+  display: none;
+
+  &.visible {
+    display: block;
+  }
+`;
+
 export const NaviWrap = styled.div.attrs<NaviWrapProps>((props) => ({
   isSeoulConOpen: undefined,
   isProgramOpen: undefined,
@@ -72,13 +88,34 @@ export const NaviWrap = styled.div.attrs<NaviWrapProps>((props) => ({
       font-size: 1rem;
       position: relative;
 
-      &:hover {
-        color: #ccc;
-      }
-
       &:nth-last-child(4) {
         margin-right: 50px;
       }
+    }
+
+    button span {
+      display: inline-block;
+      position: relative;
+    }
+
+    button span::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      height: 1px;
+      width: 0;
+      background-color: white;
+      transition: width 0.3s, bottom 0.3s;
+    }
+
+    button.active span::after {
+      width: 100%;
+    }
+
+    button:hover span::after {
+      width: 100%;
+      bottom: -3px;
     }
 
     hr {
@@ -102,7 +139,7 @@ export const NaviWrap = styled.div.attrs<NaviWrapProps>((props) => ({
       background: black;
       left: 0%;
       top: 100%;
-      width: 300px;
+      width: 237px;
 
       a {
         display: block;
@@ -110,10 +147,11 @@ export const NaviWrap = styled.div.attrs<NaviWrapProps>((props) => ({
 
         button {
           width: 100%;
-          padding: 0px 30px;
+          padding: 0px 15px;
           text-align: left;
-          height: 65px;
+          height: 58px;
           border: none;
+          font-size: 14px;
 
           &:hover {
             background: red;
@@ -128,8 +166,16 @@ export const NaviWrap = styled.div.attrs<NaviWrapProps>((props) => ({
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 820px) {
     .padding {
+      height: 60px;
+
+      .left {
+        img {
+          width: 85%;
+        }
+      }
+
       .mobile-menu-toggle {
         display: flex;
       }
@@ -255,7 +301,7 @@ export const NaviWrap = styled.div.attrs<NaviWrapProps>((props) => ({
     }
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 600px) {
     .mobile-menu-toggle {
       padding-right: 20px;
     }
@@ -265,7 +311,7 @@ export const NaviWrap = styled.div.attrs<NaviWrapProps>((props) => ({
     }
 
     .right {
-      width: 100%;
+      width: 65%;
       padding: 0;
       display: flex;
       align-items: center;

@@ -94,6 +94,7 @@ const FestivalWrap = styled.div`
 
 const PaddingWrap = styled.div`
   width: 80%;
+  max-width: 1544px;
 
   @media (max-width: 768px) {
     width: 90%;
@@ -103,13 +104,13 @@ const PaddingWrap = styled.div`
 const Title = styled.h1`
   font-size: 48px;
   margin-top: 120px;
+  line-height: 60px;
   color: rgba(191, 255, 106, 1);
   position: relative;
-  line-height: 4rem;
 
   @media (max-width: 420px) {
     font-size: 26px;
-    line-height: 2.3rem;
+    line-height:35px;
   }
 `;
 
@@ -126,6 +127,7 @@ const Contents = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 100px;
+  flex-direction: row-reverse;
 
   .left {
     width: 50%;
@@ -136,6 +138,7 @@ const Contents = styled.div`
     .btnBox {
       width: 500px;
       display: flex;
+      margin-top: -50px;
     }
 
     p {
@@ -153,6 +156,7 @@ const Contents = styled.div`
       margin-bottom: 8px;
       line-height: 26px;
       font-size: 16px;
+      font-weight: bold;
       text-align: center;
       margin-bottom: -10px;
     }
@@ -171,16 +175,6 @@ const Contents = styled.div`
         cursor: pointer;
       }
 
-      button:hover {
-        background: white;
-        transition: 0.2s;
-        color: black;
-      }
-
-      button:hover img {
-        content: url(${buttonArrowBlack});
-      }
-
       img {
         margin-left: 5px;
       }
@@ -190,13 +184,23 @@ const Contents = styled.div`
         border: 1px solid rgba(191, 255, 106, 1);
         color: rgba(191, 255, 106, 1);
       }
-
       .green:hover {
         background: rgba(191, 255, 106, 1);
+        transition: 0.2s;
         color: black;
       }
 
       .green:hover img {
+        content: url(${buttonArrowBlack});
+      }
+
+      .back:hover {
+        background: white;
+        transition: 0.2s;
+        color: black;
+      }
+
+      .back:hover img {
         content: url(${buttonArrowBlack});
       }
     }
@@ -205,11 +209,10 @@ const Contents = styled.div`
   .right {
     width: 50%;
     display: flex;
-    position: absolute;
-    right: 0;
+    overflow: hidden;
 
     img {
-      width: 80%;
+      width: 100%;
     }
   }
 
@@ -220,6 +223,14 @@ const Contents = styled.div`
     .left {
       width: 100%;
       margin-top: 50px;
+
+      .btnBox {
+        pointer-events: none;
+
+        a {
+          pointer-events: auto;
+        }
+      }
     }
 
     .right {
@@ -232,13 +243,14 @@ const Contents = styled.div`
     }
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 500px) {
     .left {
       font-size: 16px;
 
       .btnBox {
         width: 100%;
         flex-direction: column;
+        margin-top: 10px;
 
         button {
           width: 100%;

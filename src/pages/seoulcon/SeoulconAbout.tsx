@@ -83,7 +83,7 @@ const SeoulconAbout = () => {
             <div className='listbox'>
               <p className='left'>지속성</p>
               <div className='right'>
-                <p>2024년의 시작, 역사가 시작됩니다.</p>
+                <p>2023년 연말, 역사가 시작되는,</p>
                 <img src={intro4} alt='지속성' />
               </div>
             </div>
@@ -152,6 +152,7 @@ const PaddingWrap = styled.div`
 const AboutWrap = styled.div`
   width: 100%;
   height: 100vh;
+  max-height: 1166px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -167,7 +168,7 @@ const AboutWrap = styled.div`
 
   .left {
     position: absolute;
-    top: 0px;
+    top: 0;
     left: 0;
     width: 50%;
 
@@ -178,13 +179,11 @@ const AboutWrap = styled.div`
   }
 
   .right {
-    position: absolute;
-    top: 45%;
-    right: 0;
     width: 50%;
-    transform: translate(0, -50%);
+    margin-left: 50%;
     color: white;
     padding-right: 3rem;
+    margin-top: -150px;
 
     h1 {
       font-size: 3rem;
@@ -210,7 +209,8 @@ const AboutWrap = styled.div`
 
   @media (max-width: 768px) {
     justify-content: center;
-    height: 140vh;
+    height: 150vh;
+    max-height: 1300px;
     flex-direction: column;
     position: relative;
 
@@ -225,14 +225,14 @@ const AboutWrap = styled.div`
     .right {
       position: absolute;
       width: 90%;
-      top: 900px;
-      left: 30px;
+      top: 650px;
+      left: -45%;
     }
   }
 
   @media (max-width: 420px) {
     position: static;
-    height: 1200px;
+    height: 1050px;
 
     .left {
       top: 50px;
@@ -243,8 +243,8 @@ const AboutWrap = styled.div`
     }
 
     .right {
-      left: 20px;
-      top: 45rem;
+      left: -45%;
+      top: 34rem;
 
       h1 {
         font-size: 26px;
@@ -272,6 +272,7 @@ const ListWrap = styled.div`
 
   .listbox {
     width: 100%;
+    height: 160px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -289,17 +290,27 @@ const ListWrap = styled.div`
 
     .right {
       width: 50%;
+      position: relative;
 
       img {
-        display: none;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(0);
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out,
+          visibility 0.3s ease-in-out;
+        z-index: 1;
+        position: absolute;
+        bottom: 0;
+        left: 0;
       }
 
       p {
         font-size: 30px;
         color: rgba(199, 199, 199, 1);
         font-weight: bold;
-        z-index: 9;
         position: relative;
+        visibility: visible;
+        opacity: 1 !important;
       }
     }
   }
@@ -307,7 +318,11 @@ const ListWrap = styled.div`
   .listbox:hover {
     background: black;
     transition: 0.5s;
-    color: white;
+
+    .left,
+    .right p {
+      color: white;
+    }
 
     &::before {
       content: "";
@@ -320,66 +335,69 @@ const ListWrap = styled.div`
       width: 100%;
       height: 100%;
       position: absolute;
-      top: -120px;
-      right: -50%;
+      z-index: -1;
     }
   }
 
-  .listbox:nth-child(1):hover::before {
-    content: url(${intro1});
+  .listbox .right img {
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
   }
 
-  .listbox:nth-child(2):hover::before {
-    content: url(${intro2});
+  .listbox:hover .right img {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-20px);
   }
 
-  .listbox:nth-child(3):hover::before {
-    content: url(${intro3});
+  .listbox:nth-of-type(1) .right img {
+    top: -150px;
+    left: -45px;
   }
 
-  .listbox:nth-child(4):hover::before {
-    content: url(${intro4});
+  .listbox:nth-of-type(2) .right img {
+    top: -240px;
+    left: -20px;
+  }
+
+  .listbox:nth-of-type(3) .right img {
+    top: -200px;
+    left: -100px;
+  }
+
+  .listbox:nth-of-type(4) .right img {
+    top: -150px;
+    left: -40px;
   }
 
   @media (max-width: 768px) {
     .listbox {
+      position: relative;
+      height: 200px;
       pointer-events: none;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      position: relative;
 
       .left {
-        width: 100%;
-        display: flex;
-        justify-content: flex-start;
-        margin-top: 40px;
-        padding-bottom: 2rem;
-        padding-left: 10rem;
+        position: absolute;
+        top: -5px;
+        left: -80px;
       }
 
       .right {
-        img {
-          position: absolute;
-          top: 50%;
-          right: 40px;
-          transform: translateY(-50%);
-          display: block;
-          width: 110px;
-        }
-
-        .second {
-          width: 80px;
-        }
-
         p {
           position: absolute;
-          bottom: 0px;
-          left: 35px;
-          font-size: 20px;
+          bottom: -85px;
+          left: -145px;
           color: black;
-          padding-bottom: 1rem;
+        }
+
+        img {
+          position: absolute;
+          bottom: 0px;
+          right: 300px;
+          width: 135px;
+          opacity: 1;
+          visibility: visible;
         }
       }
     }

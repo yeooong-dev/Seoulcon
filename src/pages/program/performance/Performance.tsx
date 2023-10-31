@@ -178,6 +178,7 @@ const FestivalWrap = styled.div`
 
 const PaddingWrap = styled.div`
   width: 80%;
+  max-width: 1544px;
 
   @media (max-width: 768px) {
     width: 90%;
@@ -205,12 +206,13 @@ const Contents = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 260px;
+  margin-bottom: 100px;
 
   .box {
     width: 49.5%;
     height: auto;
     min-height: 400px;
+    margin-bottom: 20px;
     position: relative;
     display: flex;
     align-items: center;
@@ -251,10 +253,6 @@ const Contents = styled.div`
       filter: brightness(0.3);
     }
 
-    img {
-      width: 100%;
-    }
-
     &:hover .conImg {
       filter: none;
       transform: scale(1.1);
@@ -271,18 +269,30 @@ const Contents = styled.div`
         color: rgba(191, 255, 106, 1);
         font-size: 30px;
         margin-bottom: 30px;
+        line-height: 43px;
       }
 
       div {
         font-size: 18px;
+        width: 100%;
+        margin: 3px auto;
 
         .date {
           margin-right: 10px;
           width: 50px;
           height: 26px;
-          border: 1px solid rgba(191, 255, 106, 1);
-          padding: 0.05rem 0.2rem;
           border-radius: 50px;
+          border: 1px solid #bfff6a;
+          // border: 1px solid transparent;
+          // border-image-source: linear-gradient(
+          //   180deg,
+          //   #bfff6a 0%,
+          //   rgba(255, 255, 255, 0) 100%
+          // );
+          // border-image-slice: 1;
+          // border-image-repeat: stretch;
+          position: relative;
+          background-clip: padding-box;
           display: inline-block;
           margin-bottom: 8px;
           line-height: 26px;
@@ -320,7 +330,7 @@ const Contents = styled.div`
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     justify-content: center;
     flex-direction: column;
 
@@ -333,16 +343,30 @@ const Contents = styled.div`
       }
     }
   }
-  
-  @media (max-width: 420px) {
+
+  @media (max-width: 700px) {
+    .box {
+      margin-top: -10px;
+      margin-bottom: -10px;
+    }
+  }
+
+  @media (max-width: 670px) {
+    .box {
+      margin-top: -20px;
+    }
+  }
+
+  @media (max-width: 610px) {
     .box {
       height: 300px;
       min-height: 0px;
       position: relative;
+      margin-top: 0px;
+      margin-bottom: 20px;
 
       .conImg {
-        height: 100%;
-        width: auto;
+        height: 300px;
         object-fit: cover;
         display: block;
       }
@@ -369,6 +393,12 @@ const Contents = styled.div`
           }
         }
       }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .box {
+      margin-top: 0px;
     }
   }
 `;

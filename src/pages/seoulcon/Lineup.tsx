@@ -173,6 +173,7 @@ const StarImg = styled.img`
 
 const PaddingWrap = styled.div`
   width: 70%;
+  max-width: 1544px;
   height: auto;
   display: flex;
   align-items: center;
@@ -204,10 +205,10 @@ const Ment = styled.p`
   margin-bottom: 30px;
   z-index: 9;
   font-weight: bold;
+  line-height: 24px;
 
   @media (max-width: 420px) {
     font-size: 16px;
-    line-height: 24px;
   }
 `;
 
@@ -267,13 +268,23 @@ const ImgBox = styled.div`
 
   @media (max-width: 768px) {
     grid-template-columns: repeat(3, 1fr);
+    gap: 50px 0px;
 
     img {
       max-width: 160px;
     }
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 570px) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 10px;
+
+    img {
+      max-width: 130px;
+    }
+  }
+
+  @media (max-width: 430px) {
     margin-bottom: 100px;
     grid-template-columns: repeat(2, 1fr);
 
@@ -291,6 +302,13 @@ const ImgBox = styled.div`
         font-size: 14px;
         line-height: 22.4px;
       }
+    }
+  }
+
+  @media (max-width: 350px) {
+    gap: 50px 10px;
+    img {
+      max-width: 120px;
     }
   }
 `;

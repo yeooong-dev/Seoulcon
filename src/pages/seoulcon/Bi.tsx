@@ -25,19 +25,15 @@ const Bi = () => {
                 “서울콘 무대로의 초대 티켓 + 콘텐츠의 다양성”
               </Description>
               <Description2>
-                서울콘의 사각형 앵글은 Online과 Offline의 공간을 상징하며
-                <br />
-                첫 글자의 O를 활용하여 인플루언서의 상징인 스탠드 마이크를,
-                <br />
+                서울콘의 사각형 앵글은 Online과 Offline의 공간을 상징하며 첫
+                글자의 O를 활용하여 인플루언서의 상징인 스탠드 마이크를,
                 삼각형의 재생/플레이 심볼을 함께 사용하여 임팩트 있는 주목성을
                 의도하였습니다.
               </Description2>
               <Description2>
                 미디어 플랫폼으로 전 세계의 고객들과 커뮤니케이션하는 형태적
-                의미를 담았으며
-                <br />
-                새로움에 대한 믿음과 사람들과 함께 즐기는 컨셉으로
-                개발하였습니다.
+                의미를 담았으며 새로움에 대한 믿음과 사람들과 함께 즐기는
+                컨셉으로 개발하였습니다.
               </Description2>
               <BrandSymbol src={brandImg} alt='브랜드 심볼' />
             </DescriptionWrapper>
@@ -52,18 +48,14 @@ const Bi = () => {
               <Description>서울콘 블랙</Description>
               <Description2 style={{ marginBottom: "50px" }}>
                 서울콘 스페이스의 시작과 끝을 표현하는 컬러로서, 스포트라이트의
-                순간을 상징합니다.
-                <br />
-                기존에 볼 수 없는 축제를 채워나가는 가치로서의 의미를
-                전달합니다.
+                순간을 상징합니다. 기존에 볼 수 없는 축제를 채워나가는
+                가치로서의 의미를 전달합니다.
               </Description2>
               <Description>서울콘 레드</Description>
               <Description2 style={{ marginBottom: "50px" }}>
                 크리에이터의 돋보이는 창의성과 열정을, 서울콘에 참여하는
-                여러분들의 관심과 사랑을 표현합니다.
-                <br />
-                강렬함, 사람들의 환호, 미디어 플랫폼을 통해 글로벌로 뻗어나가는
-                영향력을 상징합니다.
+                여러분들의 관심과 사랑을 표현합니다. 강렬함, 사람들의 환호,
+                미디어 플랫폼을 통해 글로벌로 뻗어나가는 영향력을 상징합니다.
               </Description2>
               <FlexWrap>
                 <div className='brandColor'>
@@ -132,6 +124,7 @@ const BiWrap = styled.div`
 
 const ContentSection = styled.div`
   width: 70%;
+  max-width: 1544px;
   height: auto;
   display: flex;
   align-items: center;
@@ -284,7 +277,7 @@ const Description = styled.p`
   margin-top: 0;
   font-size: 22px;
   font-weight: bold;
-  line-height: 25px;
+  line-height: 32px;
 
   @media (max-width: 420px) {
     font-size: 16px;
@@ -324,6 +317,22 @@ const FlexWrap = styled.div`
   .brandColor {
     display: flex;
     align-items: center;
+    height: auto;
+
+    .colorText {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .tag {
+        margin-top: 10px;
+      }
+    }
+
+    .colorText p {
+      margin: 0;
+    }
 
     .color {
       width: 48px;
@@ -337,8 +346,13 @@ const FlexWrap = styled.div`
       width: 48px;
       height: 48px;
       background: red;
+      border: 2px solid black;
       margin-right: 20px;
     }
+  }
+
+  .brandColor .colorText p {
+    margin: 0;
   }
 
   .tag {
@@ -355,6 +369,7 @@ const FlexWrap = styled.div`
 
     .brandColor {
       width: 100%;
+      margin-bottom: 20px;
 
       .colorText {
         p:first-child {

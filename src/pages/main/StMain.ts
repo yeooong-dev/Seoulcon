@@ -49,6 +49,7 @@ export const TextCenter = styled.div`
     font-size: 3.875rem;
     margin-top: 0px;
     margin-bottom: 80px;
+    line-height: 80px;
   }
 
   button {
@@ -223,7 +224,7 @@ export const YoutubeWrap = styled.div`
 
 export const LineupWrap = styled.div`
   width: 100%;
-  height: 880px;
+  height: 800px;
   background: white;
   display: flex;
   align-items: center;
@@ -231,36 +232,37 @@ export const LineupWrap = styled.div`
   margin-top: 100px;
 
   .padding {
-    width: 100%;
+    width: 80%;
+    max-width: 1544px;
   }
 
   .text_top {
     width: 100%;
-    height: auto;
+    height: 109px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
   }
 
   .left {
-    padding-left: 12.3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
 
     h1 {
       font-size: 3rem;
+      margin-top: 0px;
     }
 
     p {
       font-size: 1.125rem;
+      font-weight: 600;
+      margin-top: 0px;
     }
   }
 
   .right {
-    padding-right: 12.3rem;
-
     button {
       width: 239px;
       height: 52px;
@@ -293,13 +295,16 @@ export const LineupWrap = styled.div`
 
   .imgBox {
     width: 100%;
+    height: auto;
     display: flex;
     overflow-x: auto;
+    overflow-y: hidden;
     scrollbar-width: none;
     -ms-overflow-style: none;
     white-space: nowrap;
     margin-top: 0px;
-    padding-left: 12.5rem;
+    position: relative;
+    z-index: 1;
 
     &::-webkit-scrollbar {
       display: none;
@@ -312,10 +317,11 @@ export const LineupWrap = styled.div`
       margin-right: 20px;
       display: inline-block;
       overflow-y: hidden;
+      z-index: 2;
 
       .width {
-        width: 300px;
-        overflow: hidden;
+        width: 260px;
+        overflow: visible;
         border-radius: 150px;
       }
 
@@ -412,7 +418,6 @@ export const LineupWrap = styled.div`
       .imgContainer {
         .width {
           width: 260px;
-          background: gray;
         }
       }
       .imgContainer:last-child {
@@ -506,11 +511,12 @@ export const ProgramWrap = styled.div`
     width: 446px;
     position: absolute;
     top: 350px;
-    right: -100px;
+    right: 0px;
   }
 
   .padding {
-    width: 87%;
+    width: 80%;
+    max-width: 1544px;
     display: flex;
     flex-direction: column;
     align-items: center;

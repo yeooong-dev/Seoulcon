@@ -95,6 +95,7 @@ const FestivalWrap = styled.div`
 
 const PaddingWrap = styled.div`
   width: 60%;
+  max-width: 1544px;
 
   .flex {
     display: flex;

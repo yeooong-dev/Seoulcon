@@ -48,6 +48,7 @@ const FestivalWrap = styled.div`
 
 const PaddingWrap = styled.div`
   width: 60%;
+  max-width: 1544px;
 
   p {
     margin-top: -10px;

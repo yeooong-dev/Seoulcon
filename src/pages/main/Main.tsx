@@ -43,7 +43,7 @@ const Main = () => {
         <Navibar />
         <img src={mainImg} alt='main_img' />
         <TextCenter>
-          <p>2023 SEOULCON INFLUENCER</p>
+          <p>2023 SEOULCon INFLUENCER</p>
           <h1>영국남자, T1, 장엘리나</h1>
           <button>
             더 보기 <img src={buttonArrow} alt='detail' />
@@ -67,7 +67,7 @@ const Main = () => {
       <YoutubeWrap>
         <img src={round} alt='원' />
         <h1>2023 서울콘</h1>
-        <p>2023 연말, 인플루언서와 당신을 전세계로 연결합니다</p>
+        <p>2023 연말, 인플루언서와 당신을 전 세계로 연결합니다</p>
         <div>
           <video playsInline muted autoPlay loop>
             <source src={mainVideo} type='video/mp4' />
