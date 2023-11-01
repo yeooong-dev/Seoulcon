@@ -151,8 +151,7 @@ const PaddingWrap = styled.div`
 
 const AboutWrap = styled.div`
   width: 100%;
-  height: 100vh;
-  max-height: 1166px;
+  height: 1040px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -206,7 +205,7 @@ const AboutWrap = styled.div`
   }
 
   @media (max-width: 1300px) {
-    max-height: 1000px;
+    height: 1000px;
 
     .left {
       top: 0;
@@ -219,7 +218,7 @@ const AboutWrap = styled.div`
   }
 
   @media (max-width: 1200px) {
-    max-height: 1050px;
+    height: 1050px;
 
     .left {
       top: 0;
@@ -232,7 +231,7 @@ const AboutWrap = styled.div`
   }
 
   @media (max-width: 1100px) {
-    max-height: 1000px;
+    height: 1000px;
 
     .left {
       top: 0;
@@ -250,8 +249,7 @@ const AboutWrap = styled.div`
   @media (max-width: 960px) {
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    max-height: 1700px;
+    height: 1350px;
     flex-direction: column;
     position: relative;
 
@@ -271,7 +269,7 @@ const AboutWrap = styled.div`
     .right {
       position: absolute;
       width: 90%;
-      top: 550px;
+      top: 450px;
       left: -44%;
     }
   }
@@ -292,8 +290,6 @@ const AboutWrap = styled.div`
     height: 1200px;
 
     .left {
-      top: 50px;
-
       img {
         width: 678px;
       }
@@ -301,7 +297,7 @@ const AboutWrap = styled.div`
 
     .right {
       left: -45%;
-      top: 450px;
+      top: 400px;
 
       h1 {
         font-size: 26px;
@@ -319,7 +315,11 @@ const AboutWrap = styled.div`
   }
 
   @media (max-width: 390px) {
-    height: 1250px;
+    height: 1200px;
+
+    .right {
+      top: 400px;
+    }
   }
 
   @media (max-width: 350px) {
@@ -330,7 +330,6 @@ const AboutWrap = styled.div`
     height: 1400px;
   }
 `;
-
 
 const ListWrap = styled.div`
   width: 100%;
@@ -447,57 +446,141 @@ const ListWrap = styled.div`
       pointer-events: none;
       display: flex;
 
-      .left {
-        position: absolute;
-        top: -5px;
-        left: -80px;
-      }
-
       .right {
+        width: 100%;
         p {
-          position: absolute;
-          bottom: -85px;
-          left: -145px;
+          width: 100%;
           color: black;
+          position: absolute;
+          top: -8px;
+          left: 0;
+          padding-left: 2rem;
         }
 
         img {
-          position: absolute;
-          bottom: 0px;
-          right: 300px;
-          width: 135px;
+          width: 150px;
           opacity: 1;
           visibility: visible;
         }
+
+        .second {
+          width: 100px;
+        }
       }
+
+      .left {
+        width: 100%;
+        position: absolute;
+        top: -8px;
+        left: 0;
+        text-align: left;
+        padding-left: 2rem;
+      }
+    }
+    .listbox:nth-of-type(1) .right img {
+      top: -75px;
+      left: 72%;
+    }
+
+    .listbox:nth-of-type(2) .right img {
+      top: -80px;
+      left: 76%;
+    }
+
+    .listbox:nth-of-type(3) .right img {
+      top: -70px;
+      left: 73%;
+    }
+
+    .listbox:nth-of-type(4) .right img {
+      top: -75px;
+      left: 75%;
     }
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 605px) {
     .listbox {
-      .left {
-        font-size: 26px;
-        padding-left: 130px;
-        margin-bottom: 30px;
-      }
-
       .right {
         p {
-          font-size: 16px;
-          bottom: 0px;
-          left: 15px;
+          font-size: 26px;
         }
 
         img {
-          right: px;
-          width: 70px;
+          width: 130px;
         }
 
         .second {
-          width: 50px;
+          width: 90px;
         }
       }
     }
+
+    .listbox:nth-of-type(1) .right img {
+      top: -65px;
+      left: 72%;
+    }
+
+    .listbox:nth-of-type(2) .right img {
+      top: -70px;
+      left: 76%;
+    }
+
+    .listbox:nth-of-type(3) .right img {
+      top: -60px;
+      left: 73%;
+    }
+
+    .listbox:nth-of-type(4) .right img {
+      top: -65px;
+      left: 75%;
+    }
+  }
+
+  @media (max-width: 518px) {
+    .listbox {
+      height: 144px;
+
+      .left{
+        font-size: 26px;
+        top: 10px;
+        left: -15px;
+      }
+      .right {
+        p {
+          font-size: 18px;
+          left: -15px;
+        }
+
+        img {
+          width: 100px;
+        }
+
+        .second {
+          width: 70px;
+        }
+      }
+    }
+
+    .listbox:nth-of-type(1) .right img {
+      top: -50px;
+      left: 68%;
+    }
+
+    .listbox:nth-of-type(2) .right img {
+      top: -55px;
+      left: 73%;
+    }
+
+    .listbox:nth-of-type(3) .right img {
+      top: -50px;
+      left: 67%;
+    }
+
+    .listbox:nth-of-type(4) .right img {
+      top: -50px;
+      left: 70%;
+    }
+  }
   }
 `;
 
