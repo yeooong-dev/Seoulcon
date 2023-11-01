@@ -37,7 +37,7 @@ export const FooterWrap = styled.div`
     z-index: 999;
 
     .right {
-      padding-right: 4rem;
+      padding-right: 3rem;
 
       img {
         margin-left: 10px;
@@ -49,7 +49,7 @@ export const FooterWrap = styled.div`
 
   @media (max-width: 470px) {
     .top {
-      left: -15px;
+      left: 0px;
       border: none;
     }
 

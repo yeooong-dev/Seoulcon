@@ -71,10 +71,6 @@ const Navibar = () => {
     };
   }, []);
 
-  useEffect(() => {
-    console.log(isScrolled);
-  }, [isScrolled]);
-
   return (
     <Wrapper>
       <Dim
@@ -83,10 +79,10 @@ const Navibar = () => {
       ></Dim>
       <NaviWrap
         ref={navRef}
-        isSeoulConOpen={isSeoulConOpen}
-        isProgramOpen={isProgramOpen}
-        isInfoOpen={isInfoOpen}
-        isScrolled={isScrolled}
+        $isSeoulConOpen={isSeoulConOpen}
+        $isProgramOpen={isProgramOpen}
+        $isInfoOpen={isInfoOpen}
+        $isScrolled={isScrolled}
       >
         <div className='padding'>
           <div className='background-blur' />

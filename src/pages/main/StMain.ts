@@ -208,7 +208,7 @@ export const YoutubeWrap = styled.div`
     }
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 600px) {
     img {
       display: none;
     }
@@ -388,13 +388,20 @@ export const LineupWrap = styled.div`
     }
   }
 
+  @media (max-width: 1000px) {
+    min-height: 700px;
+  }
+
+
+
   @media (max-width: 768px) {
+    min-height: 800px;
+
     .text_top {
       width: 100%;
       display: flex;
       justify-content: flex-start;
       flex-direction: column;
-      padding-left: 3rem;
 
       .left {
         width: 100%;
@@ -420,7 +427,7 @@ export const LineupWrap = styled.div`
     }
 
     .imgBox {
-      padding-left: 3rem;
+      margin-top: 150px;
       .imgContainer {
         .width {
           width: 260px;
@@ -432,16 +439,14 @@ export const LineupWrap = styled.div`
     }
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 530px) {
     width: 100%;
     margin-top: 50px;
+    min-height: 650px;
 
     .padding {
-      padding-left: 0rem;
-
       .text_top {
         width: 80%;
-        padding-left: 1.5rem;
 
         .left {
           h1 {
@@ -455,8 +460,7 @@ export const LineupWrap = styled.div`
       }
 
       .imgBox {
-        margin-top: -50px;
-        padding-left: 1.5rem;
+        margin-top: 120px;
 
         .imgContainer {
           .width {
@@ -501,6 +505,10 @@ export const LineupWrap = styled.div`
         }
       }
     }
+  }
+
+  @media (max-width: 423px) {
+    min-height: 900px;
   }
 `;
 

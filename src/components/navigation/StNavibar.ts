@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 interface NaviWrapProps {
-  isSeoulConOpen?: boolean;
-  isProgramOpen?: boolean;
-  isInfoOpen?: boolean;
-  isScrolled: boolean;
+  $isSeoulConOpen?: boolean;
+  $isProgramOpen?: boolean;
+  $isInfoOpen?: boolean;
+  $isScrolled: boolean;
 }
 
 export const Dim = styled.div`
@@ -36,10 +36,10 @@ export const NaviWrap = styled.div<NaviWrapProps>`
     left: 0;
     right: 0;
     bottom: 0;
-    backdrop-filter: ${(props) => (props.isScrolled ? "blur(5px)" : "none")};
+    backdrop-filter: ${(props) => (props.$isScrolled ? "blur(5px)" : "none")};
     -webkit-backdrop-filter: ${(props) =>
-      props.isScrolled ? "blur(5px)" : "none"};
-    filter: ${(props) => (props.isScrolled ? "blur(5px)" : "none")};
+      props.$isScrolled ? "blur(5px)" : "none"};
+    filter: ${(props) => (props.$isScrolled ? "blur(5px)" : "none")};
   }
 
   &::before {
