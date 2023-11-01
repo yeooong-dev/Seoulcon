@@ -239,7 +239,7 @@ export const LineupWrap = styled.div`
   .padding {
     width: 80%;
     max-width: 1544px;
-    overflow: visible;
+    overflow-x: visible;
   }
 
   .text_top {
@@ -300,7 +300,7 @@ export const LineupWrap = styled.div`
   }
 
   .imgBox {
-    width: 100%;
+    width: calc(100% + 100%);
     height: auto;
     display: flex;
     scrollbar-width: none;
@@ -322,11 +322,10 @@ export const LineupWrap = styled.div`
       margin-right: 20px;
       display: inline-block;
       z-index: 2;
-      overflow-x: auto;
+      overflow: visible;
 
       .width {
         width: 260px;
-        overflow: visible;
         border-radius: 150px;
         overflow: hidden;
       }
@@ -384,15 +383,23 @@ export const LineupWrap = styled.div`
       }
     }
     .imgContainer:last-child {
-      margin-right: 50px;
+      padding-right: 28%;
+    }
+  }
+
+  @media (max-width: 2000px) {
+    .padding {
+      .imgBox {
+        .imgContainer:last-child {
+          padding-right: 45%;
+        }
+      }
     }
   }
 
   @media (max-width: 1000px) {
     min-height: 700px;
   }
-
-
 
   @media (max-width: 768px) {
     min-height: 800px;
@@ -434,7 +441,7 @@ export const LineupWrap = styled.div`
         }
       }
       .imgContainer:last-child {
-        margin-right: 120px;
+        padding-right: 45%;
       }
     }
   }
@@ -501,7 +508,7 @@ export const LineupWrap = styled.div`
           }
         }
         .imgContainer:last-child {
-          margin-right: 100px;
+          padding-right: 45%;
         }
       }
     }
@@ -652,6 +659,36 @@ export const ProgramWrap = styled.div`
           img {
             pointer-events: none;
           }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 530px) {
+    .padding {
+      .imgWrap {
+        .left {
+          h5 {
+            font-size: 20px;
+          }
+        }
+
+        .right {
+          h5 {
+            font-size: 20px;
+          }
+        }
+      }
+
+      .text2 {
+        h1 {
+          font-size: 26px;
+          margin-bottom: 20px;
+        }
+
+        p {
+          font-size: 16px;
+          line-height: 25px;
         }
       }
     }
@@ -899,7 +936,7 @@ export const NoticeWrap = styled.div`
     }
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 570px) {
     h1 {
       font-size: 26px;
     }
