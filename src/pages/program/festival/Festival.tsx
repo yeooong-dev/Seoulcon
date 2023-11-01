@@ -296,17 +296,14 @@ const Contents = styled.div`
           width: 50px;
           height: 26px;
           border-radius: 50px;
-          border: 1px solid #bfff6a;
-          // border: 1px solid transparent;
-          // border-image-source: linear-gradient(
-          //   180deg,
-          //   #bfff6a 0%,
-          //   rgba(255, 255, 255, 0) 100%
-          // );
-          // border-image-slice: 1;
-          // border-image-repeat: stretch;
-          position: relative;
-          background-clip: padding-box;
+          border: 1px solid transparent;
+          border-image-source: linear-gradient(
+            180deg,
+            #bfff6a 0%,
+            rgba(255, 255, 255, 0) 100%
+          );
+          border-image-slice: 1;
+          border-image-repeat: stretch;
           display: inline-block;
           margin-bottom: 8px;
           line-height: 26px;
@@ -362,13 +359,13 @@ const Contents = styled.div`
   @media (max-width: 700px) {
     .box {
       margin-top: -10px;
-      margin-bottom: -10px;
+      margin-bottom: 30px;
     }
   }
 
   @media (max-width: 670px) {
     .box {
-      margin-top: -20px;
+      margin-top: 0px;
     }
   }
 

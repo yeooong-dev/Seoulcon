@@ -76,7 +76,11 @@ const Notice = () => {
                     <span className='title'>{notice.title}</span>
                     <div className='rightBox'>
                       <span className='date'>{notice.date}</span>
-                      <span className='views'>{notice.views}</span>
+                      <span className='views'>
+                        <span className='viewsText'>| </span>
+                        <span className='viewsText'>조회수 : </span>
+                        {notice.views}
+                      </span>
                     </div>
                   </div>
                 </Link>
@@ -253,6 +257,10 @@ const Contents = styled.div`
 
       .rightBox {
         width: 260px;
+
+        .viewsText {
+          display: none;
+        }
       }
 
       &:hover {
@@ -273,12 +281,11 @@ const Contents = styled.div`
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-      
       }
 
       .date {
         margin-right: 0px;
-        padding-left:50px;
+        padding-left: 50px;
       }
 
       .views {
@@ -303,30 +310,46 @@ const Contents = styled.div`
       .list {
         width: 100%;
         height: 70px;
-        margin:0;
+        margin: 0;
         align-items: flex-start;
         flex-direction: column;
         position: relative;
-  
+
         .num {
           display: none;
         }
-  
+
         .title {
           position: absolute;
           top: 13px;
           left: -20px;
+          color: white;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-width: 80%;
         }
-  
+
         .rightBox {
+          width: 100%;
           position: absolute;
           bottom: 13px;
           left: -50px;
-  
-          span {
-            color: rgba(171, 171, 171, 1);
+
+          .viewsText {
+            display: inline;
+          }
+
+          .viewsText:first-child {
+            margin-left: -35px;
+            margin-right: 5px;
           }
         }
+
+        span {
+          color: rgba(171, 171, 171, 1);
+        }
+      }
     }
   }
 `;

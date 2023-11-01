@@ -4,22 +4,21 @@ export const FooterWrap = styled.div`
   width: 100%;
   background: #ff0e14;
   display: flex;
-  flex-direction: column; /* 세로로 배치 */
+  flex-direction: column;
   align-items: center;
   overflow-y: hidden;
 
   .top {
-    flex-grow: 1; /* 여기에 flex-grow 추가 */
+    flex-grow: 1;
     position: relative;
     bottom: 50px;
     width: 100%;
+    height: 160px;
     border-bottom: 0.1px solid #171717;
     padding-left: 2rem;
-    padding-bottom: 60px;
-    padding-top: 60px;
 
     img {
-      padding-top: 20px;
+      padding-top: 65px;
       width: 120px;
     }
   }

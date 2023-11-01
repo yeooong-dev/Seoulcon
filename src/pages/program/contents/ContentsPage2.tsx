@@ -137,6 +137,11 @@ const Contents = styled.div`
       margin-top: -50px;
     }
 
+    p:nth-child(even) {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
     p {
       line-height: 35px;
     }

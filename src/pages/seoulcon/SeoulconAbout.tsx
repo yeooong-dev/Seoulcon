@@ -157,7 +157,6 @@ const AboutWrap = styled.div`
   align-items: center;
   justify-content: space-between;
   position: relative;
-  padding-top: 100px;
   padding-bottom: 100px;
   background: conic-gradient(
     from 0.8turn,
@@ -183,7 +182,6 @@ const AboutWrap = styled.div`
     margin-left: 50%;
     color: white;
     padding-right: 3rem;
-    margin-top: -340px;
 
     h1 {
       font-size: 3rem;
@@ -208,54 +206,90 @@ const AboutWrap = styled.div`
   }
 
   @media (max-width: 1300px) {
-    max-height: 850px;
+    max-height: 1000px;
+
+    .left {
+      top: 0;
+      left: -150px;
+    }
 
     .right {
-      margin-top: -40px;
+      margin-top: 50px;
     }
   }
 
   @media (max-width: 1200px) {
-    max-height: 900px;
+    max-height: 1050px;
+
+    .left {
+      top: 0;
+      left: -150px;
+    }
 
     .right {
-      margin-top: -50px;
+      margin-top: 50px;
     }
   }
 
   @media (max-width: 1100px) {
-    max-height: 850px;
+    max-height: 1000px;
+
+    .left {
+      top: 0;
+      left: -120px;
+      img {
+        width: 800px;
+      }
+    }
 
     .right {
-      margin-top: -30px;
+      margin-top: 50px;
     }
   }
 
   @media (max-width: 960px) {
     justify-content: center;
     align-items: center;
-    height: 150vh;
-    max-height: 1350px;
+    height: 100vh;
+    max-height: 1700px;
     flex-direction: column;
     position: relative;
 
     .left {
+      left: 50%;
+      transform: translate(-50%, 0%);
       width: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
+
+      img {
+        width: 100%;
+      }
     }
 
     .right {
       position: absolute;
       width: 90%;
-      top: 650px;
+      top: 550px;
       left: -44%;
     }
   }
 
-  @media (max-width: 510px) {
-    height: 1100px;
+  @media (max-width: 750px) {
+    .right {
+      top: 450px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .right {
+      top: 400px;
+    }
+  }
+
+  @media (max-width: 560px) {
+    height: 1200px;
 
     .left {
       top: 50px;
@@ -266,8 +300,8 @@ const AboutWrap = styled.div`
     }
 
     .right {
-      left: -42%;
-      top: 550px;
+      left: -45%;
+      top: 450px;
 
       h1 {
         font-size: 26px;
@@ -284,18 +318,19 @@ const AboutWrap = styled.div`
     }
   }
 
-  @media (max-width: 440px) {
-    height: 1150px;
-  }
-
-  @media (max-width: 360px) {
+  @media (max-width: 390px) {
     height: 1250px;
   }
 
-  @media (max-width: 290px) {
+  @media (max-width: 350px) {
     height: 1300px;
   }
+
+  @media (max-width: 295px) {
+    height: 1400px;
+  }
 `;
+
 
 const ListWrap = styled.div`
   width: 100%;

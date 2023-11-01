@@ -50,6 +50,10 @@ export const TextCenter = styled.div`
     margin-top: 0px;
     margin-bottom: 80px;
     line-height: 80px;
+
+    @media (max-width: 312px) {
+      line-height: 40px;
+    }
   }
 
   button {
@@ -305,7 +309,7 @@ export const LineupWrap = styled.div`
     margin-top: 0px;
     z-index: 9;
     position: relative;
-    overflow-x:auto;
+    overflow-x: auto;
 
     &::-webkit-scrollbar {
       display: none;
@@ -318,7 +322,7 @@ export const LineupWrap = styled.div`
       margin-right: 20px;
       display: inline-block;
       z-index: 2;
-      overflow-x:auto;
+      overflow-x: auto;
 
       .width {
         width: 260px;
@@ -774,6 +778,10 @@ export const NoticeWrap = styled.div`
 
         .rightBox {
           width: 220px;
+
+          .viewsText {
+            display: none;
+          }
         }
 
         &:hover {
@@ -883,7 +891,7 @@ export const NoticeWrap = styled.div`
     }
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 600px) {
     h1 {
       font-size: 26px;
     }
@@ -929,6 +937,18 @@ export const NoticeWrap = styled.div`
           position: absolute;
           bottom: 10px;
           left: 10px;
+
+          .views {
+            .viewsText {
+              display: inline;
+              color: rgba(171, 171, 171, 1);
+            }
+
+            .viewsText:first-child {
+              margin-left: -45px;
+              margin-right: 10px;
+            }
+          }
         }
 
         .date,

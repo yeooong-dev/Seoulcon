@@ -143,6 +143,11 @@ const Contents = styled.div`
       line-height: 35px;
     }
 
+    p:nth-child(even) {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
     .date {
       margin-right: 10px;
       width: 50px;
@@ -188,7 +193,7 @@ const Contents = styled.div`
       }
     }
   }
-  
+
   .right {
     width: 50%;
     display: flex;

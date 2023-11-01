@@ -155,9 +155,9 @@ const Navibar = () => {
                     <button>Influencer line up</button>
                   </Link>
 
-                  <Link to='/goods'>
+                  {/* <Link to='/goods'>
                     <button>Goods</button>
-                  </Link>
+                  </Link> */}
                 </div>
               )}
             </div>

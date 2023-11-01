@@ -224,7 +224,7 @@ const ImgBox = styled.div`
   grid-template-columns: repeat(5, 1fr);
   gap: 50px 25px;
   margin-top: 50px;
-  margin-bottom: 300px;
+  margin-bottom: 200px;
 
   div {
     display: flex;
@@ -242,6 +242,7 @@ const ImgBox = styled.div`
 
   p {
     font-size: 16px;
+    line-height: 25px;
   }
 
   p,

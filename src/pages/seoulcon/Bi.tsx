@@ -139,6 +139,7 @@ const ContentSection = styled.div`
 
 const ContentSection2 = styled.div`
   width: 70%;
+  max-width: 1544px;
   height: auto;
   display: flex;
   align-items: center;
@@ -154,6 +155,7 @@ const ContentSection2 = styled.div`
 
 const ContentSection3 = styled.div`
   width: 70%;
+  max-width: 1544px;
   height: auto;
   display: flex;
   position: relative;

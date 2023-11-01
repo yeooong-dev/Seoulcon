@@ -35,8 +35,28 @@ import Footer from "../../components/footer/Footer";
 import round from "../../assets/images/seoulcon/img-round.svg";
 import triangle from "../../assets/images/program/img-triangle.svg";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+
+type Notice = {
+  id: number;
+  title: string;
+  date: string;
+  views: number;
+};
 
 const Main = () => {
+  const [notices, setNotices] = useState<Notice[]>([]);
+
+  useEffect(() => {
+    const dummyNotices = Array.from({ length: 50 }).map((_, i) => ({
+      id: i + 1,
+      title: `[2023 서울콘] 현장 DDP 입장 순서 안내 ${i + 1}`,
+      date: "2023.07.27.",
+      views: 3345,
+    }));
+    setNotices(dummyNotices);
+  }, []);
+
   return (
     <Wrapper>
       <MainWrap>
@@ -277,62 +297,22 @@ const Main = () => {
           <hr />
 
           <div className='listBox'>
-            <Link to='/noticePage'>
-              <div className='list'>
-                <span className='num'>1</span>
-                <span className='title'>
-                  [2023 서울콘] 현장 DDP 입장 순서 안내
-                </span>
-                <div className='rightBox'>
-                  <span className='date'>2023.07.27.</span>
-                  <span className='views'>3,345</span>
+            {notices.slice(0, 5).map((notice) => (
+              <Link key={notice.id} to='/noticePage'>
+                <div className='list'>
+                  <span className='num'>{notice.id}</span>
+                  <span className='title'>{notice.title}</span>
+                  <div className='rightBox'>
+                    <span className='date'>{notice.date}</span>
+                    <span className='views'>
+                      <span className='viewsText'>| </span>
+                      <span className='viewsText'>조회수 : </span>
+                      {notice.views}
+                    </span>
+                  </div>
                 </div>
-              </div>
-            </Link>
-
-            <div className='list'>
-              <span className='num'>1</span>
-              <span className='title'>
-                [2023 서울콘] 현장 DDP 입장 순서 안내
-              </span>
-              <div className='rightBox'>
-                <span className='date'>2023.07.27.</span>
-                <span className='views'>3,345</span>
-              </div>
-            </div>
-
-            <div className='list'>
-              <span className='num'>1</span>
-              <span className='title'>
-                [2023 서울콘] 현장 DDP 입장 순서 안내
-              </span>
-              <div className='rightBox'>
-                <span className='date'>2023.07.27.</span>
-                <span className='views'>3,345</span>
-              </div>
-            </div>
-
-            <div className='list'>
-              <span className='num'>1</span>
-              <span className='title'>
-                [2023 서울콘] 현장 DDP 입장 순서 안내
-              </span>
-              <div className='rightBox'>
-                <span className='date'>2023.07.27.</span>
-                <span className='views'>3,345</span>
-              </div>
-            </div>
-
-            <div className='list'>
-              <span className='num'>1</span>
-              <span className='title'>
-                [2023 서울콘] 현장 DDP 입장 순서 안내
-              </span>
-              <div className='rightBox'>
-                <span className='date'>2023.07.27.</span>
-                <span className='views'>3,345</span>
-              </div>
-            </div>
+              </Link>
+            ))}
           </div>
         </div>
         <Link to='/notice'>
