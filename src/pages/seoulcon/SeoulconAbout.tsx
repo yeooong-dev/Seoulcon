@@ -173,7 +173,7 @@ const AboutWrap = styled.div`
     width: 50%;
 
     img {
-      width: 100%;
+      width: 962px;
       object-fit: cover;
     }
   }
@@ -183,7 +183,7 @@ const AboutWrap = styled.div`
     margin-left: 50%;
     color: white;
     padding-right: 3rem;
-    margin-top: -150px;
+    margin-top: -340px;
 
     h1 {
       font-size: 3rem;
@@ -207,10 +207,35 @@ const AboutWrap = styled.div`
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1300px) {
+    max-height: 850px;
+
+    .right {
+      margin-top: -40px;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    max-height: 900px;
+
+    .right {
+      margin-top: -50px;
+    }
+  }
+
+  @media (max-width: 1100px) {
+    max-height: 850px;
+
+    .right {
+      margin-top: -30px;
+    }
+  }
+
+  @media (max-width: 960px) {
     justify-content: center;
+    align-items: center;
     height: 150vh;
-    max-height: 1300px;
+    max-height: 1350px;
     flex-direction: column;
     position: relative;
 
@@ -219,32 +244,30 @@ const AboutWrap = styled.div`
       display: flex;
       align-items: center;
       justify-content: center;
-      top: 0px;
     }
 
     .right {
       position: absolute;
       width: 90%;
       top: 650px;
-      left: -45%;
+      left: -44%;
     }
   }
 
-  @media (max-width: 420px) {
-    position: static;
-    height: 1050px;
+  @media (max-width: 510px) {
+    height: 1100px;
 
     .left {
       top: 50px;
 
       img {
-        width: 120%;
+        width: 678px;
       }
     }
 
     .right {
-      left: -45%;
-      top: 34rem;
+      left: -42%;
+      top: 550px;
 
       h1 {
         font-size: 26px;
@@ -259,6 +282,18 @@ const AboutWrap = styled.div`
         font-size: 32px;
       }
     }
+  }
+
+  @media (max-width: 440px) {
+    height: 1150px;
+  }
+
+  @media (max-width: 360px) {
+    height: 1250px;
+  }
+
+  @media (max-width: 290px) {
+    height: 1300px;
   }
 `;
 

@@ -71,6 +71,7 @@ const FestivalWrap = styled.div`
   flex-direction: column;
   color: white;
   position: relative;
+  overflow: hidden;
 
   .Triangle {
     position: absolute;
@@ -80,12 +81,11 @@ const FestivalWrap = styled.div`
 
   .bg {
     width: 100%;
-    height: 100%;
     opacity: 0.2;
     filter: blur(10px);
     -webkit-filter: blur(10px);
     position: absolute;
-    overflow: hidden;
+    z-index: 0;
   }
 
   @media (max-width: 768px) {
@@ -133,7 +133,7 @@ const Contents = styled.div`
   flex-direction: row-reverse;
 
   .left {
-    width: 50%;
+    width: 45%;
     display: flex;
     flex-direction: column;
     z-index: 9;
@@ -182,17 +182,13 @@ const Contents = styled.div`
         margin-left: 5px;
       }
 
-      .green:hover img {
-        content: url(${buttonArrowBlack});
-      }
-
-      .back:hover {
+      button:hover {
         background: white;
         transition: 0.2s;
         color: black;
       }
 
-      .back:hover img {
+      button:hover img {
         content: url(${buttonArrowBlack});
       }
     }

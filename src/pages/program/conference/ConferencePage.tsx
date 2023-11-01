@@ -63,6 +63,8 @@ const FestivalWrap = styled.div`
   flex-direction: column;
   color: white;
   position: relative;
+  padding-bottom: 30px;
+  overflow: hidden;
 
   .Triangle {
     position: absolute;
@@ -72,12 +74,11 @@ const FestivalWrap = styled.div`
 
   .bg {
     width: 100%;
-    height: 100%;
     opacity: 0.2;
     filter: blur(10px);
     -webkit-filter: blur(10px);
     position: absolute;
-    overflow: hidden;
+    z-index: 0;
   }
 
   @media (max-width: 768px) {
@@ -99,12 +100,13 @@ const PaddingWrap = styled.div`
 const Title = styled.h1`
   font-size: 48px;
   margin-top: 120px;
-  line-height: 36px;
+  line-height: 60px;
   color: rgba(191, 255, 106, 1);
   position: relative;
 
   @media (max-width: 420px) {
     font-size: 26px;
+    line-height: 35px;
   }
 `;
 
@@ -124,7 +126,7 @@ const Contents = styled.div`
   flex-direction: row-reverse;
 
   .left {
-    width: 50%;
+    width: 45%;
     display: flex;
     flex-direction: column;
     z-index: 9;
@@ -173,17 +175,13 @@ const Contents = styled.div`
         margin-left: 5px;
       }
 
-      .green:hover img {
-        content: url(${buttonArrowBlack});
-      }
-
-      .back:hover {
+      button:hover {
         background: white;
         transition: 0.2s;
         color: black;
       }
 
-      .back:hover img {
+      button:hover img {
         content: url(${buttonArrowBlack});
       }
     }
@@ -228,15 +226,21 @@ const Contents = styled.div`
 
   @media (max-width: 500px) {
     .left {
-      div {
+      font-size: 16px;
+
+      .btnBox {
         width: 100%;
         flex-direction: column;
         margin-top: 10px;
 
         button {
           width: 100%;
-          margin-top: 15px;
+          margin-top: 30px;
           margin-bottom: 30px;
+        }
+
+        button:first-child {
+          margin-bottom: -10px;
         }
       }
     }

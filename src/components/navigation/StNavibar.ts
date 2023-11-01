@@ -4,6 +4,7 @@ interface NaviWrapProps {
   isSeoulConOpen?: boolean;
   isProgramOpen?: boolean;
   isInfoOpen?: boolean;
+  isScrolled: boolean;
 }
 
 export const Dim = styled.div`
@@ -22,16 +23,34 @@ export const Dim = styled.div`
   }
 `;
 
-export const NaviWrap = styled.div.attrs<NaviWrapProps>((props) => ({
-  isSeoulConOpen: undefined,
-  isProgramOpen: undefined,
-  isInfoOpen: undefined,
-}))<NaviWrapProps>`
+export const NaviWrap = styled.div<NaviWrapProps>`
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
+
+  .background-blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: ${(props) => (props.isScrolled ? "blur(5px)" : "none")};
+    -webkit-backdrop-filter: ${(props) =>
+      props.isScrolled ? "blur(5px)" : "none"};
+    filter: ${(props) => (props.isScrolled ? "blur(5px)" : "none")};
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
 
   .padding {
     position: absolute;
@@ -40,9 +59,7 @@ export const NaviWrap = styled.div.attrs<NaviWrapProps>((props) => ({
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 999;
-    background: rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.2);
 
     .mobile-menu-toggle {
       display: none;
@@ -51,6 +68,7 @@ export const NaviWrap = styled.div.attrs<NaviWrapProps>((props) => ({
 
   .left {
     padding-left: 30px;
+    z-index: 999;
 
     img {
       display: flex;
@@ -106,14 +124,14 @@ export const NaviWrap = styled.div.attrs<NaviWrapProps>((props) => ({
       height: 1px;
       width: 0;
       background-color: white;
-      transition: width 0.3s, bottom 0.3s;
+    }
+
+    .menu-container:hover button span::after {
+      width: 100%;
+      bottom: -3px;
     }
 
     button.active span::after {
-      width: 100%;
-    }
-
-    button:hover span::after {
       width: 100%;
       bottom: -3px;
     }
@@ -199,7 +217,6 @@ export const NaviWrap = styled.div.attrs<NaviWrapProps>((props) => ({
       background-color: black;
       flex-direction: column;
       align-items: flex-start;
-      transition: right 0.3s ease-in-out;
       padding: 2rem;
 
       &.open {
@@ -234,24 +251,23 @@ export const NaviWrap = styled.div.attrs<NaviWrapProps>((props) => ({
           width: 100%;
           height: auto;
           position: static;
-          flex-direction: row;
+          flex-direction: colum;
           justify-content: start;
           padding: 0;
           display: flex;
-          flex-wrap: wrap;
           max-width: 100%;
-          padding: 20px 0;
+          padding: 15px 0;
           border-bottom: 1px solid rgba(58, 58, 58, 1);
           color: rgba(199, 199, 199, 1);
 
           a {
-            width: 50%;
+            width: 100%;
 
             button {
               font-size: 14px;
               height: auto;
               color: rgba(199, 199, 199, 1);
-              padding: 10px 0;
+              padding: 15px 0;
               pointer-events: none;
               width: 100%;
               border: none;

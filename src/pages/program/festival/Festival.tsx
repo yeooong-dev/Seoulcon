@@ -80,7 +80,7 @@ const Festival = () => {
               />
               <div className='center'>
                 <b>
-                  APAN STAR 어워즈 <br /> & SEOULCON 어워즈
+                  APAN STAR 어워즈 <br /> & SEOULCon 어워즈
                 </b>
                 <div>
                   <span className='date'>일정</span>
@@ -225,8 +225,7 @@ const Contents = styled.div`
 
   .box {
     width: 49.5%;
-    height: auto;
-    min-height: 400px;
+    height: 360px;
     margin-bottom: 20px;
     position: relative;
     display: flex;
@@ -312,6 +311,7 @@ const Contents = styled.div`
           margin-bottom: 8px;
           line-height: 26px;
           font-size: 16px;
+          font-weight: bold;
         }
       }
     }

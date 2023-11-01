@@ -66,6 +66,8 @@ const FestivalWrap = styled.div`
   flex-direction: column;
   color: white;
   position: relative;
+  padding-bottom: 30px;
+  overflow: hidden;
 
   .Triangle {
     position: absolute;
@@ -75,12 +77,11 @@ const FestivalWrap = styled.div`
 
   .bg {
     width: 100%;
-    height: 100%;
     opacity: 0.2;
     filter: blur(10px);
     -webkit-filter: blur(10px);
     position: absolute;
-    overflow: hidden;
+    z-index: 0;
   }
 
   @media (max-width: 768px) {
@@ -102,12 +103,13 @@ const PaddingWrap = styled.div`
 const Title = styled.h1`
   font-size: 48px;
   margin-top: 120px;
-  line-height: 36px;
+  line-height: 60px;
   color: rgba(191, 255, 106, 1);
   position: relative;
 
   @media (max-width: 420px) {
     font-size: 26px;
+    line-height: 35px;
   }
 `;
 

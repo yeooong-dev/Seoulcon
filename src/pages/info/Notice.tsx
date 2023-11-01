@@ -4,8 +4,49 @@ import Navibar from "../../components/navigation/Navibar";
 import { Wrapper } from "../main/StMain";
 import square from "../../assets/images/info/img-square.svg";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+
+type Notice = {
+  id: number;
+  title: string;
+  date: string;
+  views: number;
+};
 
 const Notice = () => {
+  const [notices, setNotices] = useState<Notice[]>([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [pageRange, setPageRange] = useState([1, 5]);
+  const itemsPerPage = 10;
+
+  const increasePageRange = () => {
+    const newEnd =
+      pageRange[1] + 5 <= totalPages ? pageRange[1] + 5 : pageRange[1];
+    const newStart = newEnd - 4;
+    setPageRange([newStart, newEnd]);
+  };
+
+  const decreasePageRange = () => {
+    const newStart = pageRange[0] - 5 > 0 ? pageRange[0] - 5 : 1;
+    setPageRange([newStart, newStart + 4]);
+  };
+
+  useEffect(() => {
+    const dummyNotices = Array.from({ length: 50 }).map((_, i) => ({
+      id: i + 1,
+      title: `[2023 서울콘] 현장 DDP 입장 순서 안내 ${i + 1}`,
+      date: "2023.07.27.",
+      views: 3345,
+    }));
+    setNotices(dummyNotices);
+  }, []);
+
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = notices.slice(indexOfFirstItem, indexOfLastItem);
+
+  const totalPages = Math.ceil(notices.length / itemsPerPage);
+
   return (
     <Wrapper>
       <Navibar />
@@ -28,136 +69,50 @@ const Notice = () => {
             <Divider2 />
 
             <div className='listBox'>
-              <Link to='/noticePage'>
-                <div className='list'>
-                  <span className='num'>1</span>
-                  <span className='title'>
-                    [2023 서울콘] 현장 DDP 입장 순서 안내
-                  </span>
-                  <div className='rightBox'>
-                    <span className='date'>2023.07.27.</span>
-                    <span className='views'>3,345</span>
+              {currentItems.map((notice) => (
+                <Link key={notice.id} to='/noticePage'>
+                  <div className='list'>
+                    <span className='num'>{notice.id}</span>
+                    <span className='title'>{notice.title}</span>
+                    <div className='rightBox'>
+                      <span className='date'>{notice.date}</span>
+                      <span className='views'>{notice.views}</span>
+                    </div>
                   </div>
-                </div>
-              </Link>
-
-              <Link to='/noticePage'>
-                <div className='list'>
-                  <span className='num'>1</span>
-                  <span className='title'>
-                    [2023 서울콘] 현장 DDP 입장 순서 안내
-                  </span>
-                  <div className='rightBox'>
-                    <span className='date'>2023.07.27.</span>
-                    <span className='views'>3,345</span>
-                  </div>
-                </div>
-              </Link>
-
-              <Link to='/noticePage'>
-                <div className='list'>
-                  <span className='num'>1</span>
-                  <span className='title'>
-                    [2023 서울콘] 현장 DDP 입장 순서 안내
-                  </span>
-                  <div className='rightBox'>
-                    <span className='date'>2023.07.27.</span>
-                    <span className='views'>3,345</span>
-                  </div>
-                </div>
-              </Link>
-
-              <Link to='/noticePage'>
-                <div className='list'>
-                  <span className='num'>1</span>
-                  <span className='title'>
-                    [2023 서울콘] 현장 DDP 입장 순서 안내
-                  </span>
-                  <div className='rightBox'>
-                    <span className='date'>2023.07.27.</span>
-                    <span className='views'>3,345</span>
-                  </div>
-                </div>
-              </Link>
-
-              <Link to='/noticePage'>
-                <div className='list'>
-                  <span className='num'>1</span>
-                  <span className='title'>
-                    [2023 서울콘] 현장 DDP 입장 순서 안내
-                  </span>
-                  <div className='rightBox'>
-                    <span className='date'>2023.07.27.</span>
-                    <span className='views'>3,345</span>
-                  </div>
-                </div>
-              </Link>
-
-              <Link to='/noticePage'>
-                <div className='list'>
-                  <span className='num'>1</span>
-                  <span className='title'>
-                    [2023 서울콘] 현장 DDP 입장 순서 안내
-                  </span>
-                  <div className='rightBox'>
-                    <span className='date'>2023.07.27.</span>
-                    <span className='views'>3,345</span>
-                  </div>
-                </div>
-              </Link>
-
-              <Link to='/noticePage'>
-                <div className='list'>
-                  <span className='num'>1</span>
-                  <span className='title'>
-                    [2023 서울콘] 현장 DDP 입장 순서 안내
-                  </span>
-                  <div className='rightBox'>
-                    <span className='date'>2023.07.27.</span>
-                    <span className='views'>3,345</span>
-                  </div>
-                </div>
-              </Link>
-
-              <Link to='/noticePage'>
-                <div className='list'>
-                  <span className='num'>1</span>
-                  <span className='title'>
-                    [2023 서울콘] 현장 DDP 입장 순서 안내
-                  </span>
-                  <div className='rightBox'>
-                    <span className='date'>2023.07.27.</span>
-                    <span className='views'>3,345</span>
-                  </div>
-                </div>
-              </Link>
-
-              <Link to='/noticePage'>
-                <div className='list'>
-                  <span className='num'>1</span>
-                  <span className='title'>
-                    [2023 서울콘] 현장 DDP 입장 순서 안내
-                  </span>
-                  <div className='rightBox'>
-                    <span className='date'>2023.07.27.</span>
-                    <span className='views'>3,345</span>
-                  </div>
-                </div>
-              </Link>
-
-              <Link to='/noticePage'>
-                <div className='list'>
-                  <span className='num'>1</span>
-                  <span className='title'>
-                    [2023 서울콘] 현장 DDP 입장 순서 안내
-                  </span>
-                  <div className='rightBox'>
-                    <span className='date'>2023.07.27.</span>
-                    <span className='views'>3,345</span>
-                  </div>
-                </div>
-              </Link>
+                </Link>
+              ))}
             </div>
+            <Pagination>
+              <button onClick={decreasePageRange} className='left'>
+                &lt;
+              </button>
+
+              {Array.from({ length: 5 }).map((_, index) => {
+                const pageNum = index + pageRange[0];
+                if (pageNum <= totalPages) {
+                  return (
+                    <button
+                      key={pageNum}
+                      className='num'
+                      onClick={() => setCurrentPage(pageNum)}
+                      style={{
+                        color:
+                          currentPage === pageNum
+                            ? "white"
+                            : "rgba(86, 86, 86, 1)",
+                      }}
+                    >
+                      {pageNum}
+                    </button>
+                  );
+                }
+                return null;
+              })}
+
+              <button onClick={increasePageRange} className='right'>
+                &gt;
+              </button>
+            </Pagination>
           </Contents>
         </PaddingWrap>
       </FestivalWrap>
@@ -373,5 +328,33 @@ const Contents = styled.div`
           }
         }
     }
+  }
+`;
+
+const Pagination = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto;
+
+  .num {
+    background: none;
+    border: none;
+    color: rgba(86, 86, 86, 1);
+    cursor: pointer;
+    margin: 6px;
+  }
+
+  .left,
+  .right {
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: 1px solid white;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: white;
+    margin: 0 10px;
   }
 `;

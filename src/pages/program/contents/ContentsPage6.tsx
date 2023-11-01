@@ -66,6 +66,8 @@ const FestivalWrap = styled.div`
   flex-direction: column;
   color: white;
   position: relative;
+  padding-bottom: 30px;
+  overflow: hidden;
 
   .Triangle {
     position: absolute;
@@ -75,12 +77,11 @@ const FestivalWrap = styled.div`
 
   .bg {
     width: 100%;
-    height: 100%;
     opacity: 0.2;
     filter: blur(10px);
     -webkit-filter: blur(10px);
     position: absolute;
-    overflow: hidden;
+    z-index: 0;
   }
 
   @media (max-width: 768px) {
@@ -128,7 +129,7 @@ const Contents = styled.div`
   flex-direction: row-reverse;
 
   .left {
-    width: 50%;
+    width: 45%;
     display: flex;
     flex-direction: column;
     z-index: 9;

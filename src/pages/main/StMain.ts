@@ -224,16 +224,18 @@ export const YoutubeWrap = styled.div`
 
 export const LineupWrap = styled.div`
   width: 100%;
-  height: 800px;
   background: white;
   display: flex;
   align-items: center;
   flex-direction: column;
   margin-top: 100px;
+  height: auto;
+  min-height: 800px;
 
   .padding {
     width: 80%;
     max-width: 1544px;
+    overflow: visible;
   }
 
   .text_top {
@@ -297,14 +299,13 @@ export const LineupWrap = styled.div`
     width: 100%;
     height: auto;
     display: flex;
-    overflow-x: auto;
-    overflow-y: hidden;
     scrollbar-width: none;
     -ms-overflow-style: none;
     white-space: nowrap;
     margin-top: 0px;
+    z-index: 9;
     position: relative;
-    z-index: 1;
+    overflow-x:auto;
 
     &::-webkit-scrollbar {
       display: none;
@@ -316,13 +317,14 @@ export const LineupWrap = styled.div`
       position: relative;
       margin-right: 20px;
       display: inline-block;
-      overflow-y: hidden;
       z-index: 2;
+      overflow-x:auto;
 
       .width {
         width: 260px;
         overflow: visible;
         border-radius: 150px;
+        overflow: hidden;
       }
 
       .text {
@@ -378,7 +380,7 @@ export const LineupWrap = styled.div`
       }
     }
     .imgContainer:last-child {
-      margin-right: 250px;
+      margin-right: 50px;
     }
   }
 

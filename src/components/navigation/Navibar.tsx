@@ -9,11 +9,12 @@ import menuToggleClose from "../../assets/images/main/ico-menu-open.svg";
 import { Wrapper } from "../../pages/main/StMain";
 
 const Navibar = () => {
-  const [openMenu, setOpenMenu] = useState<string | null>(null);
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isSeoulConOpen, setIsSeoulConOpen] = useState(false);
   const [isProgramOpen, setIsProgramOpen] = useState(false);
   const [isInfoOpen, setIsInfoOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isSeoulConHovered, setIsSeoulConHovered] = useState(false);
 
   const navRef = useRef<HTMLDivElement | null>(null);
   const location = useLocation();
@@ -39,6 +40,22 @@ const Navibar = () => {
   const isAttendSubMenuActive = ["/attend"].includes(location.pathname);
 
   useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (navRef.current && !navRef.current.contains(event.target as Node)) {
         setMobileMenuOpen(false);
@@ -54,6 +71,10 @@ const Navibar = () => {
     };
   }, []);
 
+  useEffect(() => {
+    console.log(isScrolled);
+  }, [isScrolled]);
+
   return (
     <Wrapper>
       <Dim
@@ -65,8 +86,10 @@ const Navibar = () => {
         isSeoulConOpen={isSeoulConOpen}
         isProgramOpen={isProgramOpen}
         isInfoOpen={isInfoOpen}
+        isScrolled={isScrolled}
       >
         <div className='padding'>
+          <div className='background-blur' />
           <div className='left'>
             <Link to='/'>
               <img src={logo} alt='logo' />
@@ -84,15 +107,29 @@ const Navibar = () => {
           </button>
 
           <div className={`right ${isMobileMenuOpen ? "open" : ""}`}>
-            <div className='menu-container'>
-              <button
-                onMouseEnter={() => setIsSeoulConOpen(true)}
-                onMouseLeave={() => setIsSeoulConOpen(false)}
-                className={`menuBtn ${isSeoulConSubMenuActive ? "active" : ""}`}
-                onClick={() => {
-                  setIsSeoulConOpen(!isSeoulConOpen);
+            <div
+              className='menu-container'
+              onMouseEnter={() => {
+                if (window.innerWidth > 820) {
+                  setIsSeoulConOpen(true);
                   setIsProgramOpen(false);
                   setIsInfoOpen(false);
+                }
+              }}
+              onMouseLeave={() => {
+                if (window.innerWidth > 820) {
+                  setIsSeoulConOpen(false);
+                }
+              }}
+            >
+              <button
+                className={`menuBtn ${isSeoulConSubMenuActive ? "active" : ""}`}
+                onClick={() => {
+                  if (window.innerWidth <= 820) {
+                    setIsProgramOpen(false);
+                    setIsInfoOpen(false);
+                    setIsSeoulConOpen(!isSeoulConOpen);
+                  }
                 }}
               >
                 <span>SEOULCon</span>
@@ -105,11 +142,7 @@ const Navibar = () => {
                 </div>
               </button>
               {isSeoulConOpen && (
-                <div
-                  className='submenu'
-                  onMouseEnter={() => setIsSeoulConOpen(true)}
-                  onMouseLeave={() => setIsSeoulConOpen(false)}
-                >
+                <div className='submenu'>
                   <Link to='/about'>
                     <button>About</button>
                   </Link>
@@ -129,15 +162,29 @@ const Navibar = () => {
               )}
             </div>
 
-            <div className='menu-container'>
-              <button
-                onMouseEnter={() => setIsProgramOpen(true)}
-                onMouseLeave={() => setIsProgramOpen(false)}
-                className={`menuBtn2 ${isProgramSubMenuActive ? "active" : ""}`}
-                onClick={() => {
-                  setIsProgramOpen(!isProgramOpen);
+            <div
+              className='menu-container'
+              onMouseEnter={() => {
+                if (window.innerWidth > 820) {
+                  setIsProgramOpen(true);
                   setIsSeoulConOpen(false);
                   setIsInfoOpen(false);
+                }
+              }}
+              onMouseLeave={() => {
+                if (window.innerWidth > 820) {
+                  setIsProgramOpen(false);
+                }
+              }}
+            >
+              <button
+                className={`menuBtn2 ${isProgramSubMenuActive ? "active" : ""}`}
+                onClick={() => {
+                  if (window.innerWidth <= 820) {
+                    setIsSeoulConOpen(false);
+                    setIsInfoOpen(false);
+                    setIsProgramOpen(!isProgramOpen);
+                  }
                 }}
               >
                 <span>Program</span>
@@ -149,7 +196,6 @@ const Navibar = () => {
                   />
                 </div>
               </button>
-
               {isProgramOpen && (
                 <div
                   className='submenu col'
@@ -175,15 +221,29 @@ const Navibar = () => {
               )}
             </div>
 
-            <div className='menu-container'>
-              <button
-                onMouseEnter={() => setIsInfoOpen(true)}
-                onMouseLeave={() => setIsInfoOpen(false)}
-                className={`menuBtn3 ${isInfoSubMenuActive ? "active" : ""}`}
-                onClick={() => {
-                  setIsInfoOpen(!isInfoOpen);
+            <div
+              className='menu-container'
+              onMouseEnter={() => {
+                if (window.innerWidth > 820) {
+                  setIsInfoOpen(true);
                   setIsSeoulConOpen(false);
                   setIsProgramOpen(false);
+                }
+              }}
+              onMouseLeave={() => {
+                if (window.innerWidth > 820) {
+                  setIsInfoOpen(false);
+                }
+              }}
+            >
+              <button
+                className={`menuBtn3 ${isInfoSubMenuActive ? "active" : ""}`}
+                onClick={() => {
+                  if (window.innerWidth <= 820) {
+                    setIsProgramOpen(false);
+                    setIsSeoulConOpen(false);
+                    setIsInfoOpen(!isInfoOpen);
+                  }
                 }}
               >
                 <span>Information</span>
@@ -195,7 +255,6 @@ const Navibar = () => {
                   />
                 </div>
               </button>
-
               {isInfoOpen && (
                 <div
                   className='submenu'

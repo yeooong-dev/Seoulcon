@@ -210,8 +210,7 @@ const Contents = styled.div`
 
   .box {
     width: 49.5%;
-    height: auto;
-    min-height: 400px;
+    height: 360px;
     margin-bottom: 20px;
     position: relative;
     display: flex;
@@ -297,6 +296,7 @@ const Contents = styled.div`
           margin-bottom: 8px;
           line-height: 26px;
           font-size: 16px;
+          font-weight: bold;
         }
       }
     }

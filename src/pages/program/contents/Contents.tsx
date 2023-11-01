@@ -237,8 +237,7 @@ const ContentsBox = styled.div`
 
   .box {
     width: 49.5%;
-    height: auto;
-    min-height: 400px;
+    height: 360px;
     margin-bottom: 20px;
     position: relative;
     display: flex;
@@ -306,6 +305,7 @@ const ContentsBox = styled.div`
 
         .date {
           margin-right: 10px;
+          font-weight: bold;
           width: 50px;
           height: 26px;
           border-radius: 50px;
