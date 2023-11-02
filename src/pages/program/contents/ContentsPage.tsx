@@ -6,6 +6,10 @@ import Triangle from "../../../assets/images/program/img-triangle.svg";
 import buttonArrow from "../../../assets/images/main/button-arrow-white.svg";
 import buttonArrowGreen from "../../../assets/images/main/button-arrow-green.svg";
 import buttonArrowBlack from "../../../assets/images/main/button-arrow-black.svg";
+import borderImg from "../../../assets/images/program/border.svg";
+import borderImg2 from "../../../assets/images/program/border2.svg";
+import borderImg3 from "../../../assets/images/program/border3.svg";
+import borderImg4 from "../../../assets/images/program/border4.svg";
 import festival1 from "../../../assets/images/program/img-contents1.jpg";
 import { Link } from "react-router-dom";
 
@@ -27,16 +31,16 @@ const ContentsPage = () => {
             </div>
 
             <div className='left'>
-              <p className='date'>일정</p>
+              <img src={borderImg} alt='일정' className='date' />
               <p>• 23. 12. 30.(토) ~ 12. 31.(일) 10:00 ~ 18:00</p>
-              <p className='date'>장소</p>
+              <img src={borderImg2} alt='장소' className='date' />
               <p>• DDP 디자인랩 1층 D숲</p>
-              <p className='date'>내용</p>
+              <img src={borderImg3} alt='내용' className='date' />
               <p>
                 • 국내 유일 스트릿 패션 & 스니커즈 전시
                 <br />• GenZ세대들에게 인기 있는 서울의 대표 스트릿 브랜드
               </p>
-              <p className='date'>협력</p>
+              <img src={borderImg4} alt='협력' className='date' />
               <p>• ㈜오리지널랩, ㈜무신사</p>
 
               <div className='btnBox'>
@@ -106,7 +110,7 @@ const PaddingWrap = styled.div`
 
 const Title = styled.h1`
   font-size: 48px;
-  margin-top: 120px;
+  margin-top: 130px;
   line-height: 60px;
   color: rgba(191, 255, 106, 1);
   position: relative;
@@ -129,7 +133,6 @@ const Contents = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 100px;
   flex-direction: row-reverse;
 
   .left {
@@ -146,27 +149,21 @@ const Contents = styled.div`
 
     p {
       line-height: 35px;
+      margin-bottom: 40px;
     }
 
     p:nth-child(even) {
       font-size: 18px;
-      font-weight: bold;
+      font-weight: 500;
     }
 
     .date {
-      margin-right: 10px;
-      width: 50px;
-      height: 26px;
-      border: 1px solid rgba(191, 255, 106, 1);
+      width: 74px;
       padding: 0.05rem 0.2rem;
-      border-radius: 50px;
       display: inline-block;
       margin-bottom: 8px;
-      line-height: 26px;
-      font-size: 16px;
-      font-weight: bold;
       text-align: center;
-      margin-bottom: -10px;
+      margin-bottom: -5px;
     }
 
     div {
@@ -179,7 +176,7 @@ const Contents = styled.div`
         border-radius: 50px;
         font-size: 16px;
         margin-top: 100px;
-        margin-bottom: 100px;
+        margin-bottom: 150px;
         cursor: pointer;
       }
 

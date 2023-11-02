@@ -11,6 +11,8 @@ import contents5 from "../../../assets/images/program/img-contents5.jpg";
 import contents6 from "../../../assets/images/program/img-contents6.jpg";
 import buttonArrow from "../../../assets/images/main/button-arrow-white.svg";
 import buttonArrowBlack from "../../../assets/images/main/button-arrow-black.svg";
+import borderImg from "../../../assets/images/program/border.svg";
+import borderImg2 from "../../../assets/images/program/border2.svg";
 import { Link } from "react-router-dom";
 
 const Contents = () => {
@@ -32,11 +34,11 @@ const Contents = () => {
               <div className='center'>
                 <b>스트릿 패션 & 스니커즈 전시</b>
                 <div>
-                  <span className='date'>일정</span>
+                  <img src={borderImg} alt='일정' />
                   <span>23. 12. 30.(토) ~ 12. 31.(일) 10:00 ~ 18:00</span>
                 </div>
                 <div>
-                  <span className='date'>장소</span>
+                  <img src={borderImg2} alt='장소' />
                   <span>DDP 디자인랩 1층 D숲</span>
                 </div>
                 <Link to='/contentsPage'>
@@ -56,11 +58,11 @@ const Contents = () => {
               <div className='center'>
                 <b>아티스트 콜라보 전시</b>
                 <div>
-                  <span className='date'>일정</span>
+                  <img src={borderImg} alt='일정' />
                   <span>23. 12. 30.(토) ~ 12. 31.(일)</span>
                 </div>
                 <div>
-                  <span className='date'>장소</span>
+                  <img src={borderImg2} alt='장소' />
                   <span>DDP 어울림광장</span>
                 </div>
                 <Link to='/contentsPage2'>
@@ -80,11 +82,11 @@ const Contents = () => {
               <div className='center'>
                 <b>쇼플루언서 라이브 세일즈쇼</b>
                 <div>
-                  <span className='date'>일정</span>
+                  <img src={borderImg} alt='일정' />
                   <span>23. 12. 30.(토) ~ 12. 31.(일) 10:00 ~ 18:00</span>
                 </div>
                 <div>
-                  <span className='date'>장소</span>
+                  <img src={borderImg2} alt='장소' />
                   <span>DDP 디자인랩 2층 회의실</span>
                 </div>
                 <Link to='/contentsPage3'>
@@ -105,12 +107,12 @@ const Contents = () => {
               <div className='center'>
                 <b>뷰티 ‧ 패션 체험 공간</b>
                 <div>
-                  <span className='date'>일정</span>
+                  <img src={borderImg} alt='일정' />
                   <span>23. 12. 30.(토) 10:00 ~ 18:00</span>
                 </div>
 
                 <div>
-                  <span className='date'>장소</span>
+                  <img src={borderImg2} alt='장소' />
                   <span>DDP 디자인랩 2층 멤버십라이브러리</span>
                 </div>
                 <Link to='/contentsPage4'>
@@ -126,12 +128,12 @@ const Contents = () => {
               <div className='center'>
                 <b>생활맥주 쇼륨</b>
                 <div>
-                  <span className='date'>일정</span>
+                  <img src={borderImg} alt='일정' />
                   <span>23. 12. 30.(토) ~ 12. 31.(일) 10:00 ~ 18:00</span>
                 </div>
 
                 <div>
-                  <span className='date'>장소</span>
+                  <img src={borderImg2} alt='장소' />
                   <span>DDP 아트홀 고객지원실</span>
                 </div>
                 <Link to='/contentsPage5'>
@@ -152,12 +154,12 @@ const Contents = () => {
               <div className='center'>
                 <b>포토부스(인생네컷)</b>
                 <div>
-                  <span className='date'>일정</span>
+                  <img src={borderImg} alt='일정' />
                   <span>23. 12. 30.(토) ~ 12. 31.(일) 10:00 ~ 18:00</span>
                 </div>
 
                 <div>
-                  <span className='date'>장소</span>
+                  <img src={borderImg2} alt='장소' />
                   <span>DDP 디자인랩 데크라운지</span>
                 </div>
                 <Link to='/contentsPage6'>
@@ -301,30 +303,11 @@ const ContentsBox = styled.div`
       div {
         font-size: 18px;
         width: 100%;
-        margin: 3px auto;
-
-        .date {
-          margin-right: 10px;
-          font-weight: bold;
-          width: 50px;
-          height: 26px;
-          border-radius: 50px;
-          border: 1px solid #bfff6a;
-          // border: 1px solid transparent;
-          // border-image-source: linear-gradient(
-          //   180deg,
-          //   #bfff6a 0%,
-          //   rgba(255, 255, 255, 0) 100%
-          // );
-          // border-image-slice: 1;
-          // border-image-repeat: stretch;
-          position: relative;
-          background-clip: padding-box;
-          display: inline-block;
-          margin-bottom: 8px;
-          line-height: 26px;
-          font-size: 16px;
-        }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+        gap: 8px;
       }
     }
 

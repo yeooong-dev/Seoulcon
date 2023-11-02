@@ -8,6 +8,8 @@ import performance2 from "../../../assets/images/program/img-performance2.jpg";
 import performance3 from "../../../assets/images/program/img-conference1.jpg";
 import buttonArrow from "../../../assets/images/main/button-arrow-white.svg";
 import buttonArrowBlack from "../../../assets/images/main/button-arrow-black.svg";
+import borderImg from "../../../assets/images/program/border.svg";
+import borderImg2 from "../../../assets/images/program/border2.svg";
 import { Link } from "react-router-dom";
 
 const Performance = () => {
@@ -29,11 +31,11 @@ const Performance = () => {
               <div className='center'>
                 <b>K-POP 공연 & 카운트다운</b>
                 <div>
-                  <span className='date'>일정</span>
+                  <img src={borderImg} alt='일정' />
                   <span>23. 12. 31.(일) 19:00 ~ 23. 1. 1.(월) 03:00 </span>
                 </div>
                 <div>
-                  <span className='date'>장소</span>
+                  <img src={borderImg2} alt='장소' />
                   <span>DDP 아트홀 1관</span>
                 </div>
                 <Link to='/performancePage'>
@@ -53,11 +55,11 @@ const Performance = () => {
               <div className='center'>
                 <b> K-POP 랜덤플레이댄스</b>
                 <div>
-                  <span className='date'>일정</span>
+                  <img src={borderImg} alt='일정' />
                   <span>23. 12. 30.(토) 10:00 ~ 18:00</span>
                 </div>
                 <div>
-                  <span className='date'>장소</span>
+                  <img src={borderImg2} alt='장소' />
                   <span>DDP 미래로 상부</span>
                 </div>
                 <Link to='/performancePage2'>
@@ -78,11 +80,11 @@ const Performance = () => {
               <div className='center'>
                 <b>크리에이터 팬미팅</b>
                 <div>
-                  <span className='date'>일정</span>
+                  <img src={borderImg} alt='일정' />
                   <span>23. 12. 30.(토) 10:00 ~ 18:00</span>
                 </div>
                 <div>
-                  <span className='date'>장소</span>
+                  <img src={borderImg2} alt='장소' />
                   <span>DDP 디자인랩 2층 북세미나실</span>
                 </div>
                 <Link to='/performancePage3'>
@@ -102,11 +104,11 @@ const Performance = () => {
               <div className='center'>
                 <b>K-POP 댄스 어플 체험</b>
                 <div>
-                  <span className='date'>일정</span>
+                  <img src={borderImg} alt='일정' />
                   <span>23. 12. 31.(일) 10:00 ~ 18:00</span>
                 </div>
                 <div>
-                  <span className='date'>장소</span>
+                  <img src={borderImg2} alt='장소' />
                   <span>DDP 디자인랩 2층 서울온</span>
                 </div>
                 <Link to='/performancePage4'>
@@ -126,11 +128,11 @@ const Performance = () => {
               <div className='center'>
                 <b>K-POP XR 콘텐츠 체험</b>
                 <div>
-                  <span className='date'>일정</span>
+                  <img src={borderImg} alt='일정' />
                   <span>23. 12. 30.(토) ~ 12. 31.(일) 10:00 ~ 18:00</span>
                 </div>
                 <div>
-                  <span className='date'>장소</span>
+                  <img src={borderImg2} alt='장소' />
                   <span>DDP 디자인랩 1층 미디어아트갤러리</span>
                 </div>
                 <Link to='/performancePage5'>
@@ -274,30 +276,11 @@ const Contents = styled.div`
       div {
         font-size: 18px;
         width: 100%;
-        margin: 3px auto;
-
-        .date {
-          margin-right: 10px;
-          width: 50px;
-          height: 26px;
-          border-radius: 50px;
-          border: 1px solid #bfff6a;
-          // border: 1px solid transparent;
-          // border-image-source: linear-gradient(
-          //   180deg,
-          //   #bfff6a 0%,
-          //   rgba(255, 255, 255, 0) 100%
-          // );
-          // border-image-slice: 1;
-          // border-image-repeat: stretch;
-          position: relative;
-          background-clip: padding-box;
-          display: inline-block;
-          margin-bottom: 8px;
-          line-height: 26px;
-          font-size: 16px;
-          font-weight: bold;
-        }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+        gap: 8px;
       }
     }
 

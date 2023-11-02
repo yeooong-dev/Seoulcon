@@ -10,6 +10,8 @@ import FestivalImg4 from "../../../assets/images/program/img-festival4.jpg";
 import FestivalImg5 from "../../../assets/images/program/img-festival5.jpg";
 import buttonArrow from "../../../assets/images/main/button-arrow-white.svg";
 import buttonArrowBlack from "../../../assets/images/main/button-arrow-black.svg";
+import borderImg from "../../../assets/images/program/border.svg";
+import borderImg2 from "../../../assets/images/program/border2.svg";
 import { Link } from "react-router-dom";
 
 const Festival = () => {
@@ -32,11 +34,11 @@ const Festival = () => {
               <div className='center'>
                 <b>T1 CON</b>
                 <div>
-                  <span className='date'>일정</span>
+                  <img src={borderImg} alt='일정' />
                   <span>23. 12. 30.(토) 10:00 ~ 18:00</span>
                 </div>
                 <div>
-                  <span className='date'>장소</span>
+                  <img src={borderImg2} alt='장소' />
                   <span>DDP 아트홀 1관</span>
                 </div>
                 <Link to='/festivalPage'>
@@ -56,11 +58,11 @@ const Festival = () => {
               <div className='center'>
                 <b>크리에이티브포스 어워즈</b>
                 <div>
-                  <span className='date'>일정</span>
+                  <img src={borderImg} alt='일정' />
                   <span>23. 12. 31.(일) 14:00 ~ 17:00</span>
                 </div>
                 <div>
-                  <span className='date'>장소</span>
+                  <img src={borderImg2} alt='장소' />
                   <span>DDP 컨퍼런스홀</span>
                 </div>
                 <Link to='/festivalPage2'>
@@ -83,12 +85,12 @@ const Festival = () => {
                   APAN STAR 어워즈 <br /> & SEOULCon 어워즈
                 </b>
                 <div>
-                  <span className='date'>일정</span>
+                  <img src={borderImg} alt='일정' />
                   <span>23. 12. 30.(토) 19:00 ~ 21:00</span>
                 </div>
 
                 <div>
-                  <span className='date'>장소</span>
+                  <img src={borderImg2} alt='장소' />
                   <span>DDP 아트홀 2관</span>
                 </div>
                 <Link to='/festivalPage3'>
@@ -108,12 +110,12 @@ const Festival = () => {
                   [오징어 게임]
                 </b>
                 <div>
-                  <span className='date'>일정</span>
+                  <img src={borderImg} alt='일정' />
                   <span>23. 12. 31.(일) 10:00 ~ 18:00</span>
                 </div>
 
                 <div>
-                  <span className='date'>장소</span>
+                  <img src={borderImg2} alt='장소' />
                   <span>DDP 아트홀 2관</span>
                 </div>
                 <Link to='/festivalPage4'>
@@ -138,12 +140,12 @@ const Festival = () => {
                   [EDM 등]
                 </b>
                 <div>
-                  <span className='date'>일정</span>
+                  <img src={borderImg} alt='일정' />
                   <span>23. 12. 30.(토) ~ 12. 31.(일)</span>
                 </div>
 
                 <div>
-                  <span className='date'>장소</span>
+                  <img src={borderImg2} alt='장소' />
                   <span>DDP 디자인랩 3층 디자인홀, 4층 잔디사랑방</span>
                 </div>
                 <Link to='/festivalPage5'>
@@ -289,27 +291,11 @@ const Contents = styled.div`
       div {
         font-size: 18px;
         width: 100%;
-        margin: 3px auto;
-
-        .date {
-          margin-right: 10px;
-          width: 50px;
-          height: 26px;
-          border-radius: 50px;
-          border: 1px solid transparent;
-          border-image-source: linear-gradient(
-            180deg,
-            #bfff6a 0%,
-            rgba(255, 255, 255, 0) 100%
-          );
-          border-image-slice: 1;
-          border-image-repeat: stretch;
-          display: inline-block;
-          margin-bottom: 8px;
-          line-height: 26px;
-          font-size: 16px;
-          font-weight: bold;
-        }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+        gap: 8px;
       }
     }
 

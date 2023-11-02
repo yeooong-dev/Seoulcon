@@ -8,6 +8,8 @@ import Conference2 from "../../../assets/images/program/img-conference2.jpg";
 import Conference3 from "../../../assets/images/program/img-conference3.jpg";
 import buttonArrow from "../../../assets/images/main/button-arrow-white.svg";
 import buttonArrowBlack from "../../../assets/images/main/button-arrow-black.svg";
+import borderImg from "../../../assets/images/program/border.svg";
+import borderImg2 from "../../../assets/images/program/border2.svg";
 import { Link } from "react-router-dom";
 
 const Conference = () => {
@@ -29,11 +31,11 @@ const Conference = () => {
               <div className='center'>
                 <b>인플루언서 팬미팅</b>
                 <div>
-                  <span className='date'>일정</span>
+                  <img src={borderImg} alt='일정' />
                   <span>23. 12. 30.(토) 10:00 ~ 18:00</span>
                 </div>
                 <div>
-                  <span className='date'>장소</span>
+                  <img src={borderImg2} alt='장소' />
                   <span>DDP 디자인랩 2층 북세미나실</span>
                 </div>
                 <Link to='/conferencePage'>
@@ -49,11 +51,11 @@ const Conference = () => {
               <div className='center'>
                 <b>한류 포럼</b>
                 <div>
-                  <span className='date'>일정</span>
+                  <img src={borderImg} alt='일정' />
                   <span>23. 12. 30.(토) 13:00 ~ 17:00</span>
                 </div>
                 <div>
-                  <span className='date'>장소</span>
+                  <img src={borderImg2} alt='장소' />
                   <span>DDP 컨퍼런스홀</span>
                 </div>
                 <Link to='/conferencePage2'>
@@ -73,11 +75,11 @@ const Conference = () => {
               <div className='center'>
                 <b>숏폼 콘텐츠 공모전</b>
                 <div>
-                  <span className='date'>일정</span>
+                  <img src={borderImg} alt='일정' />
                   <span>23. 12. 30.(토) 10:00 ~ 18:00</span>
                 </div>
                 <div>
-                  <span className='date'>장소</span>
+                  <img src={borderImg2} alt='장소' />
                   <span>DDP 디자인랩 2층 서울온</span>
                 </div>
                 <Link to='/conferencePage3'>
@@ -99,12 +101,12 @@ const Conference = () => {
               <div className='center'>
                 <b>크리에이터 글로벌 진출 솔루션 세미나</b>
                 <div>
-                  <span className='date'>일정</span>
+                  <img src={borderImg} alt='일정' />
                   <span>23. 12. 31.(일) 14:00 ~ 18:00</span>
                 </div>
 
                 <div>
-                  <span className='date'>장소</span>
+                  <img src={borderImg2} alt='장소' />
                   <span>DDP 디자인랩 3층 디자인홀</span>
                 </div>
                 <Link to='/conferencePage4'>
@@ -120,12 +122,12 @@ const Conference = () => {
               <div className='center'>
                 <b>서울테크밋업</b>
                 <div>
-                  <span className='date'>일정</span>
+                  <img src={borderImg} alt='일정' />
                   <span>23. 12. 30.(토) 11:00 ~ 14:00</span>
                 </div>
 
                 <div>
-                  <span className='date'>장소</span>
+                  <img src={borderImg2} alt='장소' />
                   <span>DDP 디자인랩 3층 디자인홀</span>
                 </div>
                 <Link to='/conferencePage5'>
@@ -270,30 +272,11 @@ const Contents = styled.div`
       div {
         font-size: 18px;
         width: 100%;
-        margin: 3px auto;
-
-        .date {
-          margin-right: 10px;
-          width: 50px;
-          height: 26px;
-          border-radius: 50px;
-          border: 1px solid #bfff6a;
-          // border: 1px solid transparent;
-          // border-image-source: linear-gradient(
-          //   180deg,
-          //   #bfff6a 0%,
-          //   rgba(255, 255, 255, 0) 100%
-          // );
-          // border-image-slice: 1;
-          // border-image-repeat: stretch;
-          position: relative;
-          background-clip: padding-box;
-          display: inline-block;
-          margin-bottom: 8px;
-          line-height: 26px;
-          font-size: 16px;
-          font-weight: bold;
-        }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+        gap: 8px;
       }
     }
 

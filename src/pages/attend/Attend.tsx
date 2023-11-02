@@ -8,6 +8,8 @@ import performance1 from "../../assets/images/program/img-performance1.jpg";
 import contents1 from "../../assets/images/program/img-contents1.jpg";
 import buttonArrow from "../../assets/images/main/button-arrow-white.svg";
 import buttonArrowBlack from "../../assets/images/main/button-arrow-black.svg";
+import borderImg from "../../assets/images/program/border.svg";
+import borderImg2 from "../../assets/images/program/border2.svg";
 import { Link } from "react-router-dom";
 
 const Attend = () => {
@@ -29,11 +31,11 @@ const Attend = () => {
               <div className='center'>
                 <b>T1 CON</b>
                 <div>
-                  <span className='date'>일정</span>
+                  <img src={borderImg} alt='일정' />
                   <span>23. 12. 30.(토) 10:00 ~ 18:00</span>
                 </div>
                 <div>
-                  <span className='date'>장소</span>
+                  <img src={borderImg2} alt='장소' />
                   <span>DDP 아트홀 1관</span>
                 </div>
                 <Link to='/festivalPage'>
@@ -53,12 +55,12 @@ const Attend = () => {
                   [오징어 게임]
                 </b>
                 <div>
-                  <span className='date'>일정</span>
+                  <img src={borderImg} alt='일정' />
                   <span>23. 12. 31.(일) 10:00 ~ 18:00</span>
                 </div>
 
                 <div>
-                  <span className='date'>장소</span>
+                  <img src={borderImg2} alt='장소' />
                   <span>DDP 아트홀 2관</span>
                 </div>
                 <Link to='/festivalPage4'>
@@ -79,11 +81,11 @@ const Attend = () => {
               <div className='center'>
                 <b>스트릿 패션 & 스니커즈 전시</b>
                 <div>
-                  <span className='date'>일정</span>
+                  <img src={borderImg} alt='일정' />
                   <span>23. 12. 30.(토) ~ 12. 31.(일) 10:00 ~ 18:00</span>
                 </div>
                 <div>
-                  <span className='date'>장소</span>
+                  <img src={borderImg2} alt='장소' />
                   <span>DDP 디자인랩 1층 D숲</span>
                 </div>
                 <Link to='/contentsPage'>
@@ -103,11 +105,11 @@ const Attend = () => {
               <div className='center'>
                 <b>K-POP 공연 & 카운트다운</b>
                 <div>
-                  <span className='date'>일정</span>
+                  <img src={borderImg} alt='일정' />
                   <span>23. 12. 31.(일) 19:00 ~ 23. 1. 1.(월) 03:00 </span>
                 </div>
                 <div>
-                  <span className='date'>장소</span>
+                  <img src={borderImg2} alt='장소' />
                   <span>DDP 아트홀 1관</span>
                 </div>
                 <Link to='/performancePage'>
@@ -245,29 +247,11 @@ const Contents = styled.div`
       div {
         font-size: 18px;
         width: 100%;
-        margin: 3px auto;
-
-        .date {
-          margin-right: 10px;
-          width: 50px;
-          height: 26px;
-          border-radius: 50px;
-          border: 1px solid #bfff6a;
-          // border: 1px solid transparent;
-          // border-image-source: linear-gradient(
-          //   180deg,
-          //   #bfff6a 0%,
-          //   rgba(255, 255, 255, 0) 100%
-          // );
-          // border-image-slice: 1;
-          // border-image-repeat: stretch;
-          position: relative;
-          background-clip: padding-box;
-          display: inline-block;
-          margin-bottom: 8px;
-          line-height: 26px;
-          font-size: 16px;
-        }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+        gap: 8px;
       }
     }
 

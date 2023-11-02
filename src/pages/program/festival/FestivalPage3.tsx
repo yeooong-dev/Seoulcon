@@ -6,6 +6,10 @@ import Triangle from "../../../assets/images/program/img-triangle.svg";
 import buttonArrow from "../../../assets/images/main/button-arrow-white.svg";
 import buttonArrowBlack from "../../../assets/images/main/button-arrow-black.svg";
 import festival1 from "../../../assets/images/program/img-festival3.jpg";
+import borderImg from "../../../assets/images/program/border.svg";
+import borderImg2 from "../../../assets/images/program/border2.svg";
+import borderImg3 from "../../../assets/images/program/border3.svg";
+import borderImg4 from "../../../assets/images/program/border4.svg";
 import { Link } from "react-router-dom";
 
 const FestivalPage3 = () => {
@@ -26,21 +30,21 @@ const FestivalPage3 = () => {
             </div>
 
             <div className='left'>
-              <p className='date'>일정</p>
+              <img src={borderImg} alt='일정' className='date' />
               <p>• 23. 12. 30.(토) 19:00 ~ 21:00</p>
-              <p className='date'>장소</p>
+              <img src={borderImg2} alt='장소' className='date' />
               <p>• DDP 아트홀 2관</p>
-              <p className='date'>내용</p>
+              <img src={borderImg3} alt='내용' className='date' />
               <p>
                 • 전 세계 한류 열풍을 몰고 온 콘텐츠 대중문화예술인들의 노고와
                 성과를 격려하는 국내 최초이자 유일무이한 통한 시상식
                 <br />• 금회 글로벌 인플루언서 부문 시상 신설
               </p>
-              <p className='date'>협력</p>
+              <img src={borderImg4} alt='협력' className='date' />
               <p>• 사단법인 한국연예매니지먼트협회</p>
               <div>
                 <Link to='/festival'>
-                  <button>
+                  <button className='back'>
                     돌아가기 <img src={buttonArrow} alt='detail' />
                   </button>
                 </Link>
@@ -66,6 +70,7 @@ const FestivalWrap = styled.div`
   flex-direction: column;
   color: white;
   position: relative;
+  padding-bottom: 30px;
   overflow: hidden;
 
   .Triangle {
@@ -101,7 +106,7 @@ const PaddingWrap = styled.div`
 
 const Title = styled.h1`
   font-size: 48px;
-  margin-top: 120px;
+  margin-top: 130px;
   line-height: 60px;
   color: rgba(191, 255, 106, 1);
   position: relative;
@@ -121,10 +126,10 @@ const Divider = styled.hr`
 
 const Contents = styled.div`
   width: 100%;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 100px;
   flex-direction: row-reverse;
 
   .left {
@@ -141,27 +146,21 @@ const Contents = styled.div`
 
     p {
       line-height: 35px;
+      margin-bottom: 40px;
     }
 
     p:nth-child(even) {
       font-size: 18px;
-      font-weight: bold;
+      font-weight: 500;
     }
 
     .date {
-      margin-right: 10px;
-      width: 50px;
-      height: 26px;
-      border: 1px solid rgba(191, 255, 106, 1);
+      width: 74px;
       padding: 0.05rem 0.2rem;
-      border-radius: 50px;
       display: inline-block;
       margin-bottom: 8px;
-      line-height: 26px;
-      font-size: 16px;
-      font-weight: bold;
       text-align: center;
-      margin-bottom: -10px;
+      margin-bottom: -5px;
     }
 
     div {
@@ -173,8 +172,8 @@ const Contents = styled.div`
         border: 1px solid white;
         border-radius: 50px;
         font-size: 16px;
-        margin-top: 60px;
-        margin-bottom: 100px;
+        margin-top: 50px;
+        margin-bottom: 150px;
         cursor: pointer;
       }
 
@@ -182,13 +181,13 @@ const Contents = styled.div`
         margin-left: 5px;
       }
 
-      button:hover {
+      .back:hover {
         background: white;
         transition: 0.2s;
         color: black;
       }
 
-      button:hover img {
+      .back:hover img {
         content: url(${buttonArrowBlack});
       }
     }
@@ -233,15 +232,21 @@ const Contents = styled.div`
 
   @media (max-width: 500px) {
     .left {
-      div {
+      font-size: 16px;
+
+      .btnBox {
         width: 100%;
         flex-direction: column;
         margin-top: 10px;
 
         button {
           width: 100%;
-          margin-top: 15px;
+          margin-top: 30px;
           margin-bottom: 30px;
+        }
+
+        button:first-child {
+          margin-bottom: -10px;
         }
       }
     }
